@@ -43,20 +43,22 @@ const root = createRoot(rootEl);
 //
 //
 
-bootstrap()
-  .then(res => {
-    root.render(
-      <React.StrictMode>
-        <QueryClientProvider client={appQueryClient}>
-          <IntlProvider locale={res.locale}>
-            <App />
-            <AppStylesheet />
-          </IntlProvider>
-        </QueryClientProvider>
-      </React.StrictMode>
-    );
-  })
-  .catch(err => {
-    console.warn('failed to bootstrapping external contents app:', err);
-    rootEl.innerHTML = `<h1>Error</h1>`;
-  });
+// bootstrap()
+//   .then(res => {
+// http://localhost:8000/example/example-exercise 임시주석
+root.render(
+  <React.StrictMode>
+    <QueryClientProvider client={appQueryClient}>
+      {/* <IntlProvider locale={res.locale}> */}
+      <IntlProvider locale={'ko'}>
+        <App />
+        <AppStylesheet />
+      </IntlProvider>
+    </QueryClientProvider>
+  </React.StrictMode>
+);
+// })
+// .catch(err => {
+//   console.warn('failed to bootstrapping external contents app:', err);
+//   rootEl.innerHTML = `<h1>Error</h1>`;
+// });
