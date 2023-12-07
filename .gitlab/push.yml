@@ -1,0 +1,15 @@
+include:
+  - local: .gitlab/_ref.yml
+
+build-job:
+  stage: build
+  image: !reference [.pre, image]
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+  script:
+    - !reference [.install, script]
+    - yarn build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 days

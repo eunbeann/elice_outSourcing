@@ -1,0 +1,6 @@
+.pre:
+  image: node:20.5
+
+.install:
+  script:
+    - yarn install --cache-folder .yarn-cache --frozen-lockfile --silent
