@@ -16,12 +16,18 @@ import { createEliceExtRoutes } from '@elice/extcontent-utils';
 // =============== Edit below to add route paths ===============
 //
 import exampleRoutes from './contents/{example}/{example}.routes';
+import SixExample from './contents/Six-one/six-one.routes';
 
 const routes = createEliceExtRoutes([
   {
     path: '/example',
     component: import('./contents/{example}/{example}'),
     children: exampleRoutes,
+  },
+  {
+    path: '/6th',
+    component: import('./contents/Six-one/day1-exercise'),
+    children: SixExample,
   },
 ]);
 //
