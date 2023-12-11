@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { ArrowForward } from '@mui/icons-material';
 import { Avatar, Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import { NumberInput } from 'src/contents/common/number-box';
 
 import type { ProblemProp } from './P353';
+
+import ArrowRight from '../../assets/icon/arrowRight.svg';
 
 interface C353Props {
   problem: ProblemProp;
@@ -74,7 +75,14 @@ export default function C353(props: C353Props) {
                 <Typography variant="h6">
                   빨간색 주머니의 수와 파란색 주머니의 수의 비
                 </Typography>
-                <ArrowForward />
+                <Avatar
+                  src={ArrowRight}
+                  variant="square"
+                  style={{
+                    width: '1rem',
+                    height: 'max-content',
+                  }}
+                />
                 <NumberInput
                   value={Number(firstMom)}
                   onChange={e => {
@@ -93,7 +101,14 @@ export default function C353(props: C353Props) {
                 <Typography variant="h6">
                   빨간색 사탕의 수와 파란색 사탕의 수의 비
                 </Typography>
-                <ArrowForward />
+                <Avatar
+                  src={ArrowRight}
+                  variant="square"
+                  style={{
+                    width: '1rem',
+                    height: 'max-content',
+                  }}
+                />
                 <NumberInput
                   value={Number(secondMom)}
                   onChange={e => {

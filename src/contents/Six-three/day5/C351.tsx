@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { ArrowForward } from '@mui/icons-material';
 import { Avatar, Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import { NumberInput } from 'src/contents/common/number-box';
 
 import type { ProblemProp } from './P351';
+
+import ArrowRight from '../../assets/icon/arrowRight.svg';
 
 interface C351Props {
   problem: ProblemProp;
@@ -60,7 +61,14 @@ export default function C351(props: C351Props) {
           <Box display="flex" flexDirection="column" gap="1rem">
             <Box display="flex" gap="0.3rem" alignItems="center">
               <Typography variant="h6">사과의 수와 바나나의 수의 비</Typography>
-              <ArrowForward />
+              <Avatar
+                src={ArrowRight}
+                variant="square"
+                style={{
+                  width: '1rem',
+                  height: 'max-content',
+                }}
+              />
               <NumberInput
                 value={Number(firstMom)}
                 onChange={e => {
@@ -79,7 +87,14 @@ export default function C351(props: C351Props) {
               <Typography variant="h6">
                 사과 묶음의 수와 바나나 묶음의 수의 비
               </Typography>
-              <ArrowForward />
+              <Avatar
+                src={ArrowRight}
+                variant="square"
+                style={{
+                  width: '1rem',
+                  height: 'max-content',
+                }}
+              />
               <NumberInput
                 value={Number(secondMom)}
                 onChange={e => {

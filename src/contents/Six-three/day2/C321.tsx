@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { ArrowForward } from '@mui/icons-material';
 import { Avatar, Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
@@ -9,6 +8,8 @@ import { NumberUnderBar } from 'src/contents/common/number-underbar';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
 import type { ProblemProp } from './P321';
+
+import ArrowRight from '../../assets//icon/arrowRight.svg';
 
 interface C321Props {
   problem: ProblemProp;
@@ -65,7 +66,14 @@ export default function C321(props: C321Props) {
             <Typography variant="h6">
               {leftItem}의 수와 {rightItem}의 수의 비
             </Typography>
-            <ArrowForward />
+            <Avatar
+              src={ArrowRight}
+              variant="square"
+              style={{
+                width: '1rem',
+                height: 'max-content',
+              }}
+            />
             <NumberInput
               value={Number(firstMom)}
               onChange={e => {
@@ -84,7 +92,14 @@ export default function C321(props: C321Props) {
             <Typography variant="h6">
               {rightItem}의 수와 {leftItem}의 수의 비
             </Typography>
-            <ArrowForward />
+            <Avatar
+              src={ArrowRight}
+              variant="square"
+              style={{
+                width: '1rem',
+                height: 'max-content',
+              }}
+            />
             <NumberInput
               value={Number(secondMom)}
               onChange={e => {

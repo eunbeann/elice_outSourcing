@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
-import { ArrowForward } from '@mui/icons-material';
-import { Avatar, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
-import DivisionInput, { NumberInput } from 'src/contents/common/number-box';
-import { NumberUnderBar } from 'src/contents/common/number-underbar';
-import VisualFraction from 'src/contents/common/visual-fraction';
+import { NumberInput } from 'src/contents/common/number-box';
 
 import type { ProblemProp } from './P322';
 

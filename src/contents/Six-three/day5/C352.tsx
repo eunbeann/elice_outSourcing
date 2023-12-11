@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
-import { ArrowForward } from '@mui/icons-material';
 import { Avatar, Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
-import { NumberInput } from 'src/contents/common/number-box';
 import { TextUnderBar } from 'src/contents/common/text-underbar';
 
 import type { ProblemProp } from './P352';
