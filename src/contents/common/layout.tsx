@@ -62,12 +62,9 @@ const QuestionBox = styled.div<{
   subColor: string;
   bgColor: string;
 }>`
+  padding: 1rem 2rem;
   white-space: break-spaces;
-  top: 12%;
-  position: absolute;
   width: 42.5rem;
-  min-height: 7vh;
-  max-height: 9.3vh;
   background: ${props => props.bgColor};
   border: ${props => `1px solid ${props.subColor}`};
   border-radius: 0.625rem;
@@ -79,14 +76,11 @@ const QuestionBox = styled.div<{
   text-align: center;
   box-sizing: border-box;
   white-space: pre-wrap;
-  padding: 1rem;
 `;
 
 const ChildrenBox = styled.div<{ mainColor: string }>`
-  padding: 1rem;
-  bottom: 4%;
-  left: 14%;
-  position: absolute;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
   width: 70.67vw;
   height: 70vh;
   background-color: white;
