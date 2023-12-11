@@ -16,11 +16,9 @@ interface C321Props {
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-type Fraction = [number | undefined, number | undefined];
-
 export default function C321(props: C321Props) {
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, pass, qNum, leftItem, rightItem, imgSrc } = problem;
+  const { qId, pass, qNum, leftItem, rightItem, imgSrc, answer } = problem;
 
   const [isCorrect, setIsCorrect] = useState(false);
 
@@ -29,15 +27,20 @@ export default function C321(props: C321Props) {
   const [secondMom, setSecondMom] = useState<number | undefined>(undefined);
   const [secondSon, setSecondSon] = useState<number | undefined>(undefined);
 
-  // useEffect(() => {
-  //   if (son === apples && mother === people) {
-  //     setIsCorrect(true);
-  //     handleCorrectChange(qId, true);
-  //   } else {
-  //     setIsCorrect(false);
-  //     handleCorrectChange(qId, false);
-  //   }
-  // }, [isSolved, qId]);
+  useEffect(() => {
+    if (
+      answer.firstMom === firstMom &&
+      answer.firstSon === firstSon &&
+      answer.secondMom === secondMom &&
+      answer.secondSon === secondSon
+    ) {
+      setIsCorrect(true);
+      handleCorrectChange(qId, true);
+    } else {
+      setIsCorrect(false);
+      handleCorrectChange(qId, false);
+    }
+  }, [isSolved, qId]);
 
   return (
     <Box>

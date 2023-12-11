@@ -54,7 +54,7 @@ export default function P311() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#FF7613"
+        $color="#6297FF"
         isSolved={isSolved}
       />
     </Layout>
@@ -68,6 +68,14 @@ export interface ProblemProp {
   leftItem: string;
   rightItem: string;
   imgSrc: string;
+  answer: AnswerProp;
+}
+
+interface AnswerProp {
+  firstMom: number;
+  firstSon: number;
+  secondMom: number;
+  secondSon: number;
 }
 
 const problems: ProblemProp[] = [
@@ -78,6 +86,12 @@ const problems: ProblemProp[] = [
     leftItem: '벌',
     rightItem: '나비',
     imgSrc: N1,
+    answer: {
+      firstMom: 6,
+      firstSon: 5,
+      secondMom: 5,
+      secondSon: 6,
+    },
   },
   {
     qId: 1,
@@ -86,6 +100,12 @@ const problems: ProblemProp[] = [
     leftItem: '꽃',
     rightItem: '나비',
     imgSrc: N2,
+    answer: {
+      firstMom: 8,
+      firstSon: 3,
+      secondMom: 3,
+      secondSon: 8,
+    },
   },
   {
     qId: 2,
@@ -94,6 +114,7 @@ const problems: ProblemProp[] = [
     leftItem: '사각형',
     rightItem: '원',
     imgSrc: N3,
+    answer: { firstMom: 6, firstSon: 4, secondMom: 4, secondSon: 6 },
   },
   {
     qId: 3,
@@ -102,5 +123,6 @@ const problems: ProblemProp[] = [
     leftItem: '수박',
     rightItem: '사과',
     imgSrc: N4,
+    answer: { firstMom: 2, firstSon: 5, secondMom: 5, secondSon: 2 },
   },
 ];
