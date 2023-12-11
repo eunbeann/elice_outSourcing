@@ -41,14 +41,14 @@ export const setDayStyles = (day: dayType): DayStyles => {
     case 'day4':
       mainColor = '#8F6CFF';
       subColor = '#DDD3FF';
-      bgColor = '#FFEFF4';
+      bgColor = '#F4F0FF';
       bgImage = bgDay4Image;
       break;
 
     case 'day5':
       mainColor = '#00B76A';
       subColor = '#00B76A';
-      bgColor = '#FFEFF4';
+      bgColor = '#E6F8F0';
       bgImage = bgDay5Image;
       break;
 
