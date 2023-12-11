@@ -4,6 +4,7 @@ import { Avatar, Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import { NumberInput } from 'src/contents/common/number-box';
+import { TextUnderBar } from 'src/contents/common/text-underbar';
 
 import type { ProblemProp } from './P352';
 
@@ -15,22 +16,15 @@ interface C352Props {
 
 export default function C352(props: C352Props) {
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, pass, qNum, imgSrc, answer } = problem;
+  const { qId, pass, qNum, imgSrc1, imgSrc2, answer } = problem;
 
   const [isCorrect, setIsCorrect] = useState(false);
 
-  const [firstMom, setFirstMom] = useState<number | undefined>(undefined);
-  const [firstSon, setFirstSon] = useState<number | undefined>(undefined);
-  const [secondMom, setSecondMom] = useState<number | undefined>(undefined);
-  const [secondSon, setSecondSon] = useState<number | undefined>(undefined);
+  const [input1, setInput1] = useState('');
+  const [input2, setInput2] = useState('');
 
   useEffect(() => {
-    if (
-      answer.firstMom === firstMom &&
-      answer.firstSon === firstSon &&
-      answer.secondMom === secondMom &&
-      answer.secondSon === secondSon
-    ) {
+    if (answer.first === input1 && answer.second === input2) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
@@ -48,49 +42,47 @@ export default function C352(props: C352Props) {
             {qNum}
           </Typography>
         </Box>
-        <Box display="flex" gap="1rem" mb="2rem">
-          <Avatar
-            src={imgSrc}
-            variant="square"
-            style={{
-              width: '12rem',
-              height: 'max-content',
-            }}
-          />
-          <Box display="flex" flexDirection="column" gap="1rem">
-            <Box display="flex" gap="0.3rem" alignItems="center">
-              <Typography variant="h6">사과의 수와 바나나의 수의 비</Typography>
-              <ArrowForward />
-              <NumberInput
-                value={Number(firstMom)}
-                onChange={e => {
-                  setFirstMom(Number(e.target.value));
+        <Box display="flex" mb="4rem">
+          <Box display="flex" flexDirection="column" gap="2rem">
+            <Box
+              display="flex"
+              gap="0.3rem"
+              flexDirection="column"
+              alignItems="center"
+            >
+              <Avatar
+                src={imgSrc1}
+                variant="square"
+                style={{
+                  width: '15rem',
+                  height: 'max-content',
                 }}
               />
-              :
-              <NumberInput
-                value={Number(firstSon)}
+              <TextUnderBar
+                value={input1}
                 onChange={e => {
-                  setFirstSon(Number(e.target.value));
+                  setInput1(e.target.value);
                 }}
               />
             </Box>
-            <Box display="flex" gap="0.3rem" alignItems="center">
-              <Typography variant="h6">
-                사과 묶음의 수와 바나나 묶음의 수의 비
-              </Typography>
-              <ArrowForward />
-              <NumberInput
-                value={Number(secondMom)}
-                onChange={e => {
-                  setSecondMom(Number(e.target.value));
+            <Box
+              display="flex"
+              flexDirection="column"
+              gap="0.3rem"
+              alignItems="center"
+            >
+              <Avatar
+                src={imgSrc2}
+                variant="square"
+                style={{
+                  width: '15rem',
+                  height: 'max-content',
                 }}
               />
-              :
-              <NumberInput
-                value={Number(secondSon)}
+              <TextUnderBar
+                value={input2}
                 onChange={e => {
-                  setSecondSon(Number(e.target.value));
+                  setInput2(e.target.value);
                 }}
               />
             </Box>

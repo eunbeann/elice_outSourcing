@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box } from '@mui/material';
+import { Avatar, Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
@@ -15,6 +15,7 @@ import Img41 from '../../assets/image/P352/Img4-1.png';
 import Img42 from '../../assets/image/P352/Img4-2.png';
 import Img51 from '../../assets/image/P352/Img5-1.png';
 import Img52 from '../../assets/image/P352/Img5-2.png';
+import ImgExample from '../../assets/image/P352/ImgExample.png';
 
 export default function P352() {
   const [isSolved, setIsSolved] = useState(false);
@@ -37,9 +38,20 @@ export default function P352() {
   return (
     <Layout
       title="여러 가지 비로 나타내기"
-      question={'개수의 비와 묶음의 수의 비를 각각 구하세요.'}
+      question={
+        '아래 모양은 위 모양의 조각들을 몇 조각씩 똑같이 나눈 것입니다. 전체에 대한 색칠된 부분의 비를 구하세요.'
+      }
     >
       <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+        <Avatar
+          src={ImgExample}
+          variant="square"
+          style={{
+            width: '18rem',
+            height: 'max-content',
+          }}
+        />
+
         {problems.map(problem => (
           <Box
             key={problem.qNum}
