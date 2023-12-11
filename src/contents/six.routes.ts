@@ -40,40 +40,28 @@ export default createEliceExtRoutes([
     path: 'quiz1-2-3',
     component: import('./Six-one/day2/p-15'),
   },
-  // {
-  //   path: 'day3-p16',
-  //   component: import('./day3/p-16'),
-  // },
-  // {
-  //   path: 'day3-p17',
-  //   component: import('./day3/p-17'),
-  // },
-  // {
-  //   path: 'day3-p18',
-  //   component: import('./day3/p-18'),
-  // },
-  // {
-  //   path: 'day4-p19',
-  //   component: import('./day4/p-19'),
-  // },
-  // {
-  //   path: 'day4-p20',
-  //   component: import('./day4/p-20'),
-  // },
-  // {
-  //   path: 'day4-p21',
-  //   component: import('./day4/p-21'),
-  // },
-  // {
-  //   path: 'day5-p22',
-  //   component: import('./day5/p-22'),
-  // },
-  // {
-  //   path: 'day5-p23',
-  //   component: import('./day5/p-23'),
-  // },
-  // {
-  //   path: 'day5-p24',
-  //   component: import('./day5/p-24'),
-  // },
+  {
+    path: 'quiz2-1-2',
+    component: import('./Six-two/day1/P212'),
+  },
+  {
+    path: 'quiz2-1-3',
+    component: import('./Six-two/day1/P213'),
+  },
+  {
+    path: 'quiz2-2-2',
+    component: import('./Six-two/day2/P222'),
+  },
+  {
+    path: 'quiz2-2-3',
+    component: import('./Six-two/day2/P223'),
+  },
+  {
+    path: 'quiz2-5-2',
+    component: import('./Six-two/day5/P252'),
+  },
+  {
+    path: 'quiz2-5-3',
+    component: import('./Six-two/day5/P253'),
+  },
 ]);
