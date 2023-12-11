@@ -15,7 +15,7 @@ interface C351Props {
 
 export default function C351(props: C351Props) {
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, pass, qNum, leftItem, rightItem, imgSrc, answer } = problem;
+  const { qId, pass, qNum, imgSrc, answer } = problem;
 
   const [isCorrect, setIsCorrect] = useState(false);
 
@@ -48,53 +48,52 @@ export default function C351(props: C351Props) {
             {qNum}
           </Typography>
         </Box>
-        <Box display="flex" flexDirection="column" gap="0.5rem" mb="2rem">
+        <Box display="flex" gap="1rem" mb="2rem">
           <Avatar
             src={imgSrc}
             variant="square"
             style={{
-              width: '24rem',
+              width: '12rem',
               height: 'max-content',
-              marginBottom: '1rem',
             }}
           />
-          <Box display="flex" gap="0.3rem" alignItems="center">
-            <Typography variant="h6">
-              {leftItem}의 수와 {rightItem}의 수의 비
-            </Typography>
-            <ArrowForward />
-            <NumberInput
-              value={Number(firstMom)}
-              onChange={e => {
-                setFirstMom(Number(e.target.value));
-              }}
-            />
-            :
-            <NumberInput
-              value={Number(firstSon)}
-              onChange={e => {
-                setFirstSon(Number(e.target.value));
-              }}
-            />
-          </Box>
-          <Box display="flex" gap="0.3rem" alignItems="center">
-            <Typography variant="h6">
-              {rightItem}의 수와 {leftItem}의 수의 비
-            </Typography>
-            <ArrowForward />
-            <NumberInput
-              value={Number(secondMom)}
-              onChange={e => {
-                setSecondMom(Number(e.target.value));
-              }}
-            />
-            :
-            <NumberInput
-              value={Number(secondSon)}
-              onChange={e => {
-                setSecondSon(Number(e.target.value));
-              }}
-            />
+          <Box display="flex" flexDirection="column" gap="1rem">
+            <Box display="flex" gap="0.3rem" alignItems="center">
+              <Typography variant="h6">사과의 수와 바나나의 수의 비</Typography>
+              <ArrowForward />
+              <NumberInput
+                value={Number(firstMom)}
+                onChange={e => {
+                  setFirstMom(Number(e.target.value));
+                }}
+              />
+              :
+              <NumberInput
+                value={Number(firstSon)}
+                onChange={e => {
+                  setFirstSon(Number(e.target.value));
+                }}
+              />
+            </Box>
+            <Box display="flex" gap="0.3rem" alignItems="center">
+              <Typography variant="h6">
+                사과 묶음의 수와 바나나 묶음의 수의 비
+              </Typography>
+              <ArrowForward />
+              <NumberInput
+                value={Number(secondMom)}
+                onChange={e => {
+                  setSecondMom(Number(e.target.value));
+                }}
+              />
+              :
+              <NumberInput
+                value={Number(secondSon)}
+                onChange={e => {
+                  setSecondSon(Number(e.target.value));
+                }}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>

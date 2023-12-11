@@ -5,10 +5,10 @@ import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C351 from './C351';
 
-import Img1 from '../../assets/image/P351/Img1.png'
-import Img2 from '../../assets/image/P351/Img2.png'
-import Img3 from '../../assets/image/P351/Img3.png'
-import Img4 from '../../assets/image/P351/Img4.png'
+import Img1 from '../../assets/image/P351/Img1.png';
+import Img2 from '../../assets/image/P351/Img2.png';
+import Img3 from '../../assets/image/P351/Img3.png';
+import Img4 from '../../assets/image/P351/Img4.png';
 
 export default function P351() {
   const [isSolved, setIsSolved] = useState(false);
