@@ -10,7 +10,19 @@
  * ======================================================== */
 
 import { Outlet } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Pretendard Variable',
+  },
+});
 
 export default function Example() {
-  return <Outlet />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Outlet />
+    </ThemeProvider>
+  );
 }
