@@ -27,6 +27,7 @@ export default function Page11() {
     <Layout
       title="자연수 나눗셈의 몫과 분수"
       question={`귤을 똑같이 나누어 먹을 때 한 사람이 먹는 \n 귤의 양을 구하는 나눗셈식을 쓰고, 몫을 분수로 나타내세요.`}
+      day="day1"
     >
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
@@ -60,7 +61,7 @@ export default function Page11() {
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#FF7613"
+          $color="#FF6291"
           isSolved={isSolved}
         />
       </Box>

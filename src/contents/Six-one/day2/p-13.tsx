@@ -28,6 +28,7 @@ export default function Page13() {
     <Layout
       title="(분수)÷(자연수)"
       question={`□에 알맞은 수를 써넣어 식을 계산하세요.`}
+      day="day2"
     >
       <Example2Day />
       <Box display="flex" flexDirection="column" alignItems="center">
@@ -62,7 +63,7 @@ export default function Page13() {
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#FF7613"
+          $color="#6297FF"
           isSolved={isSolved}
         />
       </Box>
