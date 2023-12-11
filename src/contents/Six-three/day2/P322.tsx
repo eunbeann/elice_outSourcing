@@ -72,14 +72,14 @@ export interface ProblemProp {
 }
 
 interface AnswerProp {
-  1: number;
-  2: number;
-  3: number;
-  4: number;
-  5: number;
-  6: number;
-  7: number;
-  8: number;
+  a1: number;
+  a2: number;
+  a3: number;
+  a4: number;
+  a5: number;
+  a6: number;
+  a7: number;
+  a8: number;
 }
 
 const problems: ProblemProp[] = [
@@ -91,14 +91,14 @@ const problems: ProblemProp[] = [
     son: 5,
     hintIdx: 0,
     answer: {
-      1: 4,
-      2: 5,
-      3: 5,
-      4: 4,
-      5: 4,
-      6: 5,
-      7: 4,
-      8: 5,
+      a1: 4,
+      a2: 5,
+      a3: 5,
+      a4: 4,
+      a5: 4,
+      a6: 5,
+      a7: 4,
+      a8: 5,
     },
   },
   {
@@ -109,14 +109,14 @@ const problems: ProblemProp[] = [
     son: 7,
     hintIdx: 2,
     answer: {
-      1: 6,
-      2: 7,
-      3: 6,
-      4: 7,
-      5: 6,
-      6: 7,
-      7: 6,
-      8: 7,
+      a1: 6,
+      a2: 7,
+      a3: 6,
+      a4: 7,
+      a5: 6,
+      a6: 7,
+      a7: 6,
+      a8: 7,
     },
   },
   {
@@ -127,14 +127,14 @@ const problems: ProblemProp[] = [
     son: 3,
     hintIdx: 0,
     answer: {
-      1: 4,
-      2: 3,
-      3: 3,
-      4: 4,
-      5: 4,
-      6: 3,
-      7: 4,
-      8: 3,
+      a1: 4,
+      a2: 3,
+      a3: 3,
+      a4: 4,
+      a5: 4,
+      a6: 3,
+      a7: 4,
+      a8: 3,
     },
   },
   {
@@ -143,16 +143,16 @@ const problems: ProblemProp[] = [
     pass: false,
     mom: 5,
     son: 2,
-    hintIdx: 0,
+    hintIdx: 3,
     answer: {
-      1: 5,
-      2: 2,
-      3: 5,
-      4: 2,
-      5: 2,
-      6: 5,
-      7: 5,
-      8: 2,
+      a1: 5,
+      a2: 2,
+      a3: 5,
+      a4: 2,
+      a5: 2,
+      a6: 5,
+      a7: 5,
+      a8: 2,
     },
   },
   {
@@ -163,14 +163,14 @@ const problems: ProblemProp[] = [
     son: 8,
     hintIdx: 0,
     answer: {
-      1: 6,
-      2: 8,
-      3: 8,
-      4: 6,
-      5: 6,
-      6: 8,
-      7: 6,
-      8: 8,
+      a1: 6,
+      a2: 8,
+      a3: 8,
+      a4: 6,
+      a5: 6,
+      a6: 8,
+      a7: 6,
+      a8: 8,
     },
   },
   {
@@ -179,16 +179,16 @@ const problems: ProblemProp[] = [
     pass: false,
     mom: 3,
     son: 11,
-    hintIdx: 0,
+    hintIdx: 4,
     answer: {
-      1: 3,
-      2: 11,
-      3: 3,
-      4: 11,
-      5: 11,
-      6: 3,
-      7: 3,
-      8: 11,
+      a1: 3,
+      a2: 11,
+      a3: 3,
+      a4: 11,
+      a5: 11,
+      a6: 3,
+      a7: 3,
+      a8: 11,
     },
   },
 ];
