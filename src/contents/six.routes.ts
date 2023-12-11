@@ -18,27 +18,27 @@ import { createEliceExtRoutes } from '@elice/extcontent-utils';
 export default createEliceExtRoutes([
   {
     path: 'quiz1-1-1',
-    component: import('./day1/p-10'),
+    component: import('./Six-one/day1/p-10'),
   },
   {
     path: 'quiz1-1-2',
-    component: import('./day1/p-11'),
+    component: import('./Six-one/day1/p-11'),
   },
   {
     path: 'quiz1-1-3',
-    component: import('./day1/p-12'),
+    component: import('./Six-one/day1/p-12'),
   },
   {
     path: 'quiz1-2-1',
-    component: import('./day2/p-13'),
+    component: import('./Six-one/day2/p-13'),
   },
   {
     path: 'quiz1-2-2',
-    component: import('./day2/p-14'),
+    component: import('./Six-one/day2/p-14'),
   },
   {
     path: 'quiz1-2-3',
-    component: import('./day2/p-15'),
+    component: import('./Six-one/day2/p-15'),
   },
   // {
   //   path: 'day3-p16',
