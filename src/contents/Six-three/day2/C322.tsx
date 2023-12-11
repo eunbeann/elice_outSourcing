@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import { NumberInput } from 'src/contents/common/number-box';
 
 import type { ProblemProp } from './P322';
+
+import LeftGuideLineOrange from '../../assets/icon/leftGuideLineOrange.svg';
+import LeftGuideLinePink from '../../assets/icon/leftGuideLinePink.svg';
 
 interface C321Props {
   problem: ProblemProp;
@@ -48,7 +51,7 @@ export default function C322(props: C321Props) {
 
   return (
     <Box>
-      <Box display="flex" alignItems="start">
+      <Box display="flex" alignItems="start" mr="4rem">
         <Box display="flex" alignItems="center">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={400} marginRight="1rem">
@@ -66,7 +69,7 @@ export default function C322(props: C321Props) {
                       fontWeight={600}
                       width="6rem"
                       height="3rem"
-                      bgcolor={hintIdx === 0 ? 'orange' : 'pink'}
+                      bgcolor={hintIdx === 0 ? '#FAD476' : '#FBB0C4'}
                       display="flex"
                       justifyContent="center"
                       alignItems="center"
@@ -74,52 +77,68 @@ export default function C322(props: C321Props) {
                     >
                       {mom} : {son}
                     </Typography>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a1)}
-                        onChange={e => setA1(Number(e.target.value))}
+                    <Box display="flex" alignItems="center">
+                      <Avatar
+                        src={
+                          hintIdx === 0
+                            ? LeftGuideLineOrange
+                            : LeftGuideLinePink
+                        }
+                        variant="square"
+                        style={{
+                          width: '1.5rem',
+                          height: 'max-content',
+                        }}
                       />
-                      <Typography variant="h5">대</Typography>
-                      <NumberInput
-                        value={Number(a2)}
-                        onChange={e => setA2(Number(e.target.value))}
-                      />
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a3)}
-                        onChange={e => setA3(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">에 대한</Typography>
-                      <NumberInput
-                        value={Number(a4)}
-                        onChange={e => setA4(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의 비</Typography>
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a5)}
-                        onChange={e => setA5(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의</Typography>
-                      <NumberInput
-                        value={Number(a6)}
-                        onChange={e => setA6(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">에 대한 비</Typography>
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a7)}
-                        onChange={e => setA7(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">와</Typography>
-                      <NumberInput
-                        value={Number(a8)}
-                        onChange={e => setA8(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의 비</Typography>
+                      <Box display="flex" flexDirection="column" gap="0.5rem">
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a1)}
+                            onChange={e => setA1(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">대</Typography>
+                          <NumberInput
+                            value={Number(a2)}
+                            onChange={e => setA2(Number(e.target.value))}
+                          />
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a3)}
+                            onChange={e => setA3(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">에 대한</Typography>
+                          <NumberInput
+                            value={Number(a4)}
+                            onChange={e => setA4(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의 비</Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a5)}
+                            onChange={e => setA5(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의</Typography>
+                          <NumberInput
+                            value={Number(a6)}
+                            onChange={e => setA6(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">에 대한 비</Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a7)}
+                            onChange={e => setA7(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">와</Typography>
+                          <NumberInput
+                            value={Number(a8)}
+                            onChange={e => setA8(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의 비</Typography>
+                        </Box>
+                      </Box>
                     </Box>
                   </>
                 ),
@@ -130,7 +149,7 @@ export default function C322(props: C321Props) {
                       fontWeight={600}
                       width="6rem"
                       height="3rem"
-                      bgcolor={hintIdx === 0 ? 'orange' : 'pink'}
+                      bgcolor={hintIdx === 0 ? '#FAD476' : '#FBB0C4'}
                       display="flex"
                       justifyContent="center"
                       alignItems="center"
@@ -146,45 +165,61 @@ export default function C322(props: C321Props) {
                         onChange={e => setA2(Number(e.target.value))}
                       />
                     </Typography>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a3)}
-                        onChange={e => setA3(Number(e.target.value))}
+                    <Box display="flex" alignItems="center">
+                      <Avatar
+                        src={
+                          hintIdx === 0
+                            ? LeftGuideLineOrange
+                            : LeftGuideLinePink
+                        }
+                        variant="square"
+                        style={{
+                          width: '1.5rem',
+                          height: 'max-content',
+                        }}
                       />
-                      <Typography variant="h5">대</Typography>
-                      <NumberInput
-                        value={Number(a4)}
-                        onChange={e => setA4(Number(e.target.value))}
-                      />
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <Typography variant="h5">
-                        {son}에 대한 {mom}의 비
-                      </Typography>
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a5)}
-                        onChange={e => setA5(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의</Typography>
-                      <NumberInput
-                        value={Number(a6)}
-                        onChange={e => setA6(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">에 대한 비</Typography>
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a7)}
-                        onChange={e => setA7(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">와</Typography>
-                      <NumberInput
-                        value={Number(a8)}
-                        onChange={e => setA8(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의 비</Typography>
+                      <Box display="flex" flexDirection="column" gap="0.5rem">
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a3)}
+                            onChange={e => setA3(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">대</Typography>
+                          <NumberInput
+                            value={Number(a4)}
+                            onChange={e => setA4(Number(e.target.value))}
+                          />
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <Typography variant="h5">
+                            {son}에 대한 {mom}의 비
+                          </Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a5)}
+                            onChange={e => setA5(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의</Typography>
+                          <NumberInput
+                            value={Number(a6)}
+                            onChange={e => setA6(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">에 대한 비</Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a7)}
+                            onChange={e => setA7(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">와</Typography>
+                          <NumberInput
+                            value={Number(a8)}
+                            onChange={e => setA8(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의 비</Typography>
+                        </Box>
+                      </Box>
                     </Box>
                   </>
                 ),
@@ -195,7 +230,7 @@ export default function C322(props: C321Props) {
                       fontWeight={600}
                       width="6rem"
                       height="3rem"
-                      bgcolor={hintIdx === 0 ? 'orange' : 'pink'}
+                      bgcolor={hintIdx === 0 ? '#FAD476' : '#FBB0C4'}
                       display="flex"
                       justifyContent="center"
                       alignItems="center"
@@ -211,46 +246,61 @@ export default function C322(props: C321Props) {
                         onChange={e => setA2(Number(e.target.value))}
                       />
                     </Typography>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a3)}
-                        onChange={e => setA3(Number(e.target.value))}
+                    <Box display="flex" alignItems="center">
+                      <Avatar
+                        src={
+                          hintIdx === 0
+                            ? LeftGuideLineOrange
+                            : LeftGuideLinePink
+                        }
+                        variant="square"
+                        style={{
+                          width: '1.5rem',
+                          height: 'max-content',
+                        }}
                       />
-                      <Typography variant="h5">대</Typography>
-                      <NumberInput
-                        value={Number(a4)}
-                        onChange={e => setA4(Number(e.target.value))}
-                      />
-                    </Box>
-
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a5)}
-                        onChange={e => setA5(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">에 대한</Typography>
-                      <NumberInput
-                        value={Number(a6)}
-                        onChange={e => setA6(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의 비</Typography>
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <Typography variant="h5">
-                        {mom}의 {son}에 대한 비
-                      </Typography>
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a7)}
-                        onChange={e => setA7(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">와</Typography>
-                      <NumberInput
-                        value={Number(a8)}
-                        onChange={e => setA8(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의 비</Typography>
+                      <Box display="flex" flexDirection="column" gap="0.5rem">
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a3)}
+                            onChange={e => setA3(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">대</Typography>
+                          <NumberInput
+                            value={Number(a4)}
+                            onChange={e => setA4(Number(e.target.value))}
+                          />
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a5)}
+                            onChange={e => setA5(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">에 대한</Typography>
+                          <NumberInput
+                            value={Number(a6)}
+                            onChange={e => setA6(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의 비</Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <Typography variant="h5">
+                            {mom}의 {son}에 대한 비
+                          </Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a7)}
+                            onChange={e => setA7(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">와</Typography>
+                          <NumberInput
+                            value={Number(a8)}
+                            onChange={e => setA8(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의 비</Typography>
+                        </Box>
+                      </Box>
                     </Box>
                   </>
                 ),
@@ -261,7 +311,7 @@ export default function C322(props: C321Props) {
                       fontWeight={600}
                       width="6rem"
                       height="3rem"
-                      bgcolor={hintIdx === 0 ? 'orange' : 'pink'}
+                      bgcolor={hintIdx === 0 ? '#FAD476' : '#FBB0C4'}
                       display="flex"
                       justifyContent="center"
                       alignItems="center"
@@ -277,47 +327,61 @@ export default function C322(props: C321Props) {
                         onChange={e => setA2(Number(e.target.value))}
                       />
                     </Typography>
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a3)}
-                        onChange={e => setA3(Number(e.target.value))}
+                    <Box display="flex" alignItems="center">
+                      <Avatar
+                        src={
+                          hintIdx === 0
+                            ? LeftGuideLineOrange
+                            : LeftGuideLinePink
+                        }
+                        variant="square"
+                        style={{
+                          width: '1.5rem',
+                          height: 'max-content',
+                        }}
                       />
-                      <Typography variant="h5">대</Typography>
-                      <NumberInput
-                        value={Number(a4)}
-                        onChange={e => setA4(Number(e.target.value))}
-                      />
-                    </Box>
-
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a5)}
-                        onChange={e => setA5(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">에 대한</Typography>
-                      <NumberInput
-                        value={Number(a6)}
-                        onChange={e => setA6(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의 비</Typography>
-                    </Box>
-
-                    <Box display="flex" gap="0.2rem">
-                      <NumberInput
-                        value={Number(a7)}
-                        onChange={e => setA7(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">의</Typography>
-                      <NumberInput
-                        value={Number(a8)}
-                        onChange={e => setA8(Number(e.target.value))}
-                      />
-                      <Typography variant="h5">에 대한 비</Typography>
-                    </Box>
-                    <Box display="flex" gap="0.2rem">
-                      <Typography variant="h5">
-                        {mom}과 {son}의 비
-                      </Typography>
+                      <Box display="flex" flexDirection="column" gap="0.5rem">
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a3)}
+                            onChange={e => setA3(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">대</Typography>
+                          <NumberInput
+                            value={Number(a4)}
+                            onChange={e => setA4(Number(e.target.value))}
+                          />
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a5)}
+                            onChange={e => setA5(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">에 대한</Typography>
+                          <NumberInput
+                            value={Number(a6)}
+                            onChange={e => setA6(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의 비</Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <NumberInput
+                            value={Number(a7)}
+                            onChange={e => setA7(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">의</Typography>
+                          <NumberInput
+                            value={Number(a8)}
+                            onChange={e => setA8(Number(e.target.value))}
+                          />
+                          <Typography variant="h5">에 대한 비</Typography>
+                        </Box>
+                        <Box display="flex" gap="0.2rem">
+                          <Typography variant="h5">
+                            {mom}과 {son}의 비
+                          </Typography>
+                        </Box>
+                      </Box>
                     </Box>
                   </>
                 ),
