@@ -3,14 +3,14 @@ import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C321 from './C321';
+import C322 from './C322';
 
 import N1 from '../../assets/image/P321/N1.png';
 import N2 from '../../assets/image/P321/N2.png';
 import N3 from '../../assets/image/P321/N3.png';
 import N4 from '../../assets/image/P321/N4.png';
 
-export default function P321() {
+export default function P322() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     problems.map(problem => problem.pass)
@@ -41,7 +41,7 @@ export default function P321() {
               margin: '0.5rem',
             }}
           >
-            <C321
+            <C322
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
@@ -65,17 +65,21 @@ export interface ProblemProp {
   qId: number;
   qNum: string;
   pass: boolean;
-  leftItem: string;
-  rightItem: string;
-  imgSrc: string;
+  mom: number;
+  son: number;
+  hintIdx: number;
   answer: AnswerProp;
 }
 
 interface AnswerProp {
-  firstMom: number;
-  firstSon: number;
-  secondMom: number;
-  secondSon: number;
+  1: number;
+  2: number;
+  3: number;
+  4: number;
+  5: number;
+  6: number;
+  7: number;
+  8: number;
 }
 
 const problems: ProblemProp[] = [
@@ -83,46 +87,108 @@ const problems: ProblemProp[] = [
     qId: 0,
     qNum: '①',
     pass: false,
-    leftItem: '벌',
-    rightItem: '나비',
-    imgSrc: N1,
+    mom: 4,
+    son: 5,
+    hintIdx: 0,
     answer: {
-      firstMom: 6,
-      firstSon: 5,
-      secondMom: 5,
-      secondSon: 6,
+      1: 4,
+      2: 5,
+      3: 5,
+      4: 4,
+      5: 4,
+      6: 5,
+      7: 4,
+      8: 5,
     },
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
-    leftItem: '꽃',
-    rightItem: '나비',
-    imgSrc: N2,
+    mom: 6,
+    son: 7,
+    hintIdx: 2,
     answer: {
-      firstMom: 8,
-      firstSon: 3,
-      secondMom: 3,
-      secondSon: 8,
+      1: 6,
+      2: 7,
+      3: 6,
+      4: 7,
+      5: 6,
+      6: 7,
+      7: 6,
+      8: 7,
     },
   },
   {
     qId: 2,
     qNum: '③',
     pass: false,
-    leftItem: '사각형',
-    rightItem: '원',
-    imgSrc: N3,
-    answer: { firstMom: 6, firstSon: 4, secondMom: 4, secondSon: 6 },
+    mom: 4,
+    son: 3,
+    hintIdx: 0,
+    answer: {
+      1: 4,
+      2: 3,
+      3: 3,
+      4: 4,
+      5: 4,
+      6: 3,
+      7: 4,
+      8: 3,
+    },
   },
   {
     qId: 3,
     qNum: '④',
     pass: false,
-    leftItem: '수박',
-    rightItem: '사과',
-    imgSrc: N4,
-    answer: { firstMom: 2, firstSon: 5, secondMom: 5, secondSon: 2 },
+    mom: 5,
+    son: 2,
+    hintIdx: 0,
+    answer: {
+      1: 5,
+      2: 2,
+      3: 5,
+      4: 2,
+      5: 2,
+      6: 5,
+      7: 5,
+      8: 2,
+    },
+  },
+  {
+    qId: 4,
+    qNum: '⑤',
+    pass: false,
+    mom: 6,
+    son: 8,
+    hintIdx: 0,
+    answer: {
+      1: 6,
+      2: 8,
+      3: 8,
+      4: 6,
+      5: 6,
+      6: 8,
+      7: 6,
+      8: 8,
+    },
+  },
+  {
+    qId: 5,
+    qNum: '⑥',
+    pass: false,
+    mom: 3,
+    son: 11,
+    hintIdx: 0,
+    answer: {
+      1: 3,
+      2: 11,
+      3: 3,
+      4: 11,
+      5: 11,
+      6: 3,
+      7: 3,
+      8: 11,
+    },
   },
 ];
