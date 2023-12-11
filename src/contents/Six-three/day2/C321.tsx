@@ -70,8 +70,9 @@ export default function C321(props: C321Props) {
               src={ArrowRight}
               variant="square"
               style={{
-                width: '1rem',
+                width: '1.5rem',
                 height: 'max-content',
+                margin: '0rem 0.5rem',
               }}
             />
             <NumberInput
@@ -96,8 +97,9 @@ export default function C321(props: C321Props) {
               src={ArrowRight}
               variant="square"
               style={{
-                width: '1rem',
+                width: '1.5rem',
                 height: 'max-content',
+                margin: '0rem 0.5rem',
               }}
             />
             <NumberInput

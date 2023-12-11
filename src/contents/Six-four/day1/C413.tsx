@@ -224,8 +224,9 @@ export default function C413(props: C413Props) {
               src={ArrowRight}
               variant="square"
               style={{
-                width: '1rem',
+                width: '1.5rem',
                 height: 'max-content',
+                margin: '0rem 0.5rem',
               }}
             />
             <Box display="flex" gap="0.3rem">

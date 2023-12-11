@@ -156,8 +156,9 @@ export default function C412(props: C412Props) {
               src={ArrowRight}
               variant="square"
               style={{
-                width: '1rem',
+                width: '1.5rem',
                 height: 'max-content',
+                margin: '0rem 0.5rem',
               }}
             />
             <Box display="flex" alignItems="center" gap="0.5rem">
