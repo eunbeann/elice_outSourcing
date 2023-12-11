@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Box } from '@mui/material';
+import { useState } from 'react';
+import { Box, Typography } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import Component11Page from './11p-component';
+import C252 from './C252';
 
-export default function Page11() {
+export default function P252() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
@@ -18,16 +18,18 @@ export default function Page11() {
       return newPassArray;
     });
   };
+
   const checkAnswer = () => {
     //TODO 점수 보내는 api 추가
     setIsSolved(prev => !prev);
   };
-
   return (
     <Layout
-      title="자연수 나눗셈의 몫과 분수"
-      question={`귤을 똑같이 나누어 먹을 때 한 사람이 먹는 \n 귤의 양을 구하는 나눗셈식을 쓰고, 몫을 분수로 나타내세요.`}
-      day="day1"
+      title="연산 퍼즐"
+      question={
+        '분모, 분자에 어떤 수를 곱해서 분모를 10으로 바꿀 수 있는 분수는 0, 100으로 바꿀 수 있는 분수는 1, 1000으로 바꿀 수 있는 분수는 2를 입력하세요.(단, 10으로 바꿀 수 있는 분수는 0만, 100으로 바꿀 수 있는 분수는 1만 입력 합니다.)'
+      }
+      day="day5"
     >
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
@@ -44,12 +46,12 @@ export default function Page11() {
                 maxHeight: '200px',
                 overflowY: 'auto',
                 display: 'flex',
-                width: 'calc(40% - 0.5rem)',
+                width: '30%',
                 justifyContent: 'center',
                 margin: '0.5rem',
               }}
             >
-              <Component11Page
+              <C252
                 problem={problem}
                 isSolved={isSolved}
                 handleCorrectChange={(qId, pass) =>
@@ -61,7 +63,7 @@ export default function Page11() {
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#FF6291"
+          $color="#00B76A"
           isSolved={isSolved}
         />
       </Box>
@@ -70,14 +72,14 @@ export default function Page11() {
 }
 
 const divisionProblems = [
-  { qId: 0, qNum: '①', pass: false, orangeNum: 3, peopleNum: 4 },
-  { qId: 1, qNum: '②', pass: false, orangeNum: 6, peopleNum: 7 },
-  { qId: 2, qNum: '③', pass: false, orangeNum: 1, peopleNum: 3 },
-  { qId: 3, qNum: '④', pass: false, orangeNum: 2, peopleNum: 5 },
-  { qId: 4, qNum: '⑤', pass: false, orangeNum: 3, peopleNum: 5 },
-  { qId: 5, qNum: '⑥', pass: false, orangeNum: 1, peopleNum: 6 },
-  { qId: 6, qNum: '⑦', pass: false, orangeNum: 2, peopleNum: 3 },
-  { qId: 7, qNum: '⑧', pass: false, orangeNum: 8, peopleNum: 5 },
-  { qId: 8, qNum: '⑨', pass: false, orangeNum: 7, peopleNum: 2 },
-  { qId: 9, qNum: '⑩', pass: false, orangeNum: 5, peopleNum: 4 },
+  // 0 : 동그라미 1: 세모 2: 네모
+  { qId: 0, qNum: '①', sonNum: 1, momNum: 2, answer: 0, pass: false },
+  { qId: 1, qNum: '②', sonNum: 1, momNum: 4, answer: 1, pass: false },
+  { qId: 2, qNum: '③', sonNum: 1, momNum: 5, answer: 0, pass: false },
+  { qId: 3, qNum: '④', sonNum: 1, momNum: 8, answer: 2, pass: false },
+  { qId: 4, qNum: '⑤', sonNum: 1, momNum: 20, answer: 1, pass: false },
+  { qId: 5, qNum: '⑥', sonNum: 1, momNum: 25, answer: 1, pass: false },
+  { qId: 6, qNum: '⑦', sonNum: 1, momNum: 40, answer: 2, pass: false },
+  { qId: 7, qNum: '⑧', sonNum: 1, momNum: 125, answer: 2, pass: false },
+  { qId: 8, qNum: '⑨', sonNum: 1, momNum: 250, answer: 2, pass: false },
 ];

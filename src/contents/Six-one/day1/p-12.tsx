@@ -28,6 +28,7 @@ export default function Page12() {
     <Layout
       title="자연수 나눗셈의 몫과 분수"
       question="나눗셈의 몫을 분수로 나타내세요."
+      day="day1"
     >
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
@@ -61,7 +62,7 @@ export default function Page12() {
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#FF7613"
+          $color="#FF6291"
           isSolved={isSolved}
         />
       </Box>

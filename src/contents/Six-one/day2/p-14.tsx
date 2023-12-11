@@ -24,7 +24,7 @@ export default function Page14() {
     setIsSolved(prev => !prev);
   };
   return (
-    <Layout title="(분수)÷(자연수)" question={`계산을 하세요.`}>
+    <Layout title="(분수)÷(자연수)" question={`계산을 하세요.`} day="day2">
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
           sx={{
@@ -57,7 +57,7 @@ export default function Page14() {
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#FF7613"
+          $color="#6297FF"
           isSolved={isSolved}
         />
       </Box>
