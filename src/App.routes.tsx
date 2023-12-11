@@ -26,7 +26,7 @@ const routes = createEliceExtRoutes([
   },
   {
     path: '/sixth',
-    component: import('./contents/six'),
+    component: import('./contents/six'),
     children: SixExample,
   },
 ]);
