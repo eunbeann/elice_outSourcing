@@ -6,13 +6,14 @@ import inCorrect from 'src/contents/assets/icon/inCorrect.png';
 export default function CorrectChecker({ isCorrect }: { isCorrect: boolean }) {
   return (
     <Avatar
+      variant="square"
       src={isCorrect ? correct : inCorrect}
       alt="Icon"
       style={{
         position: 'absolute',
         marginLeft: '-1rem',
         zIndex: 1,
-        width: '3rem',
+        width: '3.2rem',
         height: '3rem',
       }}
     />
