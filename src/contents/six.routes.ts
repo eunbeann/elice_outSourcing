@@ -40,40 +40,8 @@ export default createEliceExtRoutes([
     path: 'quiz1-2-3',
     component: import('./Six-one/day2/p-15'),
   },
-  // {
-  //   path: 'day3-p16',
-  //   component: import('./day3/p-16'),
-  // },
-  // {
-  //   path: 'day3-p17',
-  //   component: import('./day3/p-17'),
-  // },
-  // {
-  //   path: 'day3-p18',
-  //   component: import('./day3/p-18'),
-  // },
-  // {
-  //   path: 'day4-p19',
-  //   component: import('./day4/p-19'),
-  // },
-  // {
-  //   path: 'day4-p20',
-  //   component: import('./day4/p-20'),
-  // },
-  // {
-  //   path: 'day4-p21',
-  //   component: import('./day4/p-21'),
-  // },
-  // {
-  //   path: 'day5-p22',
-  //   component: import('./day5/p-22'),
-  // },
-  // {
-  //   path: 'day5-p23',
-  //   component: import('./day5/p-23'),
-  // },
-  // {
-  //   path: 'day5-p24',
-  //   component: import('./day5/p-24'),
-  // },
+  {
+    path: 'quiz3-1-1',
+    component: import('./Six-three/day1/P311'),
+  },
 ]);

@@ -9,7 +9,14 @@ interface NumberInputProps {
 
 export function NumberInput(props: NumberInputProps) {
   const { value, onChange } = props;
-  return <NumBox type="text" value={value} onChange={onChange} />;
+  return (
+    <NumBox
+      type="number"
+      inputMode="numeric"
+      value={value}
+      onChange={onChange}
+    />
+  );
 }
 
 interface DivisionInputProps {
@@ -36,6 +43,12 @@ const NumBox = styled.input`
   border-radius: 0.5rem;
   width: 2rem;
   height: 2rem;
+  font-size: 1.2rem;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 `;
 
 const Divider = styled.div`
