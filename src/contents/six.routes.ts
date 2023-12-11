@@ -64,4 +64,8 @@ export default createEliceExtRoutes([
     path: 'quiz3-5-2',
     component: import('./Six-three/day5/P352'),
   },
+  {
+    path: 'quiz3-5-3',
+    component: import('./Six-three/day5/P353'),
+  },
 ]);
