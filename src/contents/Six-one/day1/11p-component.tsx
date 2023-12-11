@@ -14,8 +14,8 @@ interface Component11PageProps {
     qId: number;
     pass: boolean;
     qNum: string;
-    lNum: number;
-    rNum: number;
+    orangeNum: number;
+    peopleNum: number;
   };
   isSolved: boolean;
   handleCorrectChange: (qId: number, pass: boolean) => void;
@@ -23,7 +23,7 @@ interface Component11PageProps {
 
 export default function Component11Page(props: Component11PageProps) {
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, pass, qNum, lNum, rNum } = problem;
+  const { qId, pass, qNum, orangeNum, peopleNum } = problem;
 
   const [son, setSon] = useState(0);
   const [mother, setMother] = useState(0);
@@ -33,13 +33,10 @@ export default function Component11Page(props: Component11PageProps) {
 
   useEffect(() => {
     if (
-      // TODO 조건문 수정
-      son === lNum &&
-      lNum === num1 &&
-      son === num2 &&
-      mother === rNum &&
-      rNum === num1 &&
-      mother === num2
+      mother === num2 &&
+      son === num1 &&
+      orangeNum === num1 &&
+      peopleNum === num2
     ) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
@@ -57,9 +54,9 @@ export default function Component11Page(props: Component11PageProps) {
           <Typography> {qNum} </Typography>
           <Box display="flex" margin="1rem 0.5rem" alignItems="center">
             <img src={orange} alt="icon" />
-            <Typography marginRight="0.5rem"> {lNum}개</Typography>
+            <Typography marginRight="0.5rem"> {orangeNum}개</Typography>
             <img src={person} alt="icon" />
-            <Typography marginX="0.5rem"> {rNum}명 </Typography>
+            <Typography marginX="0.5rem"> {peopleNum}명 </Typography>
           </Box>
         </Box>
 

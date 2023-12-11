@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Box } from '@mui/material';
 
 import type { ReactNode } from 'react';
 
@@ -9,7 +8,10 @@ interface LayoutProps {
   children: ReactNode;
   title: string;
   question: string;
+  day?: dayType;
 }
+
+type dayType = 'day1' | 'day2' | 'day3' | 'day4' | 'day5';
 
 export default function Layout(props: LayoutProps) {
   const { children, title, question } = props;
@@ -57,6 +59,7 @@ const TitleBox = styled.header`
 `;
 
 const QuestionBox = styled.div`
+  white-space: break-spaces;
   top: 12%;
   position: absolute;
   width: 42.5rem;
@@ -82,7 +85,7 @@ const QuestionBox = styled.div`
 `;
 
 const ChildrenBox = styled.div`
-  padding: 2rem;
+  padding: 1rem;
   bottom: 4%;
   left: 14%;
   position: absolute;
@@ -93,3 +96,50 @@ const ChildrenBox = styled.div`
   border-radius: 0.75rem;
   overflow: auto;
 `;
+
+// // inprogress
+
+// export default function Layout(props: LayoutProps) {
+//   const getStylesForDay = (day: dayType) => {
+//     let mainColor, subColor, bgImage;
+
+//     switch (day) {
+//       case 'day1':
+//         mainColor = '#FF6291'; // 빨간색
+//         subColor = '#FFD0DE'; // 초록색
+//         bgImage = 'day1.jpg'; // day1에 대한 배경 이미지
+//         break;
+
+//       case 'day2':
+//         mainColor = '#0000ff'; // 파란색
+//         subColor = '#ffff00'; // 노란색
+//         bgImage = 'day2.jpg'; // day2에 대한 배경 이미지
+//         break;
+
+//       case 'day3':
+//         mainColor = '#800080'; // 보라색
+//         subColor = '#ff4500'; // 주황색
+//         bgImage = 'day3.jpg'; // day3에 대한 배경 이미지
+//         break;
+
+//       case 'day4':
+//         mainColor = '#00ffff'; // 청록색
+//         subColor = '#ffa500'; // 주황색
+//         bgImage = 'day4.jpg'; // day4에 대한 배경 이미지
+//         break;
+
+//       case 'day5':
+//         mainColor = '#800000'; // 갈색
+//         subColor = '#008080'; // 청록색
+//         bgImage = 'day5.jpg'; // day5에 대한 배경 이미지
+//         break;
+
+//       default:
+//         mainColor = '#000000'; // 기본값: 검은색
+//         subColor = '#ffffff'; // 기본값: 흰색
+//         bgImage = 'default.jpg'; // 기본값: 기본 배경 이미지
+//         break;
+//     }
+
+//     return { mainColor, subColor, bgImage };
+//   };

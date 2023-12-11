@@ -2,18 +2,12 @@ import React from 'react';
 import { Image, Numbers } from '@mui/icons-material';
 import { Box, ImageList, ImageListItem, Typography } from '@mui/material';
 
+import ExampleBox from 'src/contents/common/example-box';
+
 export default function ComponentExample() {
   // TODO 스타일 먹이기
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      borderRadius="30px"
-      border="solid 1px grey"
-      margin="20px"
-      padding="10px"
-      gap="5px"
-    >
+    <ExampleBox>
       <Typography>두 가지 상황의 나눗셈을 비교해 봅시다.</Typography>
       <Box>
         <Typography>
@@ -55,7 +49,7 @@ export default function ComponentExample() {
       </Box>
       <Box>
         <Typography>
-          <span style={{ color: 'red' }}>나눗셈의 몫</span>은 분수에서{' '}
+          <span style={{ color: 'red' }}>나눗셈의 몫</span>은 분수에서
           <span style={{ color: 'red' }}>
             분자를 분모만큼으로 똑같이 나눈 것
           </span>
@@ -64,6 +58,6 @@ export default function ComponentExample() {
       </Box>
       {/* TODO 이미지 전달받으면 수정 */}
       <Numbers />
-    </Box>
+    </ExampleBox>
   );
 }

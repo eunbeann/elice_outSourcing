@@ -9,7 +9,6 @@
  * please refer to the project README.md.
  * ======================================================== */
 
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import styled from '@emotion/styled';
 
