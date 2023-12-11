@@ -41,6 +41,7 @@ export default function P323() {
   };
   return (
     <Layout
+      day="day2"
       title="비"
       question={'그림을 보고 전체에 대한 색칠된 부분의 비를 구하세요.'}
     >

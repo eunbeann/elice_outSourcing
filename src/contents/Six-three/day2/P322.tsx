@@ -29,7 +29,7 @@ export default function P322() {
     setIsSolved(prev => !prev);
   };
   return (
-    <Layout title="비" question={'□에 알맞은 수를 써넣으세요.'}>
+    <Layout day="day2" title="비" question={'□에 알맞은 수를 써넣으세요.'}>
       <Box display="flex" flexWrap="wrap" justifyContent="space-around">
         {problems.map(problem => (
           <Box

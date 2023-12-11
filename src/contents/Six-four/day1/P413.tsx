@@ -25,6 +25,7 @@ export default function P413() {
   };
   return (
     <Layout
+      day="day1"
       title="비와 비례식"
       question={'문제를 읽고 빈 곳에 알맞은 수를 써넣으세요.'}
     >
@@ -52,7 +53,7 @@ export default function P413() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#FF6291"
         isSolved={isSolved}
       />
     </Layout>

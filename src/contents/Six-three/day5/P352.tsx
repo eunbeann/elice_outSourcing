@@ -37,6 +37,7 @@ export default function P352() {
   };
   return (
     <Layout
+      day="day5"
       title="여러 가지 비로 나타내기"
       question={
         '아래 모양은 위 모양의 조각들을 몇 조각씩 똑같이 나눈 것입니다. 전체에 대한 색칠된 부분의 비를 구하세요.'
@@ -75,7 +76,7 @@ export default function P352() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#00B76A"
         isSolved={isSolved}
       />
     </Layout>

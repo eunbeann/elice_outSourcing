@@ -9,22 +9,8 @@
  * please refer to the project README.md.
  * ======================================================== */
 
-import React from 'react';
 import { Outlet } from 'react-router-dom';
-import styled from '@emotion/styled';
-
-import bgImage from '../assets/image/day1-bg.png';
 
 export default function Example() {
-  return (
-    <BgImg url={bgImage}>
-      <Outlet />
-    </BgImg>
-  );
+  return <Outlet />;
 }
-
-const BgImg = styled.div<{ url: string }>`
-  background-image: url(${props => props.url});
-  background-size: cover;
-  background-position: center;
-`;

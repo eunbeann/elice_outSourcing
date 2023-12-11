@@ -30,6 +30,7 @@ export default function Page10() {
       question={
         '사과를 똑같이 나누어 먹을 때 \n 한 사람이 먹는 사과의 양을 분수로 나타내세요.'
       }
+      day="day1"
     >
       <ComponentExample />
       <Box display="flex" justifyContent="space-around">
@@ -57,7 +58,7 @@ export default function Page10() {
       </Box>
       <SubmitButton
         onClick={checkAnswer}
-        $color="#FF7613"
+        $color="#FF6291"
         isSolved={isSolved}
       />
     </Layout>

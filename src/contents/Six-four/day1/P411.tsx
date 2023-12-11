@@ -27,6 +27,7 @@ export default function P411() {
   };
   return (
     <Layout
+      day="day1"
       title="비와 비례식"
       question={'두 비율로 비례식을 세웠습니다. □에 알맞은 수를 써넣으세요.'}
     >
@@ -65,7 +66,7 @@ export default function P411() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#FF6291"
         isSolved={isSolved}
       />
     </Layout>

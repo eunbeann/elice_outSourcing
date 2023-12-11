@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 
 interface NumberInputProps {
-  value: string | number;
+  value: string | number | undefined;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 

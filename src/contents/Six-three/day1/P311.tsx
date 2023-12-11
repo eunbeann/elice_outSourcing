@@ -25,6 +25,7 @@ export default function P311() {
   };
   return (
     <Layout
+      day="day1"
       title="두 수의 비교"
       question={'문제를 읽고 빈 곳에 알맞은 수를 써넣으세요.'}
     >
@@ -52,7 +53,7 @@ export default function P311() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#FF7613"
+        $color="#FF6291"
         isSolved={isSolved}
       />
     </Layout>

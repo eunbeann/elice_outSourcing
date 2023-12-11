@@ -30,6 +30,7 @@ export default function P351() {
   };
   return (
     <Layout
+      day="day5"
       title="여러 가지 비로 나타내기"
       question={'개수의 비와 묶음의 수의 비를 각각 구하세요.'}
     >
@@ -57,7 +58,7 @@ export default function P351() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#00B76A"
         isSolved={isSolved}
       />
     </Layout>

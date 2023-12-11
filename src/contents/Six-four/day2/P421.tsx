@@ -27,6 +27,7 @@ export default function P421() {
   };
   return (
     <Layout
+      day="day2"
       title="간단한 자연수의 비로 나타내기"
       question={
         '가장 간단한 자연수의 비로 나타내는 과정입니다. 빈 곳에 알맞은 수를 써넣으세요.'

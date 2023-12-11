@@ -31,6 +31,7 @@ export default function P353() {
   };
   return (
     <Layout
+      day="day5"
       title="여러 가지 비로 나타내기"
       question={
         '주머니에 그 주머니의 색깔과 같은 사탕을 담았습니다. 주머니의 수의 비와 사탕의 수의 비를 각각 구하세요.'
@@ -60,7 +61,7 @@ export default function P353() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#00B76A"
         isSolved={isSolved}
       />
     </Layout>

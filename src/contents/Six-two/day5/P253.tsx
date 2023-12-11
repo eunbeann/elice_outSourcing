@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import Component13Page from './13p-component';
-import Example2Day from './day2-ex';
-export default function Page13() {
+import C253 from './C253';
+
+export default function P253() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
@@ -23,20 +23,20 @@ export default function Page13() {
     //TODO 점수 보내는 api 추가
     setIsSolved(prev => !prev);
   };
-
   return (
     <Layout
-      title="(분수)÷(자연수)"
-      question={`□에 알맞은 수를 써넣어 식을 계산하세요.`}
-      day="day2"
+      title="연산 퍼즐"
+      question={'문제를 읽고 알맞은 답을 써 보세요.'}
+      day="day5"
     >
-      <Example2Day />
+      <Typography textAlign="right" color="grey">
+        * 분수는 1/4와 같이 입력합니다.
+      </Typography>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
           sx={{
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'center',
           }}
         >
           {divisionProblems.map(problem => (
@@ -44,14 +44,10 @@ export default function Page13() {
               key={problem.qNum}
               sx={{
                 maxHeight: '200px',
-                overflowY: 'auto',
-                display: 'flex',
-                width: 'calc(40% - 0.5rem)',
-                justifyContent: 'center',
                 margin: '0.5rem',
               }}
             >
-              <Component13Page
+              <C253
                 problem={problem}
                 isSolved={isSolved}
                 handleCorrectChange={(qId, pass) =>
@@ -63,7 +59,7 @@ export default function Page13() {
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#6297FF"
+          $color="#00B76A"
           isSolved={isSolved}
         />
       </Box>
@@ -75,81 +71,33 @@ const divisionProblems = [
   {
     qId: 0,
     qNum: '①',
-    son: 6,
-    mom1: 7,
-    num: 4,
-    mom2: 14,
-    son2: 4,
+    q: '3 m의 줄을 8도막으로 똑같이 나누면 한 도막은 몇 m가 되는지 소수로 나타내세요.',
     pass: false,
+    unit: 'm',
+    answer: 0.375,
   },
   {
     qId: 1,
     qNum: '②',
-    son: 3,
-    mom1: 4,
-    num: 2,
-    mom2: 8,
-    son2: 2,
+    q: '수연이가 줄넘기를 20개 하는 동안 시간을 재었더니 17초가 걸렸습니다. 줄을 한 번 넘는 데 몇 초가 걸린 꼴인지 소수로 나타내세요.',
+    answer: 0.85,
     pass: false,
+    unit: '초',
   },
   {
     qId: 2,
     qNum: '③',
-    son: 5,
-    mom1: 8,
-    num: 4,
-    mom2: 32,
-    son2: 4,
+    q: '희성이가1L짜리오렌지주스를사와서14을마셨습니다.남은주스는몇L인지소수로 나타내세요.',
+    answer: 0.75,
     pass: false,
+    unit: 'L',
   },
   {
     qId: 3,
     qNum: '④',
-    son: 8,
-    mom1: 9,
-    num: 3,
-    mom2: 27,
-    son2: 3,
+    q: '1 km 거리를 자전거를 타고 가다가 표지판을 보니 목적지까지 남은 거리가 0.125 km입니 다. 지금까지 온 거리는 전체 거리의 몇 분의 몇인지 분수로 나타내세요',
+    answer: '7/8',
     pass: false,
-  },
-  {
-    qId: 4,
-    qNum: '⑤',
-    son: 6,
-    mom1: 5,
-    num: 9,
-    mom2: 15,
-    son2: 9,
-    pass: false,
-  },
-  {
-    qId: 5,
-    qNum: '⑥',
-    son: 10,
-    mom1: 14,
-    num: 4,
-    mom2: 20,
-    son2: 4,
-    pass: false,
-  },
-  {
-    qId: 6,
-    qNum: '⑦',
-    son: 8,
-    mom1: 15,
-    num: 6,
-    mom2: 16,
-    son2: 6,
-    pass: false,
-  },
-  {
-    qId: 7,
-    qNum: '⑧',
-    son: 7,
-    mom1: 15,
-    num: 10,
-    mom2: 14,
-    son2: 10,
-    pass: false,
+    unit: '',
   },
 ];
