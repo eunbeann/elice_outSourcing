@@ -53,7 +53,7 @@ export default function Component10Page(props: Component10PageProps) {
 
   return (
     <Box>
-      <Box display="flex" margin="1rem 2rem">
+      <Box display="flex" margin="1rem 2rem" position="relative">
         {isSolved && <CorrectChecker isCorrect={isCorrect} />}
         <Typography marginRight="1rem">{qNum}</Typography>
         {renderApples()}

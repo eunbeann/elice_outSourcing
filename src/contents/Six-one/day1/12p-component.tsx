@@ -35,7 +35,7 @@ export default function Component12Page(props: Component12PageProps) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" alignItems="center">
+    <Box display="flex" gap="0.2rem" alignItems="center" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography>{qNum}</Typography>
       <Typography>

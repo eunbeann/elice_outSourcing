@@ -38,6 +38,7 @@ export default function C253(props: C253Props) {
       gap="0.2rem"
       alignContent="start"
       marginTop="1rem"
+      position="relative"
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Box display="flex" gap="1rem">

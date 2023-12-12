@@ -48,7 +48,13 @@ export default function Component11Page(props: Component11PageProps) {
 
   return (
     <>
-      <Box display="flex" flexDirection="column" gap="0.2rem" alignItems="left">
+      <Box
+        display="flex"
+        flexDirection="column"
+        gap="0.2rem"
+        alignItems="left"
+        position="relative"
+      >
         {isSolved && <CorrectChecker isCorrect={isCorrect} />}
         <Box display="flex">
           <Typography> {qNum} </Typography>
