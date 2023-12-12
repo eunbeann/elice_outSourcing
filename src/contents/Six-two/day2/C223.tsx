@@ -34,7 +34,7 @@ export default function C223(props: C223Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" margin="2rem">
+    <Box display="flex" gap="0.2rem" margin="2rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography> {qNum} </Typography>
       <Box display="flex" alignItems="center">

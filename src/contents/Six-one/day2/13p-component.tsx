@@ -45,7 +45,13 @@ export default function Component13Page(props: Component13PageProps) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" alignItems="center" margin="1rem">
+    <Box
+      display="flex"
+      gap="0.2rem"
+      alignItems="center"
+      margin="1rem"
+      position="relative"
+    >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography marginRight="0.5rem">{qNum}</Typography>
       <VisualFraction momNum={mom1} sonNum={son} />

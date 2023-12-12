@@ -33,7 +33,7 @@ export default function C212(props: C212Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" paddingY="1rem">
+    <Box display="flex" gap="0.2rem" paddingY="1rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography> {qNum} </Typography>
       <Box display="flex" alignItems="center">

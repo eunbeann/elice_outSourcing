@@ -3,7 +3,7 @@ import { Box, TextField, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import VisualFraction from 'src/contents/common/visual-fraction';
-import { AnswerInput } from '../day2/C223';
+import { AnswerInput } from './C223';
 interface C222Props {
   problem: {
     qId: number;
@@ -33,7 +33,7 @@ export default function C222(props: C222Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" margin="2rem">
+    <Box display="flex" gap="0.2rem" margin="2rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography> {qNum} </Typography>
       <Box display="flex" alignItems="center">

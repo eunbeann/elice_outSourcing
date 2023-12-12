@@ -33,7 +33,13 @@ export default function C252(props: C253Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" alignContent="start" margin="2rem">
+    <Box
+      display="flex"
+      gap="0.2rem"
+      alignContent="start"
+      margin="2rem"
+      position="relative"
+    >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography> {qNum}</Typography>
       <VisualFraction momNum={momNum} sonNum={sonNum} />
