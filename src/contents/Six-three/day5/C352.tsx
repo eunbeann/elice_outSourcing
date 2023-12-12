@@ -34,7 +34,7 @@ export default function C352(props: C352Props) {
   return (
     <Box>
       <Box display="flex" alignItems="start">
-        <Box display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={400} marginRight="1rem">
             {qNum}

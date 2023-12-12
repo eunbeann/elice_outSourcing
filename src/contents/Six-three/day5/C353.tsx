@@ -43,7 +43,7 @@ export default function C353(props: C353Props) {
   return (
     <Box>
       <Box display="flex" alignItems="start">
-        <Box display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={400} marginRight="1rem">
             {qNum}

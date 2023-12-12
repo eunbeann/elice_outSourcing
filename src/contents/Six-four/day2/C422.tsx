@@ -5,20 +5,21 @@ import { Avatar, Box, Typography } from '@mui/material';
 import CorrectChecker from 'src/contents/common/correct-checker';
 import { NumberInput } from 'src/contents/common/number-box';
 import { NumberUnderBar } from 'src/contents/common/number-underbar';
+import VisualFraction from 'src/contents/common/visual-fraction';
 
-import type { ProblemProp } from './P421';
+import type { ProblemProp } from './P422';
 
 import ArrowRight from '../../assets/icon/arrowRight.svg';
 
-interface C421Props {
+interface C422Props {
   problem: ProblemProp;
   isSolved: boolean;
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function C421(props: C421Props) {
+export default function C422(props: C422Props) {
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, pass, qNum, numList, answer } = problem;
+  const { qId, pass, qNum, numList1, numList2, answer } = problem;
 
   const [isCorrect, setIsCorrect] = useState(false);
 
@@ -46,7 +47,7 @@ export default function C421(props: C421Props) {
 
   return (
     <Box display="flex" mb="5rem">
-      <Box display="flex" alignItems="start" gap="1rem">
+      <Box display="flex" alignItems="center" gap="1rem">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={400}>
@@ -55,7 +56,7 @@ export default function C421(props: C421Props) {
         </Box>
         <Box display="flex" gap="0.3rem" alignItems="center">
           <Typography variant="h5" fontWeight={400}>
-            {numList[0]}와 {numList[1]}의 최대공약수:
+            {numList1[0]}와 {numList1[1]}의 최대공약수:
           </Typography>
           <NumberUnderBar
             value={Number(input1)}
@@ -72,8 +73,16 @@ export default function C421(props: C421Props) {
               margin: '0rem 0.5rem',
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
-            {numList[0]} : {numList[1]} = {numList[0]} ÷
+          <Typography
+            variant="h5"
+            fontWeight={400}
+            display="flex"
+            alignItems="center"
+            gap="0.5rem"
+          >
+            <VisualFraction momNum={numList1[0]} sonNum={numList2[0]} />:
+            <VisualFraction momNum={numList1[1]} sonNum={numList2[1]} /> ={' ('}
+            <VisualFraction momNum={numList1[0]} sonNum={numList2[0]} /> ×
           </Typography>
           <NumberInput
             value={Number(input2)}
@@ -81,8 +90,16 @@ export default function C421(props: C421Props) {
               setInput2(Number(e.target.value));
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
-            : {numList[1]} ÷
+
+          <Typography
+            variant="h5"
+            fontWeight={400}
+            display="flex"
+            alignItems="center"
+            gap="0.5rem"
+          >
+            {') : ('}
+            <VisualFraction momNum={numList1[1]} sonNum={numList2[1]} /> ×
           </Typography>
           <NumberInput
             value={Number(input3)}
@@ -91,7 +108,7 @@ export default function C421(props: C421Props) {
             }}
           />
           <Typography variant="h5" fontWeight={400}>
-            =
+            {')='}
           </Typography>
           <NumberInput
             value={Number(input4)}

@@ -3,11 +3,11 @@ import { Avatar, Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C421 from './C421';
+import C422 from './C422';
 
-import ImgExample from '../../assets/image/P421/ImgExample.png';
+import ImgExample from '../../assets/image/P422/ImgExample.png';
 
-export default function P421() {
+export default function P422() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     problems.map(problem => problem.pass)
@@ -30,7 +30,7 @@ export default function P421() {
       day="day2"
       title="간단한 자연수의 비로 나타내기"
       question={
-        '가장 간단한 자연수의 비로 나타내는 과정입니다. 빈 곳에 알맞은 수를 써넣으세요.'
+        '자연수의 비로 나타내는 과정입니다. 빈 곳에 알맞은 수를 써넣으세요.'
       }
     >
       <Box width="100%" display="flex" justifyContent="center">
@@ -55,7 +55,7 @@ export default function P421() {
               margin: '0.5rem',
             }}
           >
-            <C421
+            <C422
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
@@ -79,7 +79,8 @@ export interface ProblemProp {
   qId: number;
   qNum: string;
   pass: boolean;
-  numList: number[];
+  numList1: number[];
+  numList2: number[];
   answer: number[];
 }
 
@@ -88,42 +89,48 @@ const problems: ProblemProp[] = [
     qId: 0,
     qNum: '①',
     pass: false,
-    numList: [12, 15],
-    answer: [3, 4, 5],
+    numList1: [8, 6],
+    numList2: [5, 7],
+    answer: [24, 15, 28],
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
-    numList: [32, 24],
-    answer: [8, 4, 3],
+    numList1: [4, 5],
+    numList2: [3, 4],
+    answer: [20, 15, 16],
   },
   {
     qId: 2,
     qNum: '③',
     pass: false,
-    numList: [80, 48],
-    answer: [16, 5, 3],
+    numList1: [6, 9],
+    numList2: [7, 5],
+    answer: [18, 21, 10],
   },
   {
     qId: 3,
     qNum: '④',
     pass: false,
-    numList: [90, 36],
-    answer: [18, 5, 2],
+    numList1: [4, 6],
+    numList2: [3, 5],
+    answer: [12, 9, 10],
   },
   {
     qId: 4,
     qNum: '⑤',
     pass: false,
-    numList: [33, 44],
-    answer: [11, 3, 4],
+    numList1: [11, 3],
+    numList2: [2, 2],
+    answer: [33, 6, 22],
   },
   {
     qId: 5,
     qNum: '⑥',
     pass: false,
-    numList: [18, 81],
-    answer: [9, 2, 9],
+    numList1: [9, 15],
+    numList2: [5, 2],
+    answer: [45, 25, 6],
   },
 ];

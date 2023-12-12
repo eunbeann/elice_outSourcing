@@ -13,9 +13,13 @@ export default function VisualFraction(props: DivisionTypoProps) {
   const { momNum, sonNum, width } = props;
   return (
     <FractionContainer>
-      <Typography fontSize="18px">{sonNum}</Typography>
+      <Typography variant="h5" fontWeight={400}>
+        {sonNum}
+      </Typography>
       <Divider $width={width} />
-      <Typography fontSize="18px">{momNum}</Typography>
+      <Typography variant="h5" fontWeight={400}>
+        {momNum}
+      </Typography>
     </FractionContainer>
   );
 }

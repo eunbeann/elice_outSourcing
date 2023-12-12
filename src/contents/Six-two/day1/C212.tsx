@@ -4,6 +4,7 @@ import { Box, TextField, Typography } from '@mui/material';
 import CorrectChecker from 'src/contents/common/correct-checker';
 import VisualFraction from 'src/contents/common/visual-fraction';
 import { AnswerInput } from '../day2/C223';
+
 interface C212Props {
   problem: {
     qId: number;

@@ -33,7 +33,7 @@ export default function C323(props: C323Props) {
   return (
     <Box>
       <Box display="flex" alignItems="start" mb="4rem">
-        <Box display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={400} marginRight="1rem">
             {qNum}

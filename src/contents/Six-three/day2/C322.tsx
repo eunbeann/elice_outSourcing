@@ -52,7 +52,7 @@ export default function C322(props: C321Props) {
   return (
     <Box>
       <Box display="flex" alignItems="start" mr="4rem">
-        <Box display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={400} marginRight="1rem">
             {qNum}

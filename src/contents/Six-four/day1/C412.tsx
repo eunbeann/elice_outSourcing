@@ -38,7 +38,7 @@ export default function C412(props: C412Props) {
   return (
     <Box>
       <Box display="flex" alignItems="start" marginRight="3rem">
-        <Box display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={400} marginRight="1rem">
             {qNum}
