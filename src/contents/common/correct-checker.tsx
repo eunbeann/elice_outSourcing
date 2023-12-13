@@ -10,7 +10,7 @@ export default function CorrectChecker({ isCorrect }: { isCorrect: boolean }) {
       alt="Icon"
       style={{
         position: 'absolute',
-        marginTop: '-1rem',
+        marginTop: '-0.6rem',
         marginLeft: '-1rem',
         zIndex: 1,
         width: '3rem',
