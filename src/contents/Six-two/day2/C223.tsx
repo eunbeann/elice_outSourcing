@@ -45,6 +45,7 @@ export default function C223(props: C223Props) {
           value={enter}
           onChange={e => setEnter(Number(e.target.value))}
           step="any"
+          disabled={isSolved}
         />
       </Box>
     </Box>

@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import Component13Page from './13p-component';
+import Component13Page from './C121';
 import Example2Day from './day2-ex';
 export default function Page13() {
   const [isSolved, setIsSolved] = useState(false);

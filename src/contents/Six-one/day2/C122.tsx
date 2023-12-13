@@ -55,6 +55,7 @@ export default function Component14Page(props: Component14PageProps) {
         mother={answerMom}
         onChangeMother={e => setAnswerMom(Number(e.target.value))}
         onChangeSon={e => setAnswerSon(Number(e.target.value))}
+        disabled={isSolved}
       />
     </Box>
   );

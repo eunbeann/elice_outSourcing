@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import Component11Page from './11p-component';
+import C113 from './C112';
 
-export default function Page11() {
+export default function P112() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
@@ -49,7 +49,7 @@ export default function Page11() {
                 margin: '0.5rem',
               }}
             >
-              <Component11Page
+              <C113
                 problem={problem}
                 isSolved={isSolved}
                 handleCorrectChange={(qId, pass) =>

@@ -51,6 +51,7 @@ export default function C253(props: C253Props) {
           value={enter}
           onChange={e => setEnter(e.target.value)}
           style={{ width: '3rem', textAlign: 'center' }}
+          disabled={isSolved}
         />
         <Typography> {unit} </Typography>
       </Box>

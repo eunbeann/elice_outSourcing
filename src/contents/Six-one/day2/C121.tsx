@@ -64,6 +64,7 @@ export default function Component13Page(props: Component13PageProps) {
             <NumberInput
               value={daughter1}
               onChange={e => setDaughter1(Number(e.target.value))}
+              disabled={isSolved}
             />
             <Typography fontSize="20px" marginLeft="0.2rem">
               ÷ {son2}
@@ -77,6 +78,7 @@ export default function Component13Page(props: Component13PageProps) {
         mother={mother}
         onChangeMother={e => setMother(Number(e.target.value))}
         onChangeSon={e => setDaughter2(Number(e.target.value))}
+        disabled={isSolved}
       />
     </Box>
   );

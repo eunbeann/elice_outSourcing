@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import Component14Page from './14p-component';
+import Component14Page from './C122';
 
 export default function Page14() {
   const [isSolved, setIsSolved] = useState(false);

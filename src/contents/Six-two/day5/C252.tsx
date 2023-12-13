@@ -47,6 +47,7 @@ export default function C252(props: C253Props) {
         value={enter}
         onChange={e => setEnter(Number(e.target.value))}
         style={{ width: '2.5rem', textAlign: 'center', margin: '1.2rem' }}
+        disabled={isSolved}
       />
     </Box>
   );
