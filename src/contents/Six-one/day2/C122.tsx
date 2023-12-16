@@ -5,7 +5,7 @@ import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput, { NumberInput } from 'src/contents/common/number-box';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
-interface Component13PageProps {
+interface C122Props {
   problem: {
     qId: number;
     qNum: string;
@@ -20,13 +20,13 @@ interface Component13PageProps {
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function Component13Page(props: Component13PageProps) {
+export default function C122(props: C122Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, pass, qNum, son, mom1, num, mom2, son2 } = problem;
 
-  const [daughter1, setDaughter1] = useState(0);
-  const [daughter2, setDaughter2] = useState(0);
-  const [mother, setMother] = useState(0);
+  const [daughter1, setDaughter1] = useState<string | number>('');
+  const [daughter2, setDaughter2] = useState<string | number>('');
+  const [mother, setMother] = useState<string | number>('');
   const [isCorrect, setIsCorrect] = useState(false);
 
   useEffect(() => {

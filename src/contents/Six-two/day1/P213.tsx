@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C213 from './C213';
+import C212 from './C212';
 
 export default function P213() {
   const [isSolved, setIsSolved] = useState(false);
@@ -50,7 +50,7 @@ export default function P213() {
                 margin: '0.5rem',
               }}
             >
-              <C213
+              <C212
                 problem={problem}
                 isSolved={isSolved}
                 handleCorrectChange={(qId, pass) =>

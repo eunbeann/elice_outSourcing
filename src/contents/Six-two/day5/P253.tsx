@@ -29,39 +29,41 @@ export default function P253() {
       question={'문제를 읽고 알맞은 답을 써 보세요.'}
       day="day5"
     >
-      <Typography textAlign="right" color="grey">
-        * 분수는 1/4와 같이 입력합니다.
-      </Typography>
-      <Box display="flex" flexDirection="column" alignItems="center">
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-          }}
-        >
-          {divisionProblems.map(problem => (
-            <Box
-              key={problem.qNum}
-              sx={{
-                maxHeight: '200px',
-                margin: '0.5rem',
-              }}
-            >
-              <C253
-                problem={problem}
-                isSolved={isSolved}
-                handleCorrectChange={(qId, pass) =>
-                  handleCorrectChange(qId, pass)
-                }
-              />
-            </Box>
-          ))}
+      <Box>
+        <Typography textAlign="right" color="grey">
+          * 분수는 1/4와 같이 입력합니다.
+        </Typography>
+        <Box display="flex" flexDirection="column" alignItems="center">
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+            }}
+          >
+            {divisionProblems.map(problem => (
+              <Box
+                key={problem.qNum}
+                sx={{
+                  maxHeight: '200px',
+                  margin: '0.5rem',
+                }}
+              >
+                <C253
+                  problem={problem}
+                  isSolved={isSolved}
+                  handleCorrectChange={(qId, pass) =>
+                    handleCorrectChange(qId, pass)
+                  }
+                />
+              </Box>
+            ))}
+          </Box>
+          <SubmitButton
+            onClick={checkAnswer}
+            $color="#00B76A"
+            isSolved={isSolved}
+          />
         </Box>
-        <SubmitButton
-          onClick={checkAnswer}
-          $color="#00B76A"
-          isSolved={isSolved}
-        />
       </Box>
     </Layout>
   );
