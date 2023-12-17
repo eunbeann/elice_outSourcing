@@ -5,7 +5,7 @@ import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C242 from './C242';
 
-export default function P242() {
+export default function P243() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
@@ -71,16 +71,16 @@ export default function P242() {
 }
 
 const divisionProblems = [
-  { qId: 0, qNum: '①', sonNum: 2, momNum: 5, answer: 0.4, pass: false },
-  { qId: 1, qNum: '②', sonNum: 9, momNum: 10, answer: 0.9, pass: false },
-  { qId: 2, qNum: '③', sonNum: 17, momNum: 50, answer: 0.34, pass: false },
-  { qId: 3, qNum: '④', sonNum: 121, momNum: 25, answer: 4.84, pass: false },
-  { qId: 4, qNum: '⑤', sonNum: 7, momNum: 4, answer: 1.75, pass: false },
-  { qId: 5, qNum: '⑥', sonNum: 7, momNum: 2, answer: 3.5, pass: false },
-  { qId: 6, qNum: '⑦', sonNum: 1233, momNum: 200, answer: 6.165, pass: false },
-  { qId: 7, qNum: '⑧', sonNum: 5, momNum: 8, answer: 0.625, pass: false },
-  { qId: 8, qNum: '⑨', sonNum: 159, momNum: 50, answer: 3.18, pass: false },
-  { qId: 9, qNum: '⑩', sonNum: 2819, momNum: 40, answer: 7.475, pass: false },
-  { qId: 10, qNum: '⑪', sonNum: 67, momNum: 500, answer: 8.285, pass: false },
-  { qId: 11, qNum: '⑫', sonNum: 1367, momNum: 250, answer: 5.468, pass: false },
+  { qId: 0, qNum: '①', sonNum: 4, momNum: 5, answer: 0.8, pass: false },
+  { qId: 1, qNum: '②', sonNum: 89, momNum: 50, answer: 1.78, pass: false },
+  { qId: 2, qNum: '③', sonNum: 51, momNum: 20, answer: 2.55, pass: false },
+  { qId: 3, qNum: '④', sonNum: 27, momNum: 8, answer: 3.375, pass: false },
+  { qId: 4, qNum: '⑤', sonNum: 212, momNum: 25, answer: 8.48, pass: false },
+  { qId: 5, qNum: '⑥', sonNum: 1621, momNum: 250, answer: 6.484, pass: false },
+  { qId: 6, qNum: '⑦', sonNum: 1063, momNum: 200, answer: 5.315, pass: false },
+  { qId: 7, qNum: '⑧', sonNum: 381, momNum: 500, answer: 0.762, pass: false },
+  { qId: 8, qNum: '⑨', sonNum: 1137, momNum: 125, answer: 9.096, pass: false },
+  { qId: 9, qNum: '⑩', sonNum: 127, momNum: 50, answer: 2.54, pass: false },
+  { qId: 10, qNum: '⑪', sonNum: 3673, momNum: 500, answer: 7.346, pass: false },
+  { qId: 11, qNum: '⑫', sonNum: 1367, momNum: 619, answer: 4.952, pass: false },
 ];
