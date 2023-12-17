@@ -34,7 +34,7 @@ export const setDayStyles = (day: dayType): DayStyles => {
     case 'day3':
       mainColor = '#FF7613';
       subColor = '#FFD6B8';
-      bgColor = '#FFEFF4';
+      bgColor = '#FFF1E7';
       bgImage = bgDay3Image;
       break;
 

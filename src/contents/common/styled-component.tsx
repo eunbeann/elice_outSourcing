@@ -7,4 +7,5 @@ export const CustomTypo = styled(Typography)`
   font-style: normal;
   font-weight: 500;
   line-height: 130%; /* 1.95rem */
+  font-size: 20px;
 `;
