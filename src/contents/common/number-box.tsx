@@ -55,3 +55,52 @@ const Divider = styled.div`
   border: solid 1px black;
   width: 2rem;
 `;
+
+interface BigDivisionInputProps {
+  mother: number | string;
+  son: number | string;
+  num: number | string;
+  onChangeMother: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeSon: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeNum: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+}
+
+export function BigDivisionInput(props: BigDivisionInputProps) {
+  const {
+    mother,
+    son,
+    num,
+    onChangeNum,
+    onChangeMother,
+    onChangeSon,
+    disabled,
+  } = props;
+  return (
+    <Box display="flex" alignItems="center" gap="0.2rem">
+      <NumberInput
+        value={num}
+        onChange={onChangeNum}
+        disabled={disabled ? true : false}
+      />
+      <Box
+        display="flex"
+        flexDirection="column"
+        gap="0.1rem"
+        marginTop="0.5rem"
+      >
+        <NumberInput
+          value={son}
+          onChange={onChangeSon}
+          disabled={disabled ? true : false}
+        />
+        <Divider />
+        <NumberInput
+          value={mother}
+          onChange={onChangeMother}
+          disabled={disabled ? true : false}
+        />
+      </Box>
+    </Box>
+  );
+}
