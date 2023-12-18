@@ -49,8 +49,8 @@ export default function DivisionInput(props: DivisionInputProps) {
   );
 }
 const Divider = styled.div`
-  border: solid 1px black;
-  width: 4rem;
+  border: solid 1px #ededee;
+  width: 2.5rem;
 `;
 
 interface BigDivisionInputProps {
@@ -105,9 +105,9 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
 
 const NumBox = styled.input<{ width?: string }>`
   text-align: center;
-  border: 0.08rem solid black;
+  border: 0.08rem solid #ededee;
   border-radius: 0.5rem;
-  width: ${({ width }) => (width ? width : '4rem')};
+  width: ${({ width }) => (width ? width : '2.5rem')};
   height: 2rem;
   font-weight: 600;
 `;

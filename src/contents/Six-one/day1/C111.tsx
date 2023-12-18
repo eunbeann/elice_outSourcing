@@ -6,6 +6,9 @@ import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 
+import number1Image from 'src/contents/assets/icon/1-1-1_num1_full.png';
+import number2Image from 'src/contents/assets/icon/1-1-1_num2Full.png';
+
 interface C111Props {
   problem: {
     qId: number;
@@ -35,34 +38,23 @@ export default function C111(props: C111Props) {
     }
   }, [isSolved, qId]);
 
-  const renderApples = () => {
-    const appleComponents = [];
-
-    for (let i = 0; i < apples; i++) {
-      appleComponents.push(<Apple key={i} />);
-    }
-
-    return appleComponents;
-  };
-  const renderPeople = () => {
-    const peopleComponents = [];
-    for (let i = 0; i < people; i++) {
-      peopleComponents.push(<Person key={i} />);
-    }
-    return peopleComponents;
-  };
-
   return (
-    <Box>
-      <Box display="flex" margin="1rem 2rem" position="relative">
-        {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-        <CustomTypo marginRight="1rem">{qNum}</CustomTypo>
-        {renderApples()}
-      </Box>
-      <Box display="flex" marginLeft="4rem">
-        <Box>{renderPeople()}</Box>
+    <Box position="relative" height="8rem">
+      <Box>
+        <Box display="flex" margin="1rem 2rem" position="relative">
+          {isSolved && <CorrectChecker isCorrect={isCorrect} />}
+          <CustomTypo marginRight="1rem">{qNum}</CustomTypo>
+          <img
+            width={qId === 0 ? '55%' : '65%'}
+            src={qId === 0 ? number1Image : number2Image}
+            alt="fiveApples and two People"
+          />
+        </Box>
         <Box
+          top="3.5rem"
+          right={qId === 0 ? '8.8rem' : '7rem'}
           display="flex"
+          position="absolute"
           flexDirection="column"
           marginTop="-0.5rem"
           marginLeft="2rem"
