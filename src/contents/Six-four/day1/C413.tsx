@@ -48,16 +48,17 @@ export default function C413(props: C413Props) {
       <Box display="flex" alignItems="start">
         <Box display="flex" alignItems="center " position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-          <Typography variant="h5" fontWeight={400} marginRight="1rem">
+          <Typography variant="h4" fontWeight={400} marginRight="1rem">
             {qNum}
           </Typography>
         </Box>
         <Box display="flex" flexDirection="column">
           <Box display="flex" gap="0.5rem" alignItems="center">
-            <Typography variant="h6" fontWeight={600}>
+            <Typography variant="h4" fontWeight={600}>
               ×
             </Typography>
             <NumberInput
+              width="2.5rem"
               value={Number(input1)}
               onChange={e => {
                 setInput1(Number(e.target.value));
@@ -75,10 +76,10 @@ export default function C413(props: C413Props) {
               <Box display="flex" gap="0.2rem">
                 {numList[0] ? (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#FAD476"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
@@ -86,14 +87,15 @@ export default function C413(props: C413Props) {
                   </Typography>
                 ) : (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#FAD476"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
                     <NumberInput
+                      width="2.5rem"
                       value={Number(input3)}
                       onChange={e => {
                         setInput3(Number(e.target.value));
@@ -101,15 +103,15 @@ export default function C413(props: C413Props) {
                     />
                   </Typography>
                 )}
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h4" fontWeight={600}>
                   :
                 </Typography>
                 {numList[1] ? (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#FAD476"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
@@ -117,14 +119,15 @@ export default function C413(props: C413Props) {
                   </Typography>
                 ) : (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#FAD476"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
                     <NumberInput
+                      width="2.5rem"
                       value={Number(input3)}
                       onChange={e => {
                         setInput3(Number(e.target.value));
@@ -136,10 +139,10 @@ export default function C413(props: C413Props) {
               <Box display="flex" gap="0.2rem">
                 {numList[2] ? (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#ABD5E0"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
@@ -147,14 +150,15 @@ export default function C413(props: C413Props) {
                   </Typography>
                 ) : (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#ABD5E0"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
                     <NumberInput
+                      width="2.5rem"
                       value={Number(input3)}
                       onChange={e => {
                         setInput3(Number(e.target.value));
@@ -162,15 +166,15 @@ export default function C413(props: C413Props) {
                     />
                   </Typography>
                 )}
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h4" fontWeight={600}>
                   :
                 </Typography>
                 {numList[3] ? (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#ABD5E0"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
@@ -178,14 +182,15 @@ export default function C413(props: C413Props) {
                   </Typography>
                 ) : (
                   <Typography
-                    variant="h6"
+                    variant="h4"
                     fontWeight={600}
                     bgcolor="#ABD5E0"
-                    width="2.5rem"
+                    width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
                   >
                     <NumberInput
+                      width="2.5rem"
                       value={Number(input3)}
                       onChange={e => {
                         setInput3(Number(e.target.value));
@@ -203,10 +208,11 @@ export default function C413(props: C413Props) {
                 height: 'max-content',
               }}
             />
-            <Typography variant="h6" fontWeight={600}>
+            <Typography variant="h4" fontWeight={600}>
               ×
             </Typography>
             <NumberInput
+              width="2.5rem"
               value={Number(input2)}
               onChange={e => {
                 setInput2(Number(e.target.value));
@@ -231,56 +237,60 @@ export default function C413(props: C413Props) {
             />
             <Box display="flex" gap="0.3rem">
               {numList[0] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h4" fontWeight={600}>
                   {numList[0]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2.5rem"
                   value={Number(input4)}
                   onChange={e => {
                     setInput4(Number(e.target.value));
                   }}
                 />
               )}
-              <Typography variant="h6" fontWeight={600}>
+              <Typography variant="h4" fontWeight={600}>
                 :
               </Typography>
               {numList[1] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h4" fontWeight={600}>
                   {numList[1]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2.5rem"
                   value={Number(input4)}
                   onChange={e => {
                     setInput4(Number(e.target.value));
                   }}
                 />
               )}
-              <Typography variant="h6" fontWeight={600}>
+              <Typography variant="h4" fontWeight={600}>
                 =
               </Typography>
               {numList[2] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h4" fontWeight={600}>
                   {numList[2]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2.5rem"
                   value={Number(input4)}
                   onChange={e => {
                     setInput4(Number(e.target.value));
                   }}
                 />
               )}
-              <Typography variant="h6" fontWeight={600}>
+              <Typography variant="h4" fontWeight={600}>
                 :
               </Typography>
               {numList[3] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h4" fontWeight={600}>
                   {numList[3]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2.5rem"
                   value={Number(input4)}
                   onChange={e => {
                     setInput4(Number(e.target.value));

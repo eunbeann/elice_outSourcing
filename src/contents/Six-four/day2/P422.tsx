@@ -38,7 +38,7 @@ export default function P422() {
           src={ImgExample}
           variant="square"
           style={{
-            width: '40rem',
+            width: '50rem',
             height: 'max-content',
             marginBottom: '2rem',
           }}

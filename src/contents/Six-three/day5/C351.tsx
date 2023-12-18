@@ -45,7 +45,7 @@ export default function C351(props: C351Props) {
       <Box display="flex" alignItems="start">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-          <Typography variant="h5" fontWeight={400} marginRight="1rem">
+          <Typography variant="h5" fontWeight={600} marginRight="1rem">
             {qNum}
           </Typography>
         </Box>
@@ -60,7 +60,9 @@ export default function C351(props: C351Props) {
           />
           <Box display="flex" flexDirection="column" gap="1rem">
             <Box display="flex" gap="0.3rem" alignItems="center">
-              <Typography variant="h6">사과의 수와 바나나의 수의 비</Typography>
+              <Typography variant="h6" fontWeight={600}>
+                사과의 수와 바나나의 수의 비
+              </Typography>
               <Avatar
                 src={ArrowRight}
                 variant="square"
@@ -85,7 +87,7 @@ export default function C351(props: C351Props) {
               />
             </Box>
             <Box display="flex" gap="0.3rem" alignItems="center">
-              <Typography variant="h6">
+              <Typography variant="h6" fontWeight={600}>
                 사과 묶음의 수와 바나나 묶음의 수의 비
               </Typography>
               <Avatar

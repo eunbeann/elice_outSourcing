@@ -45,17 +45,17 @@ export default function C353(props: C353Props) {
       <Box display="flex" alignItems="start">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-          <Typography variant="h5" fontWeight={400} marginRight="1rem">
+          <Typography variant="h5" fontWeight={600} marginRight="1rem">
             {qNum}
           </Typography>
         </Box>
         <Box>
           {qId % 2 === 0 ? (
-            <Typography variant="h5" fontWeight={400} marginBottom="1rem">
+            <Typography variant="h5" fontWeight={600} marginBottom="1rem">
               주머니에 사탕이 {candyNum}개씩 들어 있습니다.
             </Typography>
           ) : (
-            <Typography variant="h5" fontWeight={400} marginBottom="1rem">
+            <Typography variant="h5" fontWeight={600} marginBottom="1rem">
               주머니에 사탕을 {candyNum}개씩 나누어 담았습니다.
             </Typography>
           )}
@@ -72,7 +72,7 @@ export default function C353(props: C353Props) {
             />
             <Box display="flex" flexDirection="column" gap="1rem">
               <Box display="flex" gap="0.3rem" alignItems="center">
-                <Typography variant="h6">
+                <Typography variant="h6" fontWeight={600}>
                   빨간색 주머니의 수와 파란색 주머니의 수의 비
                 </Typography>
                 <Avatar
@@ -99,7 +99,7 @@ export default function C353(props: C353Props) {
                 />
               </Box>
               <Box display="flex" gap="0.3rem" alignItems="center">
-                <Typography variant="h6">
+                <Typography variant="h6" fontWeight={600}>
                   빨간색 사탕의 수와 파란색 사탕의 수의 비
                 </Typography>
                 <Avatar

@@ -30,7 +30,7 @@ export default function P322() {
   };
   return (
     <Layout day="day2" title="비" question={'□에 알맞은 수를 써넣으세요.'}>
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Box display="grid" gridTemplateColumns="1fr 1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -38,7 +38,7 @@ export default function P322() {
               overflowY: 'auto',
               display: 'flex',
               justifyContent: 'center',
-              margin: '0.5rem',
+              padding: '2rem 6rem',
             }}
           >
             <C322

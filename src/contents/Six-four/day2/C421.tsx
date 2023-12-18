@@ -49,12 +49,12 @@ export default function C421(props: C421Props) {
       <Box display="flex" alignItems="start" gap="1rem">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             {qNum}
           </Typography>
         </Box>
         <Box display="flex" gap="0.3rem" alignItems="center">
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             {numList[0]}와 {numList[1]}의 최대공약수:
           </Typography>
           <NumberUnderBar
@@ -72,7 +72,7 @@ export default function C421(props: C421Props) {
               margin: '0rem 0.5rem',
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             {numList[0]} : {numList[1]} = {numList[0]} ÷
           </Typography>
           <NumberInput
@@ -81,7 +81,7 @@ export default function C421(props: C421Props) {
               setInput2(Number(e.target.value));
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             : {numList[1]} ÷
           </Typography>
           <NumberInput
@@ -90,7 +90,7 @@ export default function C421(props: C421Props) {
               setInput3(Number(e.target.value));
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             =
           </Typography>
           <NumberInput
@@ -99,7 +99,7 @@ export default function C421(props: C421Props) {
               setInput4(Number(e.target.value));
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             :
           </Typography>
           <NumberInput

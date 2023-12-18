@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
+import { Typography } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
@@ -29,7 +30,10 @@ export default function P311() {
       title="두 수의 비교"
       question={'문제를 읽고 빈 곳에 알맞은 수를 써넣으세요.'}
     >
-      <Box display="flex" justifyContent="space-around">
+      <Typography variant="h5" width="100%" textAlign="right" color="grey">
+        * 분수는 1/4와 같이 입력합니다.
+      </Typography>
+      <Box display="grid" gridTemplateColumns="1fr 1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -37,7 +41,7 @@ export default function P311() {
               overflowY: 'auto',
               display: 'flex',
               justifyContent: 'center',
-              margin: '0.5rem',
+              padding: '2rem 2rem',
             }}
           >
             <C311
@@ -63,33 +67,91 @@ export default function P311() {
 export interface ProblemProp {
   qId: number;
   qNum: string;
-  top: number;
-  bottom: number;
-  firstType: 'integer' | 'fraction';
-  secondType: 'integer' | 'fraction';
-  thirdType: 'integer' | 'fraction';
   pass: boolean;
+  leftItem: number;
+  rightItem: number;
+  answer: [string, string];
 }
 
 const problems: ProblemProp[] = [
   {
     qId: 0,
     qNum: '①',
-    top: 12,
-    bottom: 4,
-    firstType: 'fraction',
-    secondType: 'integer',
-    thirdType: 'fraction',
     pass: false,
+    leftItem: 12,
+    rightItem: 4,
+    answer: ['3', '1/3'],
   },
   {
     qId: 1,
     qNum: '②',
-    top: 15,
-    bottom: 3,
-    firstType: 'integer',
-    secondType: 'integer',
-    thirdType: 'fraction',
     pass: false,
+    leftItem: 15,
+    rightItem: 3,
+    answer: ['5', '1/5'],
+  },
+  {
+    qId: 2,
+    qNum: '③',
+    pass: false,
+    leftItem: 15,
+    rightItem: 6,
+    answer: ['5/2', '2/5'],
+  },
+  {
+    qId: 3,
+    qNum: '④',
+    pass: false,
+    leftItem: 21,
+    rightItem: 7,
+    answer: ['3', '1/3'],
+  },
+  {
+    qId: 4,
+    qNum: '⑤',
+    pass: false,
+    leftItem: 35,
+    rightItem: 10,
+    answer: ['7/2', '2/7'],
+  },
+  {
+    qId: 5,
+    qNum: '⑥',
+    pass: false,
+    leftItem: 48,
+    rightItem: 4,
+    answer: ['12', '1/12'],
+  },
+  {
+    qId: 6,
+    qNum: '⑦',
+    pass: false,
+    leftItem: 20,
+    rightItem: 5,
+    answer: ['4', '1/4'],
+  },
+  {
+    qId: 7,
+    qNum: '⑧',
+    pass: false,
+    leftItem: 60,
+    rightItem: 12,
+    answer: ['5', '1/5'],
+  },
+  {
+    qId: 8,
+    qNum: '⑨',
+    pass: false,
+    leftItem: 70,
+    rightItem: 14,
+    answer: ['5', '1/5'],
+  },
+  {
+    qId: 9,
+    qNum: '⑩',
+    pass: false,
+    leftItem: 90,
+    rightItem: 25,
+    answer: ['18/5', '5/18'],
   },
 ];

@@ -5,6 +5,8 @@ import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C412 from './C412';
 
+import ImgExample from '../../assets/image/P412/ImgExample.png';
+
 export default function P412() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
@@ -29,7 +31,16 @@ export default function P412() {
       title="비와 비례식"
       question={'□에 알맞은 수를 써넣으세요.'}
     >
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Avatar
+        src={ImgExample}
+        variant="square"
+        style={{
+          width: '50rem',
+          height: 'max-content',
+          marginBottom: '2rem',
+        }}
+      />
+      <Box display="grid" gridTemplateColumns="1fr 1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}

@@ -14,7 +14,7 @@ export function NumberInput(props: NumberInputProps) {
   return (
     <NumBox
       width={width}
-      type="text"
+      type="number"
       value={value}
       onChange={onChange}
       disabled={disabled}
@@ -101,12 +101,12 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
 
 const NumBox = styled.input<{ width?: string }>`
   text-align: center;
-  border: 0.08rem solid grey;
+  border: 0.08rem solid gray;
   border-radius: 0.5rem;
   width: ${({ width }) => (width ? width : '2.5rem')};
   height: 2rem;
 
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -114,11 +114,6 @@ const NumBox = styled.input<{ width?: string }>`
   }
 `;
 
-const Divider = styled.div`
-  border: solid 1px black;
-  width: 2rem;
-  font-weight: 600;
-`;
 const Divider = styled.div`
   border: solid 1px grey;
   width: 2.5rem;

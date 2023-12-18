@@ -36,13 +36,13 @@ export default function P411() {
           src={ImgExample}
           variant="square"
           style={{
-            width: '40rem',
+            width: '50rem',
             height: 'max-content',
             marginBottom: '2rem',
           }}
         />
       </Box>
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Box display="grid" gridTemplateColumns="1fr 1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -50,7 +50,7 @@ export default function P411() {
               overflowY: 'auto',
               display: 'flex',
               justifyContent: 'center',
-              margin: '0.5rem',
+              padding: '2rem 6rem',
             }}
           >
             <C411
