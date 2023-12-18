@@ -14,7 +14,7 @@ export function NumberInput(props: NumberInputProps) {
   return (
     <NumBox
       width={width}
-      type="text"
+      type="number"
       value={value}
       onChange={onChange}
       disabled={disabled}
