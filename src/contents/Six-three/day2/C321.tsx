@@ -45,7 +45,7 @@ export default function C321(props: C321Props) {
       <Box display="flex" alignItems="start">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-          <Typography variant="h5" fontWeight={400} marginRight="1rem">
+          <Typography variant="h5" fontWeight={600} marginRight="1rem">
             {qNum}
           </Typography>
         </Box>
@@ -60,7 +60,7 @@ export default function C321(props: C321Props) {
             }}
           />
           <Box display="flex" gap="0.3rem" alignItems="center">
-            <Typography variant="h6">
+            <Typography variant="h6" fontWeight={600}>
               {leftItem}의 수와 {rightItem}의 수의 비
             </Typography>
             <Avatar
@@ -87,7 +87,7 @@ export default function C321(props: C321Props) {
             />
           </Box>
           <Box display="flex" gap="0.3rem" alignItems="center">
-            <Typography variant="h6">
+            <Typography variant="h6" fontWeight={600}>
               {rightItem}의 수와 {leftItem}의 수의 비
             </Typography>
             <Avatar

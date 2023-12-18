@@ -101,7 +101,7 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
 
 const NumBox = styled.input<{ width?: string }>`
   text-align: center;
-  border: 0.08rem solid black;
+  border: 0.08rem solid gray;
   border-radius: 0.5rem;
   width: ${({ width }) => (width ? width : '4rem')};
   height: 2rem;
@@ -115,7 +115,7 @@ const NumBox = styled.input<{ width?: string }>`
 `;
 
 const Divider = styled.div`
-  border: solid 1px black;
+  border: solid 1px gray;
   width: 2rem;
   font-weight: 600;
 `;
