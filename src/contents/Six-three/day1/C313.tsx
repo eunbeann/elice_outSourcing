@@ -5,15 +5,15 @@ import CorrectChecker from 'src/contents/common/correct-checker';
 import { NumberInput } from 'src/contents/common/number-box';
 import { TextUnderBar } from 'src/contents/common/text-underbar';
 
-import type { ProblemProp } from './P312';
+import type { ProblemProp } from './P313';
 
-interface C312Props {
+interface C313Props {
   problem: ProblemProp;
   isSolved: boolean;
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function C312(props: C312Props) {
+export default function C313(props: C313Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, pass, qNum, answer, imgSrc } = problem;
 
@@ -56,8 +56,8 @@ export default function C312(props: C312Props) {
           <Box display="flex" flexDirection="column">
             <Typography variant="h5" fontWeight={600} mb="2rem">
               {qId === 0
-                ? '사과 3개와 바나나 2개를 넣어 주스 1병을 만들어요.'
-                : '여학생 4명, 남학생 2명이 모여 모둠 하나를 만들어요.'}
+                ? '주머니 1개에 빨간색 사탕 5개, 파란색 사탕 4개를 넣어요.'
+                : '필통 1개에 지우개가 2개, 연필이 1자루 들어 있어요.'}
             </Typography>
             <Box position="relative">
               <Avatar
@@ -71,7 +71,7 @@ export default function C312(props: C312Props) {
               />
               <Box
                 position="absolute"
-                right={qId === 0 ? '23rem' : '22.2rem'}
+                right={qId === 0 ? '19.2rem' : '18rem'}
                 top={qId === 0 ? '2.7rem' : '2.8rem'}
               >
                 <NumberInput
@@ -82,7 +82,7 @@ export default function C312(props: C312Props) {
               </Box>
               <Box
                 position="absolute"
-                right={qId === 0 ? '19.3rem' : '18.2rem'}
+                right={qId === 0 ? '15.2rem' : '14.1rem'}
                 top={qId === 0 ? '2.7rem' : '2.8rem'}
               >
                 <NumberInput
@@ -93,8 +93,8 @@ export default function C312(props: C312Props) {
               </Box>
               <Box
                 position="absolute"
-                right={qId === 0 ? '15.5rem' : '14.3rem'}
-                top={qId === 0 ? '2.7rem' : '2.8rem'}
+                right={qId === 0 ? '11.3rem' : '22rem'}
+                top={qId === 0 ? '2.7rem' : '5.4rem'}
               >
                 <NumberInput
                   width="2.5rem"
@@ -104,8 +104,8 @@ export default function C312(props: C312Props) {
               </Box>
               <Box
                 position="absolute"
-                right={qId === 0 ? '19.3rem' : '18.2rem'}
-                top={qId === 0 ? '5.2rem' : '5.4rem'}
+                right={qId === 0 ? '15.2rem' : '18em'}
+                top={qId === 0 ? '5.4rem' : '5.4rem'}
               >
                 <NumberInput
                   width="2.5rem"
@@ -115,8 +115,8 @@ export default function C312(props: C312Props) {
               </Box>
               <Box
                 position="absolute"
-                right={qId === 0 ? '15.5rem' : '14.3rem'}
-                top={qId === 0 ? '5.2rem' : '5.4rem'}
+                right={qId === 0 ? '11.3rem' : '14.1rem'}
+                top={qId === 0 ? '5.4rem' : '5.4rem'}
               >
                 <NumberInput
                   width="2.5rem"
@@ -129,8 +129,8 @@ export default function C312(props: C312Props) {
               <Box display="flex" mt="2rem">
                 <Typography variant="h5" fontWeight={600}>
                   {qId === 0
-                    ? '사과의 수는 바나나의 수의'
-                    : '여학생의 수는 남학생의 수의'}
+                    ? '빨간색 사탕의 수는 파란색 사탕의 수의'
+                    : '지우개의 수는 연필의 수의'}
                 </Typography>
                 <TextUnderBar
                   width="4rem"
@@ -144,8 +144,8 @@ export default function C312(props: C312Props) {
               <Box display="flex" mt="2rem">
                 <Typography variant="h5" fontWeight={600}>
                   {qId === 0
-                    ? '바나나의 수는 사과의 수의'
-                    : '남학생의 수는 여학생의 수의'}
+                    ? '파란색 사탕의 수는 빨간색 사탕의 수의'
+                    : '연필의 수는 지우개의 수의'}
                 </Typography>
                 <TextUnderBar
                   width="4rem"

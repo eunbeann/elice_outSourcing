@@ -4,12 +4,12 @@ import { Typography } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C312 from './C312';
+import C313 from './C313';
 
-import FirstImg from '../../assets/image/P312/3-1-2_1.png';
-import SecondImg from '../../assets/image/P312/3-1-2_2.png';
+import FirstImg from '../../assets/image/P313/3-1-3_1.png';
+import SecondImg from '../../assets/image/P313/3-1-3_2.png';
 
-export default function P312() {
+export default function P313() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     problems.map(problem => problem.pass)
@@ -47,7 +47,7 @@ export default function P312() {
               padding: '2rem 2rem',
             }}
           >
-            <C312
+            <C313
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
@@ -80,14 +80,14 @@ const problems: ProblemProp[] = [
     qId: 0,
     qNum: '①',
     pass: false,
-    answer: ['12', '15', '18', '10', '12', '3/2', '2/3'],
+    answer: ['20', '25', '30', '20', '24', '5/4', '4/5'],
     imgSrc: FirstImg,
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
-    answer: ['16', '20', '24', '10', '12', '2', '1/2'],
+    answer: ['10', '12', '4', '5', '6', '2', '1/2'],
     imgSrc: SecondImg,
   },
 ];
