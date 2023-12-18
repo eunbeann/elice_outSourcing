@@ -20,8 +20,8 @@ export default function C113(props: C113Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, pass, qNum, lNum, rNum } = problem;
 
-  const [son, setSon] = useState(0);
-  const [mother, setMother] = useState(0);
+  const [son, setSon] = useState<string | number>('');
+  const [mother, setMother] = useState<string | number>('');
   const [isCorrect, setIsCorrect] = useState(false);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function C113(props: C113Props) {
     <Box display="flex" gap="0.2rem" alignItems="center" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography>{qNum}</Typography>
-      <Typography>
+      <Typography marginRight="0.5rem">
         {lNum} ÷ {rNum} =
       </Typography>
       <DivisionInput

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Apple, Person } from '@mui/icons-material';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
@@ -45,14 +44,14 @@ export default function C111(props: C111Props) {
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <CustomTypo marginRight="1rem">{qNum}</CustomTypo>
           <img
-            width={qId === 0 ? '55%' : '65%'}
+            width={qId === 0 ? '65%' : '75%'}
             src={qId === 0 ? number1Image : number2Image}
             alt="fiveApples and two People"
           />
         </Box>
         <Box
           top="3.5rem"
-          right={qId === 0 ? '8.8rem' : '7rem'}
+          right={qId === 0 ? '7.5rem' : '5.5rem'}
           display="flex"
           position="absolute"
           flexDirection="column"
