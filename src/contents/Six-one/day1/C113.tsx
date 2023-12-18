@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput from 'src/contents/common/number-box';
 
-interface Component12PageProps {
+interface C113Props {
   problem: {
     qId: number;
     pass: boolean;
@@ -16,7 +16,7 @@ interface Component12PageProps {
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function Component12Page(props: Component12PageProps) {
+export default function C113(props: C113Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, pass, qNum, lNum, rNum } = problem;
 
@@ -35,7 +35,7 @@ export default function Component12Page(props: Component12PageProps) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" alignItems="center">
+    <Box display="flex" gap="0.2rem" alignItems="center" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography>{qNum}</Typography>
       <Typography>
@@ -46,6 +46,7 @@ export default function Component12Page(props: Component12PageProps) {
         son={son}
         onChangeMother={e => setMother(Number(e.target.value))}
         onChangeSon={e => setSon(Number(e.target.value))}
+        disabled={isSolved}
       />
     </Box>
   );

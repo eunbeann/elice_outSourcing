@@ -1,26 +1,33 @@
 import styled from '@emotion/styled';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+
+import { CustomTypo } from './styled-component';
 
 import type { ReactNode } from 'react';
 
 interface DivisionTypoProps {
+  natureNum?: number | string;
   momNum: number | ReactNode;
   sonNum: number | ReactNode;
   width?: string;
+  fontSize?: string;
 }
 
 export default function VisualFraction(props: DivisionTypoProps) {
-  const { momNum, sonNum, width } = props;
+  const { momNum, sonNum, width, natureNum, fontSize } = props;
   return (
-    <FractionContainer>
-      <Typography variant="h5" fontWeight={400}>
-        {sonNum}
-      </Typography>
-      <Divider $width={width} />
-      <Typography variant="h5" fontWeight={400}>
-        {momNum}
-      </Typography>
-    </FractionContainer>
+    <Box display="flex" flexDirection="row" alignItems="center">
+      {natureNum && <CustomTypo fontSize="18 px">{natureNum}</CustomTypo>}
+      <FractionContainer>
+        <CustomTypo fontSize={fontSize ? fontSize : '18px'}>
+          {sonNum}
+        </CustomTypo>
+        <Divider $width={width} />
+        <CustomTypo fontSize={fontSize ? fontSize : '18px'}>
+          {momNum}
+        </CustomTypo>
+      </FractionContainer>
+    </Box>
   );
 }
 

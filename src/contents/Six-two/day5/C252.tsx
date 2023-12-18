@@ -20,7 +20,7 @@ export default function C252(props: C253Props) {
   const [isCorrect, setIsCorrect] = useState(false);
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, qNum, sonNum, momNum, answer, pass } = problem;
-  const [enter, setEnter] = useState<number>(0);
+  const [enter, setEnter] = useState<number | string>('');
 
   useEffect(() => {
     if (enter === answer) {
@@ -33,7 +33,13 @@ export default function C252(props: C253Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" alignContent="start" margin="2rem">
+    <Box
+      display="flex"
+      gap="0.2rem"
+      alignContent="start"
+      margin="2rem"
+      position="relative"
+    >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography> {qNum}</Typography>
       <VisualFraction momNum={momNum} sonNum={sonNum} />
@@ -41,6 +47,7 @@ export default function C252(props: C253Props) {
         value={enter}
         onChange={e => setEnter(Number(e.target.value))}
         style={{ width: '2.5rem', textAlign: 'center', margin: '1.2rem' }}
+        disabled={isSolved}
       />
     </Box>
   );

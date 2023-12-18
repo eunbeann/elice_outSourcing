@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
-import { Apple, Person } from '@mui/icons-material';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput, { NumberInput } from 'src/contents/common/number-box';
+import { CustomTypo } from 'src/contents/common/styled-component';
 
 import orange from 'src/contents/assets/icon/orange.svg';
 import person from 'src/contents/assets/icon/person.svg';
 
-interface Component11PageProps {
+interface C113Props {
   problem: {
     qId: number;
     pass: boolean;
@@ -21,14 +20,14 @@ interface Component11PageProps {
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function Component11Page(props: Component11PageProps) {
+export default function C113(props: C113Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, pass, qNum, orangeNum, peopleNum } = problem;
 
-  const [son, setSon] = useState(0);
-  const [mother, setMother] = useState(0);
-  const [num1, setNum1] = useState(0);
-  const [num2, setNum2] = useState(0);
+  const [son, setSon] = useState<string | number>('');
+  const [mother, setMother] = useState<string | number>('');
+  const [num1, setNum1] = useState<string | number>('');
+  const [num2, setNum2] = useState<string | number>('');
   const [isCorrect, setIsCorrect] = useState(true);
 
   useEffect(() => {
@@ -48,15 +47,21 @@ export default function Component11Page(props: Component11PageProps) {
 
   return (
     <>
-      <Box display="flex" flexDirection="column" gap="0.2rem" alignItems="left">
+      <Box
+        display="flex"
+        flexDirection="column"
+        gap="0.2rem"
+        alignItems="left"
+        position="relative"
+      >
         {isSolved && <CorrectChecker isCorrect={isCorrect} />}
         <Box display="flex">
-          <Typography> {qNum} </Typography>
+          <CustomTypo> {qNum} </CustomTypo>
           <Box display="flex" margin="1rem 0.5rem" alignItems="center">
             <img src={orange} alt="icon" />
-            <Typography marginRight="0.5rem"> {orangeNum}개</Typography>
+            <CustomTypo marginRight="0.5rem"> {orangeNum}개</CustomTypo>
             <img src={person} alt="icon" />
-            <Typography marginX="0.5rem"> {peopleNum}명 </Typography>
+            <CustomTypo marginX="0.5rem"> {peopleNum}명 </CustomTypo>
           </Box>
         </Box>
 
@@ -69,11 +74,13 @@ export default function Component11Page(props: Component11PageProps) {
           <NumberInput
             value={num1}
             onChange={e => setNum1(Number(e.target.value))}
+            disabled={isSolved}
           />
           ÷
           <NumberInput
             value={num2}
             onChange={e => setNum2(Number(e.target.value))}
+            disabled={isSolved}
           />
           =
           <DivisionInput
@@ -81,6 +88,7 @@ export default function Component11Page(props: Component11PageProps) {
             son={son}
             onChangeMother={e => setMother(Number(e.target.value))}
             onChangeSon={e => setSon(Number(e.target.value))}
+            disabled={isSolved}
           />
         </Box>
       </Box>

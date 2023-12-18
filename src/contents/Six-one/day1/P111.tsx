@@ -3,10 +3,10 @@ import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import Component10Page from './10p-component';
 import ComponentExample from './c-ex';
+import C111 from './C111';
 
-export default function Page10() {
+export default function P111() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
@@ -46,7 +46,7 @@ export default function Page10() {
               margin: '0.5rem',
             }}
           >
-            <Component10Page
+            <C111
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
