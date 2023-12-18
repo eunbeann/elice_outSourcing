@@ -26,7 +26,7 @@ export default function P251() {
   };
   return (
     <Layout
-      title="연산퍼즐"
+      title="연산퍼즐 - 개발중"
       question={'나눗셈의 계산 결과와 같은 것을 선으로 이으세요.'}
       day="day5"
     >

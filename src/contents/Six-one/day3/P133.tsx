@@ -43,7 +43,7 @@ export default function P133() {
                 maxHeight: '200px',
                 overflowY: 'auto',
                 display: 'flex',
-                width: '30%',
+                width: '40%',
                 justifyContent: 'center',
                 margin: '0.5rem',
               }}
