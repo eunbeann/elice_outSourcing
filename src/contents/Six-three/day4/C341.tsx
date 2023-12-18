@@ -82,7 +82,7 @@ export default function C341(props: C341Props) {
               비교하는 양은 기준량의
             </Typography>
             <TextUnderBar
-              width="4rem"
+              width="5rem"
               value={input ? input : ''}
               onChange={e => setInput(e.target.value)}
             />
