@@ -48,10 +48,6 @@ export default function DivisionInput(props: DivisionInputProps) {
     </Box>
   );
 }
-const Divider = styled.div`
-  border: solid 1px #ededee;
-  width: 2.5rem;
-`;
 
 interface BigDivisionInputProps {
   mother: number | string;
@@ -105,9 +101,13 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
 
 const NumBox = styled.input<{ width?: string }>`
   text-align: center;
-  border: 0.08rem solid #ededee;
+  border: 0.08rem solid grey;
   border-radius: 0.5rem;
   width: ${({ width }) => (width ? width : '2.5rem')};
   height: 2rem;
   font-weight: 600;
+`;
+const Divider = styled.div`
+  border: solid 1px grey;
+  width: 2.5rem;
 `;
