@@ -5,8 +5,8 @@ import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput, { NumberInput } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 
-import orange from 'src/contents/assets/icon/orange.svg';
-import person from 'src/contents/assets/icon/person.svg';
+import person from 'src/contents/assets/icon/1-1-1_bluehair.png';
+import orange from 'src/contents/assets/icon/1-1-2.png';
 
 interface C113Props {
   problem: {
@@ -58,9 +58,9 @@ export default function C113(props: C113Props) {
         <Box display="flex">
           <CustomTypo> {qNum} </CustomTypo>
           <Box display="flex" margin="1rem 0.5rem" alignItems="center">
-            <img src={orange} alt="icon" />
+            <img width="60rem" src={orange} alt="orange" />
             <CustomTypo marginRight="0.5rem"> {orangeNum}개</CustomTypo>
-            <img src={person} alt="icon" />
+            <img width="60rem" src={person} alt="icon" />
             <CustomTypo marginX="0.5rem"> {peopleNum}명 </CustomTypo>
           </Box>
         </Box>

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { Box, Input, TextField, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
-import { NumberInput } from 'src/contents/common/number-box';
+import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
 interface C223Props {
   problem: {
@@ -36,10 +36,10 @@ export default function C223(props: C223Props) {
   return (
     <Box display="flex" gap="0.2rem" margin="2rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-      <Typography> {qNum} </Typography>
+      <CustomTypo> {qNum} </CustomTypo>
       <Box display="flex" alignItems="center">
         <VisualFraction momNum={momNum} sonNum={sonNum} />
-        <Typography marginX="1rem"> = </Typography>
+        <CustomTypo marginX="1rem"> = </CustomTypo>
         <AnswerInput
           type="number"
           value={enter}

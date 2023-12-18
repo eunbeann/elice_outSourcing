@@ -9,36 +9,40 @@ import DivisionInput, {
 } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 
-interface C151Props {
+interface C152Props {
   problem: {
     qId: number;
     qNum: string;
     qString: string;
     equationNature?: number | string;
+    equationLeft?: number;
     equationMom: number;
     equationSon: number;
     equationDiv: number;
     answerMom: number;
     answerSon: number;
+    unit: string;
     pass: boolean;
   };
   isSolved: boolean;
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function C151(props: C151Props) {
+export default function C152(props: C152Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const {
     qId,
     pass,
     qNum,
     qString,
+    equationLeft,
     equationNature,
     equationMom,
     equationSon,
     equationDiv,
     answerMom,
     answerSon,
+    unit,
   } = problem;
   const [isCorrect, setIsCorrect] = useState(false);
   const [equationSonValue, setEquationSonValue] = useState<string | number>('');
@@ -92,14 +96,20 @@ export default function C151(props: C151Props) {
               onChangeMother={e => setEquationMomValue(Number(e.target.value))}
               onChangeSon={e => setEquationSonValue(Number(e.target.value))}
             />
-          ) : (
+          ) : equationLeft ? (
             <DivisionInput
               mother={equationMomValue}
               son={equationSonValue}
               onChangeMother={e => setEquationMomValue(Number(e.target.value))}
               onChangeSon={e => setEquationSonValue(Number(e.target.value))}
             />
+          ) : (
+            <NumberInput
+              value={equationSonValue}
+              onChange={e => setEquationSonValue(Number(e.target.value))}
+            />
           )}
+
           <CustomTypo marginX="1rem">÷</CustomTypo>
           <NumberInput
             width="2.5rem"
@@ -115,6 +125,7 @@ export default function C151(props: C151Props) {
             onChangeMother={e => setAnswerMomValue(Number(e.target.value))}
             onChangeSon={e => setAnswerSonValue(Number(e.target.value))}
           />
+          <CustomTypo paddingX="1rem">{unit}</CustomTypo>
         </Box>
       </Box>
     </Box>

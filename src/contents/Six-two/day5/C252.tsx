@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Box, TextField, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { Box, TextField } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
 interface C253Props {
   problem: {
@@ -41,7 +42,7 @@ export default function C252(props: C253Props) {
       position="relative"
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-      <Typography> {qNum}</Typography>
+      <CustomTypo> {qNum}</CustomTypo>
       <VisualFraction momNum={momNum} sonNum={sonNum} />
       <TextField
         value={enter}
