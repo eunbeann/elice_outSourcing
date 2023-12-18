@@ -14,9 +14,10 @@ interface C151Props {
     qId: number;
     qNum: string;
     qString: string;
-    equationNature: number;
+    equationNature?: number | string;
     equationMom: number;
     equationSon: number;
+    equationDiv: number;
     answerMom: number;
     answerSon: number;
     pass: boolean;
@@ -35,6 +36,7 @@ export default function C151(props: C151Props) {
     equationNature,
     equationMom,
     equationSon,
+    equationDiv,
     answerMom,
     answerSon,
   } = problem;
@@ -60,15 +62,11 @@ export default function C151(props: C151Props) {
 
   return (
     <Box
-      minWidth="35rem"
+      minWidth="30rem"
       alignItems="left"
       gap="0.2rem"
-      margin="1rem"
+      marginBottom="1rem"
       position="relative"
-      sx={{
-        overflow: 'hidden',
-        overflowY: 'scroll',
-      }}
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Box>
