@@ -115,11 +115,6 @@ const NumBox = styled.input<{ width?: string }>`
 `;
 
 const Divider = styled.div`
-  border: solid 1px black;
-  width: 2rem;
-  font-weight: 600;
-`;
-const Divider = styled.div`
   border: solid 1px grey;
   width: 2.5rem;
 `;

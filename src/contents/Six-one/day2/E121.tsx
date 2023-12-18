@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import ExampleBox from 'src/contents/common/example-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
