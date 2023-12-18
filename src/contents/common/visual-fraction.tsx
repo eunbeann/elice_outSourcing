@@ -10,17 +10,22 @@ interface DivisionTypoProps {
   momNum: number | ReactNode;
   sonNum: number | ReactNode;
   width?: string;
+  fontSize?: string;
 }
 
 export default function VisualFraction(props: DivisionTypoProps) {
-  const { momNum, sonNum, width, natureNum } = props;
+  const { momNum, sonNum, width, natureNum, fontSize } = props;
   return (
     <Box display="flex" flexDirection="row" alignItems="center">
       {natureNum && <CustomTypo fontSize="18 px">{natureNum}</CustomTypo>}
       <FractionContainer>
-        <CustomTypo fontSize="18px">{sonNum}</CustomTypo>
+        <CustomTypo fontSize={fontSize ? fontSize : '18px'}>
+          {sonNum}
+        </CustomTypo>
         <Divider $width={width} />
-        <CustomTypo fontSize="18px">{momNum}</CustomTypo>
+        <CustomTypo fontSize={fontSize ? fontSize : '18px'}>
+          {momNum}
+        </CustomTypo>
       </FractionContainer>
     </Box>
   );

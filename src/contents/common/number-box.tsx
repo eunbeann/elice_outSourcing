@@ -6,12 +6,19 @@ interface NumberInputProps {
   value: string | number;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  width?: string;
 }
 
 export function NumberInput(props: NumberInputProps) {
-  const { value, onChange, disabled } = props;
+  const { value, onChange, disabled, width } = props;
   return (
-    <NumBox type="text" value={value} onChange={onChange} disabled={disabled} />
+    <NumBox
+      width={width}
+      type="text"
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+    />
   );
 }
 
@@ -41,19 +48,9 @@ export default function DivisionInput(props: DivisionInputProps) {
     </Box>
   );
 }
-
-const NumBox = styled.input`
-  text-align: center;
-  border: 0.08rem solid black;
-  border-radius: 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  font-weight: 600;
-`;
-
 const Divider = styled.div`
   border: solid 1px black;
-  width: 2rem;
+  width: 4rem;
 `;
 
 interface BigDivisionInputProps {
@@ -79,6 +76,7 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
   return (
     <Box display="flex" alignItems="center" gap="0.2rem">
       <NumberInput
+        width="2.6rem"
         value={num}
         onChange={onChangeNum}
         disabled={disabled ? true : false}
@@ -104,3 +102,12 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
     </Box>
   );
 }
+
+const NumBox = styled.input<{ width?: string }>`
+  text-align: center;
+  border: 0.08rem solid black;
+  border-radius: 0.5rem;
+  width: ${({ width }) => (width ? width : '4rem')};
+  height: 2rem;
+  font-weight: 600;
+`;
