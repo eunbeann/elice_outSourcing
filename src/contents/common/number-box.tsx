@@ -103,7 +103,7 @@ const NumBox = styled.input<{ width?: string }>`
   text-align: center;
   border: 0.08rem solid gray;
   border-radius: 0.5rem;
-  width: ${({ width }) => (width ? width : '4rem')};
+  width: ${({ width }) => (width ? width : '2.5rem')};
   height: 2rem;
 
   font-size: 1.6rem;

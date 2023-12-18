@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import { Avatar, Box } from '@mui/material';
+import { Avatar, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C421 from './C421';
+import C331 from './C331';
 
-import ImgExample from '../../assets/image/P421/ImgExample.png';
+import ImgExample from '../../assets/image/P331/ImgExample.png';
 
-export default function P421() {
+export default function P331() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     problems.map(problem => problem.pass)
@@ -27,24 +28,29 @@ export default function P421() {
   };
   return (
     <Layout
-      day="day2"
-      title="간단한 자연수의 비로 나타내기"
-      question={
-        '가장 간단한 자연수의 비로 나타내는 과정입니다. 빈 곳에 알맞은 수를 써넣으세요.'
-      }
+      day="day3"
+      title="자연수의 비"
+      question={'빈 곳에 알맞은 수를 써넣으세요.'}
     >
-      <Box width="100%" display="flex" justifyContent="center">
-        <Avatar
-          src={ImgExample}
-          variant="square"
-          style={{
-            width: '45rem',
-            height: 'max-content',
-            marginBottom: '2rem',
-          }}
-        />
-      </Box>
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Typography
+        variant="h5"
+        width="100%"
+        textAlign="right"
+        color="grey"
+        mb="2rem"
+      >
+        * 분수는 1/4와 같이 입력합니다.
+      </Typography>
+      <Avatar
+        src={ImgExample}
+        variant="square"
+        style={{
+          width: '45rem',
+          height: 'max-content',
+          marginBottom: '2rem',
+        }}
+      />
+      <Box display="grid" gridTemplateColumns="1fr 1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -52,10 +58,10 @@ export default function P421() {
               overflowY: 'auto',
               display: 'flex',
               justifyContent: 'center',
-              margin: '0.5rem',
+              padding: '2rem 4rem',
             }}
           >
-            <C421
+            <C331
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
@@ -79,8 +85,9 @@ export interface ProblemProp {
   qId: number;
   qNum: string;
   pass: boolean;
-  numList: number[];
-  answer: number[];
+  leftItem: number;
+  rightItem: number;
+  answer: string;
 }
 
 const problems: ProblemProp[] = [
@@ -88,42 +95,64 @@ const problems: ProblemProp[] = [
     qId: 0,
     qNum: '①',
     pass: false,
-    numList: [12, 15],
-    answer: [3, 4, 5],
+    leftItem: 4,
+    rightItem: 5,
+    answer: '4/5',
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
-    numList: [32, 24],
-    answer: [8, 4, 3],
+    leftItem: 7,
+    rightItem: 4,
+    answer: '4/7',
   },
   {
     qId: 2,
     qNum: '③',
     pass: false,
-    numList: [80, 48],
-    answer: [16, 5, 3],
+    leftItem: 2,
+    rightItem: 3,
+    answer: '2/3',
   },
   {
     qId: 3,
     qNum: '④',
     pass: false,
-    numList: [90, 36],
-    answer: [18, 5, 2],
+    leftItem: 4,
+    rightItem: 8,
+    answer: '2',
   },
   {
     qId: 4,
     qNum: '⑤',
     pass: false,
-    numList: [33, 44],
-    answer: [11, 3, 4],
+    leftItem: 3,
+    rightItem: 7,
+    answer: '3/7',
   },
   {
     qId: 5,
     qNum: '⑥',
     pass: false,
-    numList: [18, 81],
-    answer: [9, 2, 9],
+    leftItem: 4,
+    rightItem: 9,
+    answer: '9/4',
+  },
+  {
+    qId: 6,
+    qNum: '⑦',
+    pass: false,
+    leftItem: 6,
+    rightItem: 11,
+    answer: '6/11',
+  },
+  {
+    qId: 7,
+    qNum: '⑧',
+    pass: false,
+    leftItem: 13,
+    rightItem: 8,
+    answer: '8/13',
   },
 ];
