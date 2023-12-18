@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
 
+import ExampleBox from 'src/contents/common/example-box';
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C222 from './C222';
 
-export default function P222() {
+// import C222 from './C222';
+import e221Image from 'src/contents/assets/image/e_221.png';
+export default function P251() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
@@ -25,10 +27,13 @@ export default function P222() {
   };
   return (
     <Layout
-      title="분모를 바꾸어 진분수를 소수로 고치기"
-      question={'분수를 소수로 바꾸세요.'}
-      day="day2"
+      title="연산퍼즐"
+      question={'나눗셈의 계산 결과와 같은 것을 선으로 이으세요.'}
+      day="day5"
     >
+      <ExampleBox>
+        <img width="100%" src={e221Image} alt="fractionE122" />
+      </ExampleBox>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
           sx={{
@@ -49,19 +54,19 @@ export default function P222() {
                 margin: '0.5rem',
               }}
             >
-              <C222
+              {/* <C222
                 problem={problem}
                 isSolved={isSolved}
                 handleCorrectChange={(qId, pass) =>
                   handleCorrectChange(qId, pass)
                 }
-              />
+              /> */}
             </Box>
           ))}
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#6297FF"
+          $color="#00B76A"
           isSolved={isSolved}
         />
       </Box>
@@ -70,7 +75,7 @@ export default function P222() {
 }
 
 const divisionProblems = [
-  { qId: 0, qNum: '①', sonNum: 1, momNum: 5, answer: 0.2, pass: false },
+  { qId: 0, qNum: '①', sonNum: 4, momNum: 5, answer: 0.2, pass: false },
   { qId: 1, qNum: '②', sonNum: 5, momNum: 8, answer: 0.625, pass: false },
   { qId: 2, qNum: '③', sonNum: 1, momNum: 2, answer: 0.5, pass: false },
   { qId: 3, qNum: '④', sonNum: 3, momNum: 4, answer: 0.75, pass: false },

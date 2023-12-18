@@ -47,17 +47,22 @@ export default function C122(props: C122Props) {
   return (
     <Box
       display="flex"
+      minWidth="18rem"
       gap="0.2rem"
       alignItems="center"
       margin="1rem"
       position="relative"
+      sx={{
+        overflow: 'hidden',
+        overflowY: 'scroll',
+      }}
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Typography marginRight="0.5rem">{qNum}</Typography>
       <VisualFraction momNum={mom1} sonNum={son} />
       <Typography fontSize="20px"> ÷ {num} = </Typography>
       <VisualFraction
-        width="5rem"
+        width="6rem"
         momNum={mom2}
         sonNum={
           <Box display="flex" alignItems="center">
