@@ -6,6 +6,7 @@ import SubmitButton from 'src/contents/common/submit-button';
 import C131 from './C131';
 
 export default function P131() {
+  // 색칠문제
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
