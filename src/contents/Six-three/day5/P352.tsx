@@ -43,7 +43,7 @@ export default function P352() {
         '아래 모양은 위 모양의 조각들을 몇 조각씩 똑같이 나눈 것입니다. 전체에 대한 색칠된 부분의 비를 구하세요.'
       }
     >
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Box display="grid" gridTemplateColumns="1fr 1fr" justifyItems="center">
         <Avatar
           src={ImgExample}
           variant="square"
@@ -60,7 +60,7 @@ export default function P352() {
               overflowY: 'auto',
               display: 'flex',
               justifyContent: 'center',
-              margin: '0.5rem',
+              padding: '2rem 6rem',
             }}
           >
             <C352

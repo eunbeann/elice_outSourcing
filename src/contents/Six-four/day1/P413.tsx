@@ -29,7 +29,7 @@ export default function P413() {
       title="비와 비례식"
       question={'문제를 읽고 빈 곳에 알맞은 수를 써넣으세요.'}
     >
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Box display="grid" gridTemplateColumns="1fr 1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -37,7 +37,7 @@ export default function P413() {
               overflowY: 'auto',
               display: 'flex',
               justifyContent: 'center',
-              margin: '0.5rem',
+              padding: '2rem 6rem',
             }}
           >
             <C413

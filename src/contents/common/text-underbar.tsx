@@ -15,9 +15,10 @@ const UnderBar = styled.input`
   text-align: center;
   border: none;
   border-bottom: 0.08rem solid gray;
-  font-size: 1.2rem;
+  font-size: 2rem;
   width: 8rem;
-  height: 2rem;
+  height: 3rem;
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;

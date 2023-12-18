@@ -52,11 +52,12 @@ export default function C411(props: C411Props) {
               justifyContent="center"
             >
               {numList[0] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h5" fontWeight={600}>
                   {numList[0]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2rem"
                   value={Number(input1)}
                   onChange={e => {
                     setInput1(Number(e.target.value));
@@ -65,11 +66,12 @@ export default function C411(props: C411Props) {
               )}
               <UnderBar />
               {numList[1] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h5" fontWeight={600}>
                   {numList[1]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2rem"
                   value={Number(input1)}
                   onChange={e => {
                     setInput1(Number(e.target.value));
@@ -77,7 +79,7 @@ export default function C411(props: C411Props) {
                 />
               )}
             </Box>
-            <Typography variant="h6" fontWeight={600}>
+            <Typography variant="h5" fontWeight={600}>
               =
             </Typography>
             <Box
@@ -87,11 +89,12 @@ export default function C411(props: C411Props) {
               justifyContent="center"
             >
               {numList[2] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h5" fontWeight={600}>
                   {numList[2]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2rem"
                   value={Number(input1)}
                   onChange={e => {
                     setInput1(Number(e.target.value));
@@ -100,11 +103,12 @@ export default function C411(props: C411Props) {
               )}
               <UnderBar />
               {numList[3] ? (
-                <Typography variant="h6" fontWeight={600}>
+                <Typography variant="h5" fontWeight={600}>
                   {numList[3]}
                 </Typography>
               ) : (
                 <NumberInput
+                  width="2rem"
                   value={Number(input1)}
                   onChange={e => {
                     setInput1(Number(e.target.value));
@@ -124,56 +128,60 @@ export default function C411(props: C411Props) {
           />
           <Box display="flex" alignItems="center" gap="0.5rem">
             {numList[0] ? (
-              <Typography variant="h6" fontWeight={600}>
+              <Typography variant="h5" fontWeight={600}>
                 {numList[0]}
               </Typography>
             ) : (
               <NumberInput
+                width="2rem"
                 value={Number(input2)}
                 onChange={e => {
                   setInput2(Number(e.target.value));
                 }}
               />
             )}
-            <Typography variant="h6" fontWeight={600}>
+            <Typography variant="h5" fontWeight={600}>
               :
             </Typography>
             {numList[1] ? (
-              <Typography variant="h6" fontWeight={600}>
+              <Typography variant="h5" fontWeight={600}>
                 {numList[1]}
               </Typography>
             ) : (
               <NumberInput
+                width="2rem"
                 value={Number(input2)}
                 onChange={e => {
                   setInput2(Number(e.target.value));
                 }}
               />
             )}
-            <Typography variant="h6" fontWeight={600}>
+            <Typography variant="h5" fontWeight={600}>
               =
             </Typography>
             {numList[2] ? (
-              <Typography variant="h6" fontWeight={600}>
+              <Typography variant="h5" fontWeight={600}>
                 {numList[2]}
               </Typography>
             ) : (
               <NumberInput
+                width="2rem"
                 value={Number(input2)}
                 onChange={e => {
                   setInput2(Number(e.target.value));
                 }}
               />
             )}
-            <Typography variant="h6" fontWeight={600}>
+            <Typography variant="h5" fontWeight={600}>
               :
             </Typography>
             {numList[3] ? (
-              <Typography variant="h6" fontWeight={600}>
+              <Typography variant="h5" fontWeight={600}>
                 {numList[3]}
               </Typography>
             ) : (
               <NumberInput
+                width="2rem"
                 value={Number(input2)}
                 onChange={e => {
                   setInput2(Number(e.target.value));

@@ -106,7 +106,7 @@ const NumBox = styled.input<{ width?: string }>`
   width: ${({ width }) => (width ? width : '4rem')};
   height: 2rem;
 
-  font-size: 1.2rem;
+  font-size: 2rem;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;

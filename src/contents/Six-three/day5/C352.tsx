@@ -36,7 +36,7 @@ export default function C352(props: C352Props) {
       <Box display="flex" alignItems="start">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-          <Typography variant="h5" fontWeight={400} marginRight="1rem">
+          <Typography variant="h5" fontWeight={600} marginRight="1rem">
             {qNum}
           </Typography>
         </Box>
