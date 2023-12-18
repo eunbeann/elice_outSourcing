@@ -26,8 +26,8 @@ export default function P342() {
   };
   return (
     <Layout
-      day="day3"
-      title="자연수의 비"
+      day="day4"
+      title="분수, 소수의 비"
       question={'문제를 읽고 빈 곳에 알맞은 수를 써넣으세요.'}
     >
       <Typography

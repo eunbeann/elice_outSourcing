@@ -38,13 +38,13 @@ export default function P421() {
           src={ImgExample}
           variant="square"
           style={{
-            width: '45rem',
+            width: '50rem',
             height: 'max-content',
             marginBottom: '2rem',
           }}
         />
       </Box>
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Box display="grid" gridTemplateColumns="1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}

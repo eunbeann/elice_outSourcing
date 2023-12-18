@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Box } from '@mui/material';
+import { Avatar, Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C321 from './C321';
 
+import ImgExample from '../../assets/image/P321/ImgExample.png';
 import N1 from '../../assets/image/P321/N1.png';
 import N2 from '../../assets/image/P321/N2.png';
 import N3 from '../../assets/image/P321/N3.png';
@@ -30,6 +31,15 @@ export default function P321() {
   };
   return (
     <Layout day="day2" title="비" question={'□에 알맞은 수를 써넣으세요.'}>
+      <Avatar
+        src={ImgExample}
+        variant="square"
+        style={{
+          width: '45rem',
+          height: 'max-content',
+          marginBottom: '2rem',
+        }}
+      />
       <Box display="flex" flexWrap="wrap" justifyContent="space-around">
         {problems.map(problem => (
           <Box

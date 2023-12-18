@@ -50,12 +50,12 @@ export default function C422(props: C422Props) {
       <Box display="flex" alignItems="center" gap="1rem">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             {qNum}
           </Typography>
         </Box>
         <Box display="flex" gap="0.3rem" alignItems="center">
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             {numList1[0]}와 {numList1[1]}의 최대공약수:
           </Typography>
           <NumberUnderBar
@@ -75,7 +75,7 @@ export default function C422(props: C422Props) {
           />
           <Typography
             variant="h5"
-            fontWeight={400}
+            fontWeight={600}
             display="flex"
             alignItems="center"
             gap="0.5rem"
@@ -93,7 +93,7 @@ export default function C422(props: C422Props) {
 
           <Typography
             variant="h5"
-            fontWeight={400}
+            fontWeight={600}
             display="flex"
             alignItems="center"
             gap="0.5rem"
@@ -107,7 +107,7 @@ export default function C422(props: C422Props) {
               setInput3(Number(e.target.value));
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             {')='}
           </Typography>
           <NumberInput
@@ -116,7 +116,7 @@ export default function C422(props: C422Props) {
               setInput4(Number(e.target.value));
             }}
           />
-          <Typography variant="h5" fontWeight={400}>
+          <Typography variant="h5" fontWeight={600}>
             :
           </Typography>
           <NumberInput
