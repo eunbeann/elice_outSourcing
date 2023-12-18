@@ -52,9 +52,9 @@ export default function C121(props: C121Props) {
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
       <VisualFraction momNum={mom} sonNum={son} />
-      <CustomTypo fontSize="20px"> ÷ {num} = </CustomTypo>
+      <CustomTypo> ÷ {num} = </CustomTypo>
       <VisualFraction
-        width="5rem"
+        width="6.1rem"
         momNum={rMom}
         sonNum={
           <Box display="flex" alignItems="center">
@@ -63,7 +63,7 @@ export default function C121(props: C121Props) {
               onChange={e => setLSon(Number(e.target.value))}
               disabled={isSolved}
             />
-            <CustomTypo fontSize="20px" marginLeft="0.2rem">
+            <CustomTypo marginLeft="0.2rem">
               ÷
               <NumberInput
                 value={rSon}

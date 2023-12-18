@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import ExampleBox from 'src/contents/common/example-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
@@ -19,10 +19,10 @@ export default function E122() {
       <Box display="flex" alignItems="center">
         <img width="55%" height="10%" src={fractionE122} alt="fractionE122" />
         <Box bgcolor="beige" padding="0.6rem" marginX="2rem">
-          <CustomTypo>
+          <Typography>
             분수의 분모, 분자에 곱하는 수가 달라 도 결과는 같지만 곱하는 수에
             따라서 약분을 해야 하는 경우가 있습니다.
-          </CustomTypo>
+          </Typography>
         </Box>
       </Box>
     </ExampleBox>
