@@ -36,7 +36,7 @@ export default function P411() {
           src={ImgExample}
           variant="square"
           style={{
-            width: '45rem',
+            width: '50rem',
             height: 'max-content',
             marginBottom: '2rem',
           }}
