@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput, { NumberInput } from 'src/contents/common/number-box';
+import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
 interface C122Props {
@@ -58,9 +59,9 @@ export default function C122(props: C122Props) {
       }}
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-      <Typography marginRight="0.5rem">{qNum}</Typography>
+      <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
       <VisualFraction momNum={mom1} sonNum={son} />
-      <Typography fontSize="20px"> ÷ {num} = </Typography>
+      <CustomTypo fontSize="20px"> ÷ {num} = </CustomTypo>
       <VisualFraction
         width="6rem"
         momNum={mom2}
@@ -71,13 +72,13 @@ export default function C122(props: C122Props) {
               onChange={e => setDaughter1(Number(e.target.value))}
               disabled={isSolved}
             />
-            <Typography fontSize="20px" marginLeft="0.2rem">
+            <CustomTypo fontSize="20px" marginLeft="0.2rem">
               ÷ {son2}
-            </Typography>
+            </CustomTypo>
           </Box>
         }
       />
-      <Typography fontSize="20px"> = </Typography>
+      <CustomTypo fontSize="20px"> = </CustomTypo>
       <DivisionInput
         son={daughter2}
         mother={mother}

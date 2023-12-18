@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
-import { Box, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
 import { AnswerInput } from '../day2/C223';
 
@@ -39,9 +39,9 @@ export default function C212(props: C212Props) {
   return (
     <Box display="flex" gap="0.2rem" paddingY="1rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-      <Typography> {qNum} </Typography>
+      <CustomTypo> {qNum} </CustomTypo>
       <Box display="flex" alignItems="center">
-        <Typography mt="1.7rem">{momNum}</Typography>
+        <CustomTypo mt="1.7rem">{momNum}</CustomTypo>
         <Box ml="0.2rem" mt="2rem" mr="1rem" position="relative">
           <img width="60rem" height="20rem" src={fractionBar} alt="icon" />
           <Box position="absolute" left="0.8rem" top="0rem">
@@ -49,7 +49,7 @@ export default function C212(props: C212Props) {
           </Box>
         </Box>
         <VisualFraction momNum={momNum} sonNum={sonNum} />
-        <Typography marginX="0.4rem"> = </Typography>
+        <CustomTypo marginX="0.4rem"> = </CustomTypo>
         <AnswerInput
           type="number"
           value={enter}

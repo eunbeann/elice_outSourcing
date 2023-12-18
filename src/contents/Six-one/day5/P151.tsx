@@ -6,7 +6,7 @@ import SubmitButton from 'src/contents/common/submit-button';
 import VisualFraction from 'src/contents/common/visual-fraction';
 import C151 from './C151';
 
-export default function P131() {
+export default function P151() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     divisionProblems.map(problem => problem.pass)
@@ -27,7 +27,7 @@ export default function P131() {
 
   return (
     <Layout
-      title="문장제 - 작업중"
+      title="문장제"
       question={`문제를 읽고 알맞은 식과 답을 써 보세요.`}
       day="day5"
     >

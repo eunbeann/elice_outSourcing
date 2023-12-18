@@ -83,14 +83,23 @@ export default function C151(props: C151Props) {
       >
         <Box display="flex" alignItems="center">
           <CustomTypo paddingX="1rem">식: </CustomTypo>
-          <BigDivisionInput
-            num={equationNatureValue}
-            mother={equationMomValue}
-            son={equationSonValue}
-            onChangeNum={e => setEquationNatureValue(Number(e.target.value))}
-            onChangeMother={e => setEquationMomValue(Number(e.target.value))}
-            onChangeSon={e => setEquationSonValue(Number(e.target.value))}
-          />
+          {equationNature ? (
+            <BigDivisionInput
+              num={equationNatureValue}
+              mother={equationMomValue}
+              son={equationSonValue}
+              onChangeNum={e => setEquationNatureValue(Number(e.target.value))}
+              onChangeMother={e => setEquationMomValue(Number(e.target.value))}
+              onChangeSon={e => setEquationSonValue(Number(e.target.value))}
+            />
+          ) : (
+            <DivisionInput
+              mother={equationMomValue}
+              son={equationSonValue}
+              onChangeMother={e => setEquationMomValue(Number(e.target.value))}
+              onChangeSon={e => setEquationSonValue(Number(e.target.value))}
+            />
+          )}
           <CustomTypo marginX="1rem">÷</CustomTypo>
           <NumberInput
             width="2.5rem"

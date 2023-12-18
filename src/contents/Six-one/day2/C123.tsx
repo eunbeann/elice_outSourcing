@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput from 'src/contents/common/number-box';
+import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
 interface C123Props {
@@ -46,10 +47,10 @@ export default function C123(props: C123Props) {
       position="relative"
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-      <Typography marginRight="0.5rem">{qNum}</Typography>
+      <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
       <VisualFraction momNum={mom} sonNum={son} />
-      <Typography fontSize="20px"> ÷ </Typography>
-      <Typography fontSize="20px"> {nature} = </Typography>
+      <CustomTypo fontSize="20px"> ÷ </CustomTypo>
+      <CustomTypo fontSize="20px"> {nature} = </CustomTypo>
       <DivisionInput
         son={answerMom}
         mother={answerMom}
