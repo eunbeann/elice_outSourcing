@@ -5,7 +5,7 @@ import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput from 'src/contents/common/number-box';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
-interface Component14PageProps {
+interface C123Props {
   problem: {
     qId: number;
     qNum: string;
@@ -18,13 +18,13 @@ interface Component14PageProps {
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function Component14Page(props: Component14PageProps) {
+export default function C123(props: C123Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, qNum, mom, son, nature, pass } = problem;
 
   const [isCorrect, setIsCorrect] = useState(false);
-  const [answerMom, setAnswerMom] = useState(0);
-  const [answerSon, setAnswerSon] = useState(0);
+  const [answerMom, setAnswerMom] = useState<string | number>('');
+  const [answerSon, setAnswerSon] = useState<string | number>('');
 
   useEffect(() => {
     // TODO 정답 체크
@@ -55,6 +55,7 @@ export default function Component14Page(props: Component14PageProps) {
         mother={answerMom}
         onChangeMother={e => setAnswerMom(Number(e.target.value))}
         onChangeSon={e => setAnswerSon(Number(e.target.value))}
+        disabled={isSolved}
       />
     </Box>
   );

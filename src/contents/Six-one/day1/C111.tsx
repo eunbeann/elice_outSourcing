@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Apple, Person } from '@mui/icons-material';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import DivisionInput from 'src/contents/common/number-box';
+import { CustomTypo } from 'src/contents/common/styled-component';
 
-interface Component10PageProps {
+interface C111Props {
   problem: {
     qId: number;
     pass: boolean;
@@ -17,11 +18,11 @@ interface Component10PageProps {
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
 
-export default function Component10Page(props: Component10PageProps) {
+export default function C111(props: C111Props) {
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, pass, qNum, apples, people } = problem;
-  const [mother, setMother] = useState(0);
-  const [son, setSon] = useState(0);
+  const [mother, setMother] = useState<string | number>('');
+  const [son, setSon] = useState<string | number>('');
   const [isCorrect, setIsCorrect] = useState(false);
 
   useEffect(() => {
@@ -55,7 +56,7 @@ export default function Component10Page(props: Component10PageProps) {
     <Box>
       <Box display="flex" margin="1rem 2rem" position="relative">
         {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-        <Typography marginRight="1rem">{qNum}</Typography>
+        <CustomTypo marginRight="1rem">{qNum}</CustomTypo>
         {renderApples()}
       </Box>
       <Box display="flex" marginLeft="4rem">
@@ -71,6 +72,7 @@ export default function Component10Page(props: Component10PageProps) {
             son={son}
             onChangeMother={e => setMother(Number(e.target.value))}
             onChangeSon={e => setSon(Number(e.target.value))}
+            disabled={isSolved}
           />
         </Box>
       </Box>

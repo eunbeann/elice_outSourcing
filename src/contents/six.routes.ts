@@ -18,27 +18,55 @@ import { createEliceExtRoutes } from '@elice/extcontent-utils';
 export default createEliceExtRoutes([
   {
     path: 'quiz1-1-1',
-    component: import('./Six-one/day1/p-10'),
+    component: import('./Six-one/day1/P111'),
   },
   {
     path: 'quiz1-1-2',
-    component: import('./Six-one/day1/p-11'),
+    component: import('./Six-one/day1/P112'),
   },
   {
     path: 'quiz1-1-3',
-    component: import('./Six-one/day1/p-12'),
+    component: import('./Six-one/day1/P113'),
   },
   {
     path: 'quiz1-2-1',
-    component: import('./Six-one/day2/p-13'),
+    component: import('./Six-one/day2/P121'),
   },
   {
     path: 'quiz1-2-2',
-    component: import('./Six-one/day2/p-14'),
+    component: import('./Six-one/day2/P122'),
   },
   {
     path: 'quiz1-2-3',
-    component: import('./Six-one/day2/p-15'),
+    component: import('./Six-one/day2/P123'),
+  },
+  {
+    path: 'quiz1-3-1',
+    component: import('./Six-one/day3/P131'),
+  },
+  {
+    path: 'quiz1-3-2',
+    component: import('./Six-one/day3/P132'),
+  },
+  {
+    path: 'quiz1-3-3',
+    component: import('./Six-one/day3/P133'),
+  },
+  {
+    path: 'quiz1-4-1',
+    component: import('./Six-one/day4/P141'),
+  },
+  {
+    path: 'quiz1-4-3',
+    component: import('./Six-one/day4/P143'),
+  },
+  {
+    path: 'quiz1-5-1',
+    component: import('./Six-one/day5/P151'),
+  },
+  {
+    path: 'quiz2-1-1',
+    component: import('./Six-two/day1/P211'),
   },
   {
     path: 'quiz2-1-2',
@@ -49,12 +77,28 @@ export default createEliceExtRoutes([
     component: import('./Six-two/day1/P213'),
   },
   {
+    path: 'quiz2-2-1',
+    component: import('./Six-two/day2/P221'),
+  },
+  {
     path: 'quiz2-2-2',
     component: import('./Six-two/day2/P222'),
   },
   {
     path: 'quiz2-2-3',
     component: import('./Six-two/day2/P223'),
+  },
+  {
+    path: 'quiz2-4-2',
+    component: import('./Six-two/day4/P242'),
+  },
+  {
+    path: 'quiz2-4-3',
+    component: import('./Six-two/day4/P243'),
+  },
+  {
+    path: 'quiz2-5-1',
+    component: import('./Six-two/day5/P251'),
   },
   {
     path: 'quiz2-5-2',

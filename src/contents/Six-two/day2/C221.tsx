@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Box, TextField, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
-import { AnswerInput } from '../day2/C223';
-interface C213Props {
+import { AnswerInput } from './C223';
+interface C221Props {
   problem: {
     qId: number;
     qNum: string;
@@ -16,11 +17,11 @@ interface C213Props {
   isSolved: boolean;
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
-export default function C213(props: C213Props) {
+export default function C221(props: C221Props) {
   const [isCorrect, setIsCorrect] = useState(false);
   const { problem, isSolved, handleCorrectChange } = props;
   const { qId, qNum, sonNum, momNum, answer, pass } = problem;
-  const [enter, setEnter] = useState<number>(0);
+  const [enter, setEnter] = useState<number | string>('');
 
   useEffect(() => {
     if (enter === answer) {
@@ -33,28 +34,18 @@ export default function C213(props: C213Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" gap="0.2rem" paddingY="1rem" position="relative">
+    <Box display="flex" gap="0.2rem" margin="2rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
-      <Typography> {qNum} </Typography>
+      <CustomTypo> {qNum} </CustomTypo>
       <Box display="flex" alignItems="center">
-        <Typography>{momNum}</Typography>
-        <Box
-          border="1px solid grey"
-          borderBottom="none"
-          borderRight="none"
-          paddingLeft="0.5rem"
-          paddingRight="3rem"
-          marginX="0.7rem"
-        >
-          {sonNum}
-        </Box>
         <VisualFraction momNum={momNum} sonNum={sonNum} />
-        <Typography marginX="1rem"> = </Typography>
+        <CustomTypo marginX="1rem"> = </CustomTypo>
         <AnswerInput
           type="number"
           value={enter}
           onChange={e => setEnter(Number(e.target.value))}
           step="any"
+          disabled={isSolved}
         />
       </Box>
     </Box>

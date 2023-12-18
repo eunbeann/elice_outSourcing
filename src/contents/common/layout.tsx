@@ -27,12 +27,13 @@ export default function Layout(props: LayoutProps) {
 }
 
 const BgImg = styled.div<{ url: string }>`
-  height: 100vh;
+  height: 100%;
   background-image: url(${props => props.url});
   background-size: cover;
   background-position: center;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 `;
 
 const Flex = styled.div`
@@ -76,15 +77,20 @@ const QuestionBox = styled.div<{
   text-align: center;
   box-sizing: border-box;
   white-space: pre-wrap;
+  font-weight: 500;
 `;
 
 const ChildrenBox = styled.div<{ mainColor: string }>`
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0rem;
   padding: 1rem 2rem;
-  width: 70.67vw;
+  width: 71vw;
   height: 70vh;
   background-color: white;
   border: ${props => `8px solid ${props.mainColor}`};
   border-radius: 0.75rem;
   overflow: auto;
+  font-weight: 600;
 `;
