@@ -5,7 +5,7 @@ export const CustomTypo = styled(Typography)`
   color: #000;
   font-family: Pretendard;
   font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 1.95rem */
-  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.334;
+  font-size: 1.5rem;
 `;

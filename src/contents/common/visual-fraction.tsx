@@ -40,6 +40,7 @@ const FractionContainer = styled.div`
 `;
 
 const Divider = styled.div<{ $width?: string }>`
+  margin: 0.1rem;
   border: solid 1px black;
   width: ${props => (props.$width ? props.$width : '1.5rem')};
 `;
