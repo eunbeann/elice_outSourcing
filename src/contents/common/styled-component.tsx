@@ -3,7 +3,6 @@ import { Typography } from '@mui/material';
 
 export const CustomTypo = styled(Typography)`
   color: #000;
-  font-family: Pretendard;
   font-style: normal;
   font-weight: 600;
   line-height: 1.334;
