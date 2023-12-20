@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import { CustomTypo } from './styled-component';
 
@@ -31,16 +31,37 @@ export default function VisualFraction(props: DivisionTypoProps) {
   );
 }
 
+//폰트 얇은 분수
+export function BasicVisualFraction(props: DivisionTypoProps) {
+  const { momNum, sonNum, width, natureNum } = props;
+  return (
+    <Box display="flex" flexDirection="row" alignItems="center">
+      {natureNum && <Typography fontSize="18 px">{natureNum}</Typography>}
+      <FractionContainer>
+        <Typography>{sonNum}</Typography>
+        <BasicDivider $width={width} />
+        <Typography>{momNum}</Typography>
+      </FractionContainer>
+    </Box>
+  );
+}
+
 const FractionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   align-items: center;
 `;
 
 const Divider = styled.div<{ $width?: string }>`
   margin: 0.1rem;
   border: solid 1px black;
+  width: ${props => (props.$width ? props.$width : '1.5rem')};
+`;
+
+const BasicDivider = styled.div<{ $width?: string }>`
+  margin: 0.1rem;
+  border: solid 0.3px black;
   width: ${props => (props.$width ? props.$width : '1.5rem')};
 `;
