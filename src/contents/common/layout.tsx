@@ -52,7 +52,7 @@ const TitleBox = styled.header<{ mainColor: string }>`
   justify-content: center;
   color: var(--White, #fff);
   text-align: center;
-  font-family: Elice DX Neolli OTF;
+  font-family: Elice DX Neolli;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -63,6 +63,7 @@ const QuestionBox = styled.div<{
   subColor: string;
   bgColor: string;
 }>`
+  font-family: Elice DX Neolli;
   padding: 1rem 2rem;
   white-space: break-spaces;
   width: 42.5rem;
