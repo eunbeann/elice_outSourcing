@@ -32,7 +32,7 @@ export default function P151() {
       day="day5"
     >
       <QuestionTab />
-      <Box display="flex" flexDirection="column" alignItems="center">
+      <Box display="flex" flexDirection="column">
         <Box
           sx={{
             display: 'flex',
@@ -46,8 +46,8 @@ export default function P151() {
                 maxHeight: '200px',
                 overflowY: 'auto',
                 width: '100%',
+                justifyContent: 'center',
                 display: 'flex',
-                justifyContent: 'left',
                 margin: '0.5rem',
               }}
             >
@@ -74,14 +74,14 @@ export default function P151() {
 function QuestionTab() {
   return (
     <>
-      <Box fontSize="18px" display="flex" alignItems="center">
+      <Box fontSize="1.5rem" display="flex" alignItems="center">
         어떤 분수를 6으로 나누어야 할 것을 잘못하여 곱했더니
         <span style={{ margin: '0ch 0.3ch' }}>
           <VisualFraction natureNum="3" momNum="5" sonNum="1" />
         </span>
         이 되었습니다.
       </Box>
-      <Box fontSize="18px" marginBottom="2rem">
+      <Box fontSize="1.5rem" marginBottom="2rem">
         바르게 계산한 몫을 기약분수로 구하려고 합니다. (①~②)
       </Box>
     </>

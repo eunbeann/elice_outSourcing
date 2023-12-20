@@ -38,25 +38,22 @@ export default function C111(props: C111Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box position="relative" height="8rem">
+    <Box position="relative" minHeight="8rem">
       <Box>
         <Box display="flex" margin="1rem 2rem" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <CustomTypo marginRight="1rem">{qNum}</CustomTypo>
           <img
-            width={qId === 0 ? '65%' : '75%'}
+            width={qId === 0 ? '75%' : '85%'}
             src={qId === 0 ? number1Image : number2Image}
             alt="fiveApples and two People"
           />
         </Box>
         <Box
           top="3.5rem"
-          right={qId === 0 ? '7.5rem' : '5.5rem'}
-          display="flex"
+          right={qId === 0 ? '6rem' : '4rem'}
           position="absolute"
-          flexDirection="column"
-          marginTop="-0.5rem"
-          marginLeft="2rem"
+          marginTop="-0.2rem"
         >
           <DivisionInput
             mother={mother}

@@ -15,8 +15,7 @@ interface C152Props {
     qNum: string;
     qString: string;
     equationNature?: number | string;
-    equationLeft?: number;
-    equationMom: number;
+    equationMom?: number;
     equationSon: number;
     equationDiv: number;
     answerMom: number;
@@ -35,7 +34,6 @@ export default function C152(props: C152Props) {
     pass,
     qNum,
     qString,
-    equationLeft,
     equationNature,
     equationMom,
     equationSon,
@@ -64,9 +62,40 @@ export default function C152(props: C152Props) {
     }
   }, [isSolved, qId]);
 
+  const renderInputComponent = () => {
+    if (equationNature) {
+      return (
+        <BigDivisionInput
+          num={equationNatureValue}
+          mother={equationMomValue}
+          son={equationSonValue}
+          onChangeNum={e => setEquationNatureValue(Number(e.target.value))}
+          onChangeMother={e => setEquationMomValue(Number(e.target.value))}
+          onChangeSon={e => setEquationSonValue(Number(e.target.value))}
+        />
+      );
+    } else if (equationMom) {
+      return (
+        <DivisionInput
+          mother={equationMomValue}
+          son={equationSonValue}
+          onChangeMother={e => setEquationMomValue(Number(e.target.value))}
+          onChangeSon={e => setEquationSonValue(Number(e.target.value))}
+        />
+      );
+    }
+    return (
+      <NumberInput
+        value={equationSonValue}
+        onChange={e => setEquationSonValue(Number(e.target.value))}
+      />
+    );
+  };
+
   return (
     <Box
       minWidth="30rem"
+      width="100%"
       alignItems="left"
       gap="0.2rem"
       marginBottom="1rem"
@@ -87,29 +116,7 @@ export default function C152(props: C152Props) {
       >
         <Box display="flex" alignItems="center">
           <CustomTypo paddingX="1rem">식: </CustomTypo>
-          {equationNature ? (
-            <BigDivisionInput
-              num={equationNatureValue}
-              mother={equationMomValue}
-              son={equationSonValue}
-              onChangeNum={e => setEquationNatureValue(Number(e.target.value))}
-              onChangeMother={e => setEquationMomValue(Number(e.target.value))}
-              onChangeSon={e => setEquationSonValue(Number(e.target.value))}
-            />
-          ) : equationLeft ? (
-            <DivisionInput
-              mother={equationMomValue}
-              son={equationSonValue}
-              onChangeMother={e => setEquationMomValue(Number(e.target.value))}
-              onChangeSon={e => setEquationSonValue(Number(e.target.value))}
-            />
-          ) : (
-            <NumberInput
-              value={equationSonValue}
-              onChange={e => setEquationSonValue(Number(e.target.value))}
-            />
-          )}
-
+          {renderInputComponent()}
           <CustomTypo marginX="1rem">÷</CustomTypo>
           <NumberInput
             width="2.5rem"

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
@@ -61,19 +60,11 @@ export default function C151(props: C151Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box
-      minWidth="30rem"
-      alignItems="left"
-      gap="0.2rem"
-      marginBottom="1rem"
-      position="relative"
-    >
+    <Box minWidth="30rem" gap="0.2rem" marginBottom="1rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Box>
         <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
-        <CustomTypo fontSize="20px" paddingBottom="1rem">
-          {qString}
-        </CustomTypo>
+        <CustomTypo paddingBottom="1rem">{qString}</CustomTypo>
       </Box>
       <Box
         display="flex"
@@ -120,13 +111,3 @@ export default function C151(props: C151Props) {
     </Box>
   );
 }
-
-const InputBox = styled.input<{ width?: string }>`
-  width: ${({ width }) => width};
-  height: 2rem;
-  border: 1px solid black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  margin: 1rem;
-`;

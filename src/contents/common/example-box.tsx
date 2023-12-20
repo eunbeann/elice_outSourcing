@@ -8,7 +8,8 @@ export default function ExampleBox({ children }: { children: ReactNode }) {
 
 const CustomBox = styled.div`
   width: 80%;
-  padding: 1rem;
+  padding: 1rem 3rem;
+
   border-radius: 1.25rem;
   margin-top: 2rem;
   border: 1px solid #c0c0c0;

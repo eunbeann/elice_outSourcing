@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import ExampleBox from 'src/contents/common/example-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
@@ -9,7 +9,7 @@ import textE121 from 'src/contents/assets/image/text-e121.png';
 export default function E121() {
   return (
     <ExampleBox>
-      <CustomTypo fontSize="17px" marginBottom="1rem">
+      <CustomTypo>
         (분수)÷(자연수)에서 분수의
         <span style={{ color: 'red' }}>
           분자가 자연수의 배수인 경우 분자를 자연수로 나눕니다.
