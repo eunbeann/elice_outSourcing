@@ -9,7 +9,8 @@
  * If you have any questions, please contact us via contact point.
  * ======================================================== */
 
-import { css, Global } from '@emotion/react';
+// eslint-disable-next-line prettier/prettier
+import { css,Global } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 
 const AppStylesheet: React.FC = () => (
