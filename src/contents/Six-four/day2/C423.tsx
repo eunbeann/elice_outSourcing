@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Avatar, Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
-import { NumberInput } from 'src/contents/common/number-box';
+import DivisionInput, { NumberInput } from 'src/contents/common/number-box';
 import { NumberUnderBar } from 'src/contents/common/number-underbar';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
@@ -33,10 +33,11 @@ export default function C423(props: C423Props) {
   useEffect(() => {
     if (
       answer[0] === input1 &&
-      answer[0] === input2 &&
       answer[0] === input3 &&
+      answer[1] === input2 &&
       answer[1] === input4 &&
-      answer[2] === input5
+      answer[2] === input5 &&
+      answer[3] === input6
     ) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
@@ -53,6 +54,46 @@ export default function C423(props: C423Props) {
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <Typography variant="h5" fontWeight={600}>
             {qNum}
+          </Typography>
+        </Box>
+        <Box display="flex" alignItems="center">
+          <Typography
+            variant="h5"
+            fontWeight={600}
+            display="flex"
+            alignItems="center"
+          >
+            <VisualFraction momNum={numList[1]} sonNum={numList[0]} />
+            :
+            <VisualFraction momNum={numList[3]} sonNum={numList[2]} />
+            =(
+            <VisualFraction momNum={numList[1]} sonNum={numList[0]} />
+            ×
+            <DivisionInput
+              son={String(input1)}
+              mother={String(input2)}
+              onChangeSon={e => setInput1(Number(e.target.value))}
+              onChangeMother={e => setInput2(Number(e.target.value))}
+            />
+            ): (
+            <VisualFraction momNum={numList[3]} sonNum={numList[2]} />
+            ×
+            <DivisionInput
+              son={String(input3)}
+              mother={String(input4)}
+              onChangeSon={e => setInput3(Number(e.target.value))}
+              onChangeMother={e => setInput4(Number(e.target.value))}
+            />
+            )=
+            <NumberInput
+              value={String(input5)}
+              onChange={e => setInput5(Number(e.target.value))}
+            />
+            :
+            <NumberInput
+              value={String(input6)}
+              onChange={e => setInput6(Number(e.target.value))}
+            />
           </Typography>
         </Box>
       </Box>

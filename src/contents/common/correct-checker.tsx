@@ -12,7 +12,7 @@ export default function CorrectChecker({ isCorrect }: { isCorrect: boolean }) {
       style={{
         position: 'absolute',
         marginTop: '-0.6rem',
-        marginLeft: '-1rem',
+        marginLeft: '-2rem',
         zIndex: 1,
         width: '3.2rem',
         height: '3rem',
