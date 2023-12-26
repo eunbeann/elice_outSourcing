@@ -20,9 +20,9 @@ export default function C432(props: C432Props) {
   const { qId, pass, qNum, leftNum, rightNum, answer } = problem;
 
   const leftNumType =
-    leftNum.length === 2 ? '소수' : leftNum.length === 4 ? '분수' : '대분수';
+    leftNum.length === 1 ? '소수' : leftNum.length === 2 ? '분수' : '대분수';
   const rightNumType =
-    rightNum.length === 2 ? '소수' : rightNum.length === 4 ? '분수' : '대분수';
+    rightNum.length === 1 ? '소수' : rightNum.length === 2 ? '분수' : '대분수';
 
   const [isCorrect, setIsCorrect] = useState(false);
 
@@ -50,69 +50,97 @@ export default function C432(props: C432Props) {
         </Box>
         <Box>
           <Box display="flex" mb="1rem" ml="0.5rem">
-            <Box display="flex" flexDirection="column">
+            <Box display="flex">
               <Typography
                 variant="h5"
-                fontWeight={600}
-                bgcolor="#f9d590"
-                width="6rem"
-                height="2.5rem"
                 display="flex"
-                justifyContent="center"
                 alignItems="center"
-                border="1px solid black"
+                gap="0.5rem"
               >
-                전항
-              </Typography>
-              <Typography
-                variant="h5"
-                fontWeight={600}
-                width="6rem"
-                height="5rem"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                border="1px solid black"
-                borderTop="none"
-              >
-                {leftNumType === '소수' ? (
-                  leftNum[0]
-                ) : leftNumType === '분수' ? (
-                  <VisualFraction momNum={leftNum[1]} sonNum={leftNum[0]} />
-                ) : (
-                  <>
-                    {leftNum[0]}{' '}
-                    <VisualFraction momNum={leftNum[2]} sonNum={leftNum[1]} />
-                  </>
-                )}
+                <Typography
+                  variant="h5"
+                  fontWeight={600}
+                  bgcolor="#fce3e7"
+                  width="4rem"
+                  height="4rem"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  border="1px solid black"
+                >
+                  {leftNumType === '소수' ? (
+                    leftNum[0]
+                  ) : leftNumType === '분수' ? (
+                    <VisualFraction momNum={leftNum[1]} sonNum={leftNum[0]} />
+                  ) : (
+                    <>
+                      {leftNum[0]}{' '}
+                      <VisualFraction momNum={leftNum[2]} sonNum={leftNum[1]} />
+                    </>
+                  )}
+                </Typography>
+                :
+                <Typography
+                  variant="h5"
+                  fontWeight={600}
+                  bgcolor="#daecf6"
+                  width="4rem"
+                  height="4rem"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  border="1px solid black"
+                >
+                  {rightNumType === '소수' ? (
+                    rightNum[0]
+                  ) : rightNumType === '분수' ? (
+                    <VisualFraction momNum={rightNum[1]} sonNum={rightNum[0]} />
+                  ) : (
+                    <>
+                      {rightNum[0]}{' '}
+                      <VisualFraction
+                        momNum={rightNum[2]}
+                        sonNum={rightNum[1]}
+                      />
+                    </>
+                  )}
+                </Typography>
+                =
+                <Typography
+                  variant="h5"
+                  fontWeight={600}
+                  bgcolor="#fce3e7"
+                  width="4rem"
+                  height="4rem"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  border="1px solid black"
+                >
+                  <NumberInput
+                    value={input1}
+                    onChange={e => setInput1(Number(e.target.value))}
+                  />
+                </Typography>
+                :
+                <Typography
+                  variant="h5"
+                  fontWeight={600}
+                  bgcolor="#daecf6"
+                  width="4rem"
+                  height="4rem"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  border="1px solid black"
+                >
+                  <NumberInput
+                    value={input2}
+                    onChange={e => setInput2(Number(e.target.value))}
+                  />
+                </Typography>
               </Typography>
             </Box>
-          </Box>
-          <Box display="flex" gap="0.3rem" alignItems="center">
-            <Avatar
-              src={ArrowRightRed}
-              variant="square"
-              style={{
-                width: '1.5rem',
-                height: 'max-content',
-                margin: '0rem 0.5rem',
-              }}
-            />
-            <Typography variant="h5" fontWeight={600} display="flex">
-              <NumberInput
-                value={Number(input1)}
-                onChange={e => {
-                  setInput1(Number(e.target.value));
-                }}
-              />
-              :
-              <NumberInput
-                value={Number(input2)}
-                onChange={e => {
-                  setInput2(Number(e.target.value));
-                }}
-              />
-            </Typography>
           </Box>
         </Box>
       </Box>
