@@ -51,6 +51,8 @@ export default function P423() {
               display: 'flex',
               justifyContent: 'center',
               margin: '0.5rem',
+              paddingTop: '1rem',
+              paddingLeft: '2rem',
             }}
           >
             <C423

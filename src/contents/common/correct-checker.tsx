@@ -16,6 +16,7 @@ export default function CorrectChecker({ isCorrect }: { isCorrect: boolean }) {
         zIndex: 1,
         width: '3.2rem',
         height: '3rem',
+        left: '1rem',
       }}
     />
   );
