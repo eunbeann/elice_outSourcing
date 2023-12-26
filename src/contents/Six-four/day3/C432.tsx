@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Avatar, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import { NumberInput } from 'src/contents/common/number-box';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
 import type { ProblemProp } from './P432';
-
-import ArrowRightRed from '../../assets/icon/arrowRightRed.png';
 
 interface C432Props {
   problem: ProblemProp;
