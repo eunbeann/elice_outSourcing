@@ -31,7 +31,7 @@ export default function P431() {
         '어떤 비의 전항과 후항을 표에 적었습니다. 비를 가장 간단한 자연수의 비로 나타내세요.'
       }
     >
-      <Box display="grid" gridTemplateColumns="1fr 1fr">
+      <Box display="grid" gridTemplateColumns="1fr 1fr" gap="3rem">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -40,6 +40,8 @@ export default function P431() {
               display: 'flex',
               justifyContent: 'center',
               margin: '0.5rem',
+              paddingTop: '1rem',
+              paddingLeft: '2rem',
             }}
           >
             <C431
