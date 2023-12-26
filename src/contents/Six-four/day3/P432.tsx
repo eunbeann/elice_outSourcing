@@ -3,9 +3,9 @@ import { Avatar, Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C431 from './C431';
+import C432 from './C432';
 
-export default function P431() {
+export default function P432() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     problems.map(problem => problem.pass)
@@ -44,7 +44,7 @@ export default function P431() {
               paddingLeft: '2rem',
             }}
           >
-            <C431
+            <C432
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
@@ -68,7 +68,8 @@ export interface ProblemProp {
   qId: number;
   qNum: string;
   pass: boolean;
-  numList: number[];
+  leftNum: number[];
+  rightNum: number[];
   answer: number[];
 }
 
@@ -77,56 +78,96 @@ const problems: ProblemProp[] = [
     qId: 0,
     qNum: '①',
     pass: false,
-    numList: [7, 2, 21, 2],
-    answer: [1, 3],
+    leftNum: [2.3],
+    rightNum: [4.7],
+    answer: [23, 47],
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
-    numList: [3, 4, 1, 6],
-    answer: [9, 2],
+    leftNum: [4, 2, 5],
+    rightNum: [3.3],
+    answer: [4, 3],
   },
   {
     qId: 2,
     qNum: '③',
     pass: false,
-    numList: [0.5, 0.7],
-    answer: [5, 7],
+    leftNum: [7.2],
+    rightNum: [2.4],
+    answer: [3, 1],
   },
   {
     qId: 3,
     qNum: '④',
     pass: false,
-    numList: [3.6, 4.5],
-    answer: [4, 5],
+    leftNum: [2, 9],
+    rightNum: [5, 6],
+    answer: [4, 15],
   },
   {
     qId: 4,
     qNum: '⑤',
     pass: false,
-    numList: [3, 1, 3, 4, 1, 4],
-    answer: [40, 51],
+    leftNum: [6],
+    rightNum: [1.2],
+    answer: [5, 1],
   },
   {
     qId: 5,
     qNum: '⑥',
     pass: false,
-    numList: [3, 8, 2, 5],
-    answer: [15, 16],
+    leftNum: [4.5],
+    rightNum: [7.5],
+    answer: [3, 5],
   },
   {
     qId: 6,
     qNum: '⑦',
     pass: false,
-    numList: [0.09, 0.15],
-    answer: [3, 5],
+    leftNum: [17, 3],
+    rightNum: [2, 9],
+    answer: [51, 2],
   },
   {
     qId: 7,
     qNum: '⑧',
     pass: false,
-    numList: [1.2, 0.9],
-    answer: [4, 3],
+    leftNum: [8],
+    rightNum: [3, 1, 3],
+    answer: [12, 5],
+  },
+  {
+    qId: 8,
+    qNum: '⑨',
+    pass: false,
+    leftNum: [18],
+    rightNum: [24],
+    answer: [3, 4],
+  },
+  {
+    qId: 9,
+    qNum: '⑩',
+    pass: false,
+    leftNum: [5, 4],
+    rightNum: [4, 5],
+    answer: [25, 16],
+  },
+  {
+    qId: 10,
+    qNum: '⑪',
+    pass: false,
+    leftNum: [2.7],
+    rightNum: [0.36],
+    answer: [15, 2],
+  },
+  {
+    qId: 11,
+    qNum: '⑫',
+    pass: false,
+    leftNum: [3, 1, 2],
+    rightNum: [7.7],
+    answer: [5, 11],
   },
 ];
