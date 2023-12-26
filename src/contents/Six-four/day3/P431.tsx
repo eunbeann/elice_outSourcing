@@ -25,8 +25,8 @@ export default function P431() {
   };
   return (
     <Layout
-      day="day2"
-      title="간단한 자연수의 비로 나타내기"
+      day="day3"
+      title="다른 비로 나타내기"
       question={
         '어떤 비의 전항과 후항을 표에 적었습니다. 비를 가장 간단한 자연수의 비로 나타내세요.'
       }
@@ -55,7 +55,7 @@ export default function P431() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#FF7613"
         isSolved={isSolved}
       />
     </Layout>
