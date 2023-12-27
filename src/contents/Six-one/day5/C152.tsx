@@ -51,9 +51,10 @@ export default function C152(props: C152Props) {
   const [equationDivValue, setEquationDivValue] = useState<string | number>('');
   const [answerMomValue, setAnswerMomValue] = useState<string | number>('');
   const [answerSonValue, setAnswerSonValue] = useState<string | number>('');
+
   useEffect(() => {
     // TODO 정답 체크
-    if (true) {
+    if (answerMom === answerMomValue && answerSon === answerSonValue) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
