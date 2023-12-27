@@ -30,42 +30,39 @@ export default function P113() {
       question="나눗셈의 몫을 분수로 나타내세요."
       day="day1"
     >
-      <Box display="flex" flexDirection="column" alignItems="center">
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-          }}
-        >
-          {divisionProblems.map(problem => (
-            <Box
-              key={problem.qNum}
-              sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
-                display: 'flex',
-                width: 'calc(40% - 0.5rem)',
-                justifyContent: 'center',
-                margin: '0.5rem',
-              }}
-            >
-              <C113
-                problem={problem}
-                isSolved={isSolved}
-                handleCorrectChange={(qId, pass) =>
-                  handleCorrectChange(qId, pass)
-                }
-              />
-            </Box>
-          ))}
-        </Box>
-        <SubmitButton
-          onClick={checkAnswer}
-          $color="#FF6291"
-          isSolved={isSolved}
-        />
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          width: '100%',
+          justifyContent: 'center',
+        }}
+      >
+        {divisionProblems.map(problem => (
+          <Box
+            key={problem.qNum}
+            sx={{
+              display: 'flex',
+              width: 'calc(40% - 0.5rem)',
+              margin: '2rem 0.5rem',
+              paddingLeft: '10%',
+            }}
+          >
+            <C113
+              problem={problem}
+              isSolved={isSolved}
+              handleCorrectChange={(qId, pass) =>
+                handleCorrectChange(qId, pass)
+              }
+            />
+          </Box>
+        ))}
       </Box>
+      <SubmitButton
+        onClick={checkAnswer}
+        $color="#FF6291"
+        isSolved={isSolved}
+      />
     </Layout>
   );
 }

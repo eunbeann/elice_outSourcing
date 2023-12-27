@@ -42,8 +42,6 @@ export default function P152() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 width: '100%',
                 display: 'flex',
                 justifyContent: 'left',

@@ -52,23 +52,3 @@ export default function C242(props: C242Props) {
     </Box>
   );
 }
-
-export const AnswerInput = styled.input`
-  width: 4rem;
-  height: 2rem;
-  border: solid #ededee 0.1rem;
-  border-radius: 5px;
-
-  ::-webkit-outer-spin-button,
-  ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  :focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  -moz-appearance: textfield;
-`;

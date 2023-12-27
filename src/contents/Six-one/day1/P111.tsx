@@ -22,6 +22,7 @@ export default function P111() {
 
   const checkAnswer = () => {
     //TODO 점수 보내는 api 추가
+    // calculateTruePercentage(passArray)
     setIsSolved(prev => !prev);
   };
   return (
@@ -38,8 +39,6 @@ export default function P111() {
           <Box
             key={problem.qNum}
             sx={{
-              maxHeight: '200px',
-              overflowY: 'auto',
               display: 'flex',
               width: 'calc(40% - 0.5rem)',
               justifyContent: 'center',

@@ -60,11 +60,13 @@ export default function C151(props: C151Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box minWidth="30rem" gap="0.2rem" marginBottom="1rem" position="relative">
+    <Box width="90%" gap="0.2rem" marginBottom="1rem" position="relative">
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Box>
         <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
-        <CustomTypo paddingBottom="1rem">{qString}</CustomTypo>
+        <CustomTypo fontSize="1.25rem" paddingBottom="1rem">
+          {qString}
+        </CustomTypo>
       </Box>
       <Box
         display="flex"

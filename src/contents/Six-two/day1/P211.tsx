@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import ExampleBox from 'src/contents/common/example-box';
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C211 from './C211';
 
-import i211_1 from 'src/contents/assets/image/211-1.png';
-import e211Image from 'src/contents/assets/image/e_2-1-1.png';
+import e211Q1 from 'src/contents/assets/image/P211/211-1.png';
+import e211Image from 'src/contents/assets/image/P211/e_2-1-1.png';
 
 export default function P211() {
   const [isSolved, setIsSolved] = useState(false);
@@ -29,7 +29,7 @@ export default function P211() {
   };
   return (
     <Layout
-      title="나눗셈으로 분수를 소수로 고치기 - 개발중 "
+      title="나눗셈으로 분수를 소수로 고치기"
       question={'빈칸을 채워서 분수를 소수로 바꾸세요.'}
       day="day1"
     >
@@ -37,6 +37,9 @@ export default function P211() {
         <img width="100%" src={e211Image} alt="fractionE122" />
       </ExampleBox>
       <Box display="flex" flexDirection="column" alignItems="center">
+        <Typography fontSize="1.25rem">
+          * 보기처럼 계산해보며 값을 구하세요.
+        </Typography>
         <Box
           sx={{
             display: 'flex',
@@ -48,8 +51,6 @@ export default function P211() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 display: 'flex',
                 width: '40%',
                 justifyContent: 'center',
@@ -77,20 +78,8 @@ export default function P211() {
 }
 
 const divisionProblems = [
-  {
-    qId: 0,
-    qNum: '①',
-    qI: 'src/contents/assets/image/211-1.png',
-    answer: 0.2,
-    pass: false,
-  },
-  {
-    qId: 1,
-    qNum: '②',
-    qI: 'src/contents/assets/image/e_2-1-1.png',
-    answer: 0.05,
-    pass: false,
-  },
-  { qId: 2, qNum: '③', qI: 'i211_1', answer: 0.16, pass: false },
-  { qId: 3, qNum: '④', qI: 'i211_1', answer: 0.14, pass: false },
+  { qId: 0, qNum: '①', sonNum: 1, momNum: 2, answer: 0.5, pass: false },
+  { qId: 1, qNum: '②', sonNum: 3, momNum: 5, answer: 0.6, pass: false },
+  { qId: 2, qNum: '③', sonNum: 3, momNum: 4, answer: 0.75, pass: false },
+  { qId: 3, qNum: '④', sonNum: 3, momNum: 25, answer: 0.12, pass: false },
 ];

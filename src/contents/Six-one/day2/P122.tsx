@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
 
+import ExampleBox from 'src/contents/common/example-box';
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C122 from './C122';
-import E122 from './E122';
+
+import e122Image from 'src/contents/assets/image/P122/e_1-2-2.png';
 export default function P122() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
@@ -30,7 +32,9 @@ export default function P122() {
       question={`□에 알맞은 수를 써넣어 식을 계산하세요.`}
       day="day2"
     >
-      <E122 />
+      <ExampleBox>
+        <img width="100%" src={e122Image} alt="fractionE122" />
+      </ExampleBox>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
           sx={{
@@ -43,8 +47,6 @@ export default function P122() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 display: 'flex',
                 width: 'calc(40% - 0.5rem)',
                 justifyContent: 'center',

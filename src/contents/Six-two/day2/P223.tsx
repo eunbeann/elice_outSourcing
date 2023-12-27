@@ -41,8 +41,6 @@ export default function P223() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 display: 'flex',
                 width: '40%',
                 justifyContent: 'center',
@@ -61,7 +59,7 @@ export default function P223() {
         </Box>
         <SubmitButton
           onClick={checkAnswer}
-          $color="#00B76A"
+          $color="#6297FF"
           isSolved={isSolved}
         />
       </Box>

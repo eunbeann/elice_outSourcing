@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
@@ -51,9 +50,10 @@ export default function C152(props: C152Props) {
   const [equationDivValue, setEquationDivValue] = useState<string | number>('');
   const [answerMomValue, setAnswerMomValue] = useState<string | number>('');
   const [answerSonValue, setAnswerSonValue] = useState<string | number>('');
+
   useEffect(() => {
     // TODO 정답 체크
-    if (true) {
+    if (answerMom === answerMomValue && answerSon === answerSonValue) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
@@ -104,7 +104,7 @@ export default function C152(props: C152Props) {
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Box>
         <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
-        <CustomTypo fontSize="20px" paddingBottom="1rem">
+        <CustomTypo fontSize="1.25rem" paddingBottom="1rem">
           {qString}
         </CustomTypo>
       </Box>
@@ -138,13 +138,3 @@ export default function C152(props: C152Props) {
     </Box>
   );
 }
-
-const InputBox = styled.input<{ width?: string }>`
-  width: ${({ width }) => width};
-  height: 2rem;
-  border: 1px solid black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  margin: 1rem;
-`;

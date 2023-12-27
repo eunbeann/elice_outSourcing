@@ -6,7 +6,7 @@ import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C141 from './C141';
 
-import e141Image from 'src/contents/assets/image/e_1-4-1.png';
+import e141Image from 'src/contents/assets/image/P141/e_1-4-1.png';
 export default function P141() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
@@ -44,8 +44,6 @@ export default function P141() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 display: 'flex',
                 width: '40%',
                 justifyContent: 'center',

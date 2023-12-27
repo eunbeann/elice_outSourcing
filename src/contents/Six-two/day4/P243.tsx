@@ -30,6 +30,7 @@ export default function P243() {
       day="day4"
     >
       <Typography> * 정답이 대분수일 경우 가분수로 고쳐 적습니다.</Typography>
+      <Typography> * 약분 가능한 수는 약분하여 적습니다.</Typography>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
           sx={{
@@ -42,8 +43,6 @@ export default function P243() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 display: 'flex',
                 width: '40%',
                 justifyContent: 'center',

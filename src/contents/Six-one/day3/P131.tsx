@@ -6,7 +6,7 @@ import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C131 from './C131';
 
-import e131Image from 'src/contents/assets/image/e_1-3-1.png';
+import e131Image from 'src/contents/assets/image/P131/e_1-3-1.png';
 export default function P131() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
@@ -43,8 +43,6 @@ export default function P131() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 display: 'flex',
                 width: '40%',
                 justifyContent: 'center',
@@ -203,15 +201,6 @@ const divisionProblems = [
     lSon: 7,
     rSon: 7,
     cMom: 8,
-    cSon: 1,
-    pass: false,
-  },
-  {
-    qId: 14,
-    qNum: '⑮',
-    lSon: 12,
-    rSon: 36,
-    cMom: 3,
     cSon: 1,
     pass: false,
   },

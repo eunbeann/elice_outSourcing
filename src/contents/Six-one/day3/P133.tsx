@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import ExampleBox from 'src/contents/common/example-box';
 import Layout from 'src/contents/common/layout';
@@ -29,6 +29,7 @@ export default function P133() {
   return (
     <Layout title="÷(자연수)의 계산" question={`계산을 하세요.`} day="day3">
       <Box display="flex" flexDirection="column" alignItems="center">
+        <Typography>약분 가능한 수는 약분합니다.</Typography>
         <Box
           sx={{
             display: 'flex',
@@ -40,10 +41,8 @@ export default function P133() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 display: 'flex',
-                width: '40%',
+                width: '30%',
                 justifyContent: 'center',
                 margin: '0.5rem',
               }}
@@ -208,8 +207,8 @@ const divisionProblems = [
   {
     qId: 14,
     qNum: '⑮',
-    lSon: 2,
-    lMom: 9,
+    lSon: 9,
+    lMom: 2,
     rSon: 5,
     cMom: 10,
     cSon: 9,

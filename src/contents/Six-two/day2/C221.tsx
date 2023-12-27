@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { AnswerInput, NumberInput } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
-import { AnswerInput } from './C223';
 interface C221Props {
   problem: {
     qId: number;
@@ -12,6 +12,8 @@ interface C221Props {
     sonNum: number;
     momNum: number;
     answer: number;
+    rSon: number;
+    rMom: number;
     pass: boolean;
   };
   isSolved: boolean;
@@ -20,11 +22,12 @@ interface C221Props {
 export default function C221(props: C221Props) {
   const [isCorrect, setIsCorrect] = useState(false);
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, qNum, sonNum, momNum, answer, pass } = problem;
+  const { qId, qNum, sonNum, momNum, answer, pass, rSon, rMom } = problem;
   const [enter, setEnter] = useState<number | string>('');
+  const [answerSon, setAnswerSon] = useState<string | number>('');
 
   useEffect(() => {
-    if (enter === answer) {
+    if (enter === answer && rSon === answerSon) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
@@ -38,13 +41,23 @@ export default function C221(props: C221Props) {
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <CustomTypo> {qNum} </CustomTypo>
       <Box display="flex" alignItems="center">
-        <VisualFraction momNum={momNum} sonNum={sonNum} />
+        <VisualFraction width="3rem" momNum={momNum} sonNum={sonNum} />
+        <CustomTypo marginX="1rem"> = </CustomTypo>
+        <VisualFraction
+          width="4rem"
+          momNum={rMom}
+          sonNum={
+            <NumberInput
+              width="4rem"
+              value={answerSon}
+              onChange={e => setAnswerSon(Number(e.target.value))}
+            />
+          }
+        />
         <CustomTypo marginX="1rem"> = </CustomTypo>
         <AnswerInput
-          type="number"
           value={enter}
           onChange={e => setEnter(Number(e.target.value))}
-          step="any"
           disabled={isSolved}
         />
       </Box>

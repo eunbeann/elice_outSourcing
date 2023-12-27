@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { AnswerInput } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
 interface C223Props {
@@ -41,33 +41,11 @@ export default function C223(props: C223Props) {
         <VisualFraction momNum={momNum} sonNum={sonNum} />
         <CustomTypo marginX="1rem"> = </CustomTypo>
         <AnswerInput
-          type="number"
           value={enter}
           onChange={e => setEnter(Number(e.target.value))}
-          step="any"
           disabled={isSolved}
         />
       </Box>
     </Box>
   );
 }
-
-export const AnswerInput = styled.input`
-  width: 4rem;
-  height: 2rem;
-  border: solid #ededee 0.1rem;
-  border-radius: 5px;
-
-  ::-webkit-outer-spin-button,
-  ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  :focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  -moz-appearance: textfield;
-`;

@@ -43,7 +43,7 @@ const Flex = styled.div`
 `;
 
 const TitleBox = styled.header<{ mainColor: string }>`
-  width: fit-content;
+  width: 35vw;
   border-radius: 0px 0px 30px 30px;
   background: ${props => props.mainColor};
   display: inline-flex;
@@ -52,7 +52,7 @@ const TitleBox = styled.header<{ mainColor: string }>`
   justify-content: center;
   color: var(--White, #fff);
   text-align: center;
-  font-family: Elice DX Neolli OTF;
+  font-family: Elice DX Neolli;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;

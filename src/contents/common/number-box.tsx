@@ -11,12 +11,49 @@ interface NumberInputProps {
 
 export function NumberInput(props: NumberInputProps) {
   const { value, onChange, disabled, width } = props;
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = event.target.value === '' ? undefined : event.target.value;
+
+    const newEvent = {
+      ...event,
+      target: { ...event.target, value: newValue },
+    };
+
+    onChange(newEvent as React.ChangeEvent<HTMLInputElement>);
+  };
+
   return (
     <NumBox
       width={width}
       type="number"
       value={value}
-      onChange={onChange}
+      onChange={handleChange}
+      disabled={disabled}
+    />
+  );
+}
+
+export function AnswerInput(props: NumberInputProps) {
+  const { value, onChange, disabled, width } = props;
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = event.target.value === '' ? undefined : event.target.value;
+
+    const newEvent = {
+      ...event,
+      target: { ...event.target, value: newValue },
+    };
+
+    onChange(newEvent as React.ChangeEvent<HTMLInputElement>);
+  };
+
+  return (
+    <Answer
+      width={width}
+      type="number"
+      value={value}
+      onChange={handleChange}
       disabled={disabled}
     />
   );
@@ -28,19 +65,22 @@ interface DivisionInputProps {
   onChangeMother: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onChangeSon: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  width?: string;
 }
 
 export default function DivisionInput(props: DivisionInputProps) {
-  const { mother, son, onChangeMother, onChangeSon, disabled } = props;
+  const { mother, son, onChangeMother, onChangeSon, disabled, width } = props;
   return (
     <Box display="flex" flexDirection="column" gap="0.1rem" marginTop="0.5rem">
       <NumberInput
+        width={width}
         value={son}
         onChange={onChangeSon}
         disabled={disabled ? true : false}
       />
-      <Divider />
+      <Divider width={width} />
       <NumberInput
+        width={width}
         value={mother}
         onChange={onChangeMother}
         disabled={disabled ? true : false}
@@ -57,6 +97,7 @@ interface BigDivisionInputProps {
   onChangeSon: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onChangeNum: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
+  width?: string;
 }
 
 export function BigDivisionInput(props: BigDivisionInputProps) {
@@ -68,6 +109,7 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
     onChangeMother,
     onChangeSon,
     disabled,
+    width,
   } = props;
   return (
     <Box display="flex" alignItems="center" gap="0.2rem">
@@ -84,12 +126,14 @@ export function BigDivisionInput(props: BigDivisionInputProps) {
         marginTop="0.5rem"
       >
         <NumberInput
+          width={width}
           value={son}
           onChange={onChangeSon}
           disabled={disabled ? true : false}
         />
         <Divider />
         <NumberInput
+          width={width}
           value={mother}
           onChange={onChangeMother}
           disabled={disabled ? true : false}
@@ -114,7 +158,29 @@ const NumBox = styled.input<{ width?: string }>`
   }
 `;
 
-const Divider = styled.div`
+const Divider = styled.div<{ width?: string }>`
   border: solid 1px grey;
-  width: 2.5rem;
+  width: ${props => (props.width ? props.width : '2.5rem')};
+`;
+
+const Answer = styled.input<{ width?: string }>`
+  text-align: center;
+  width: ${props => (props.width ? props.width : '4rem')};
+  height: 2rem;
+  font-size: 1.5rem;
+  border: solid #909090 0.1rem;
+  border-radius: 5px;
+
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  :focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  -moz-appearance: textfield;
 `;
