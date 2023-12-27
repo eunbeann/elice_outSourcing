@@ -206,13 +206,4 @@ const divisionProblems = [
     cSon: 1,
     pass: false,
   },
-  {
-    qId: 14,
-    qNum: '⑮',
-    lSon: 12,
-    rSon: 36,
-    cMom: 3,
-    cSon: 1,
-    pass: false,
-  },
 ];

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
 import { CustomTypo } from 'src/contents/common/styled-component';
@@ -44,9 +44,9 @@ export default function C212(props: C212Props) {
       <Box display="flex" alignItems="center">
         <CustomTypo mt="1.7rem">{momNum}</CustomTypo>
         <Box ml="0.2rem" mt="2rem" mr="1rem" position="relative">
-          <img width="60rem" height="20rem" src={fractionBar} alt="icon" />
+          <img width="60rem" height="30rem" src={fractionBar} alt="icon" />
           <Box position="absolute" left="0.8rem" top="0rem">
-            {sonNum}
+            <CustomTypo>{sonNum}</CustomTypo>
           </Box>
         </Box>
         <VisualFraction momNum={momNum} sonNum={sonNum} />
