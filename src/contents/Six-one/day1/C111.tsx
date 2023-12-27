@@ -40,28 +40,34 @@ export default function C111(props: C111Props) {
   return (
     <Box position="relative" minHeight="10rem">
       <Box>
-        <Box display="flex" margin="1rem 2rem" position="relative">
+        <Box
+          display="flex"
+          margin="1rem 2rem"
+          position="relative"
+          width="23rem"
+          height="100%"
+        >
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
           <CustomTypo marginRight="1rem">{qNum}</CustomTypo>
           <img
-            width={qId === 0 ? '75%' : '85%'}
+            width={qId === 0 ? '65%' : '85%'}
             src={qId === 0 ? number1Image : number2Image}
             alt="fiveApples and two People"
           />
-        </Box>
-        <Box
-          top="3.5rem"
-          right={qId === 0 ? '6rem' : '4rem'}
-          position="absolute"
-          marginTop="-0.2rem"
-        >
-          <DivisionInput
-            mother={mother}
-            son={son}
-            onChangeMother={e => setMother(Number(e.target.value))}
-            onChangeSon={e => setSon(Number(e.target.value))}
-            disabled={isSolved}
-          />
+          <Box
+            top="3rem"
+            right={qId === 0 ? '6rem' : '3rem'}
+            position="absolute"
+            marginTop="-0.2rem"
+          >
+            <DivisionInput
+              mother={mother}
+              son={son}
+              onChangeMother={e => setMother(Number(e.target.value))}
+              onChangeSon={e => setSon(Number(e.target.value))}
+              disabled={isSolved}
+            />
+          </Box>
         </Box>
       </Box>
     </Box>
