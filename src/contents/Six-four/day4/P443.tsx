@@ -29,7 +29,7 @@ export default function P443() {
       title="□ 구하기"
       question={'빈 곳에 알맞은 수를 써넣으세요.'}
     >
-      <Box display="grid" gridTemplateColumns="1fr 1fr">
+      <Box display="grid" gridTemplateColumns="1fr 1fr" gap="5rem">
         {problems.map(problem => (
           <Box
             key={problem.qNum}

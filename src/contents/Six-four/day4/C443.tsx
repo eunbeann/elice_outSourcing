@@ -32,7 +32,7 @@ export default function C443(props: C443Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" mb="5rem">
+    <Box display="flex">
       <Box display="flex" alignItems="center" gap="1rem">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
@@ -48,7 +48,16 @@ export default function C443(props: C443Props) {
             alignItems="center"
             gap="0.5rem"
           >
-            <Box>
+            <Box
+              bgcolor="#fde3e6"
+              width="3rem"
+              height="3rem"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              border="1px solid black"
+              borderRadius="50%"
+            >
               {numList[0] === 'blank' ? (
                 <NumberInput
                   value={input1}
@@ -59,7 +68,16 @@ export default function C443(props: C443Props) {
               )}
             </Box>
             {':'}
-            <Box>
+            <Box
+              bgcolor="#d9ecf6"
+              width="3rem"
+              height="3rem"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              border="1px solid black"
+              borderRadius="50%"
+            >
               {numList[1] === 'blank' ? (
                 <NumberInput
                   value={input1}
@@ -70,7 +88,16 @@ export default function C443(props: C443Props) {
               )}
             </Box>
             {'='}
-            <Box>
+            <Box
+              bgcolor="#fde3e6"
+              width="3rem"
+              height="3rem"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              border="1px solid black"
+              borderRadius="50%"
+            >
               {numList[2] === 'blank' ? (
                 <NumberInput
                   value={input1}
@@ -81,7 +108,16 @@ export default function C443(props: C443Props) {
               )}
             </Box>
             {':'}
-            <Box>
+            <Box
+              bgcolor="#d9ecf6"
+              width="3rem"
+              height="3rem"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              border="1px solid black"
+              borderRadius="50%"
+            >
               {numList[3] === 'blank' ? (
                 <NumberInput
                   value={input1}
