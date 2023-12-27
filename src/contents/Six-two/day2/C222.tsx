@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { AnswerInput } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
-import { AnswerInput } from './C223';
 interface C222Props {
   problem: {
     qId: number;
@@ -41,10 +41,8 @@ export default function C222(props: C222Props) {
         <VisualFraction momNum={momNum} sonNum={sonNum} />
         <CustomTypo marginX="1rem"> = </CustomTypo>
         <AnswerInput
-          type="number"
           value={enter}
           onChange={e => setEnter(Number(e.target.value))}
-          step="any"
           disabled={isSolved}
         />
       </Box>
