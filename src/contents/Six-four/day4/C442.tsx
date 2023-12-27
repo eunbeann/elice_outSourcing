@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
-import { NumberInput } from 'src/contents/common/number-box';
+import { TextUnderBar } from 'src/contents/common/text-underbar';
 import VisualFraction from 'src/contents/common/visual-fraction';
 
 import type { ProblemProp } from './P442';
@@ -19,11 +19,10 @@ export default function C442(props: C442Props) {
 
   const [isCorrect, setIsCorrect] = useState(false);
 
-  const [input1, setInput1] = useState<undefined | number>(undefined);
-  const [input2, setInput2] = useState<undefined | number>(undefined);
+  const [input1, setInput1] = useState<undefined | string>(undefined);
 
   useEffect(() => {
-    if (answer === input1 && answer === input2) {
+    if (answer === input1) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
@@ -33,7 +32,7 @@ export default function C442(props: C442Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box display="flex" mb="5rem">
+    <Box display="flex">
       <Box display="flex" alignItems="center" gap="1rem">
         <Box display="flex" alignItems="center" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}
@@ -49,34 +48,61 @@ export default function C442(props: C442Props) {
             alignItems="center"
             gap="0.5rem"
           >
-            {numList1Type === '정수' ? (
-              <>
-                {numList1[0]} : {numList1[1]}
-              </>
+            {num1 === 'blank' ? (
+              <TextUnderBar
+                width="5rem"
+                value={input1 ? input1 : ''}
+                onChange={e => {
+                  setInput1(e.target.value);
+                }}
+              />
+            ) : Array.isArray(num1) ? (
+              <VisualFraction momNum={num1[1]} sonNum={num1[0]} />
             ) : (
-              <>
-                <VisualFraction momNum={numList1[1]} sonNum={numList1[0]} /> :
-                <VisualFraction momNum={numList1[3]} sonNum={numList1[2]} />
-              </>
+              num1
             )}
-            {' = ('}
-            {numList2[0]} {qId % 2 === 0 ? '×' : '÷'} {numList2[1]}
-            {') : ('}
-            <NumberInput
-              value={Number(input1)}
-              onChange={e => {
-                setInput1(Number(e.target.value));
-              }}
-            />
-            {qId % 2 === 0 ? '×' : '÷'} {numList2[1]}
-            {') = '}
-            {numList2[0]}:
-            <NumberInput
-              value={Number(input2)}
-              onChange={e => {
-                setInput2(Number(e.target.value));
-              }}
-            />
+            {' : '}
+            {num2 === 'blank' ? (
+              <TextUnderBar
+                width="5rem"
+                value={input1 ? input1 : ''}
+                onChange={e => {
+                  setInput1(e.target.value);
+                }}
+              />
+            ) : Array.isArray(num2) ? (
+              <VisualFraction momNum={num2[1]} sonNum={num2[0]} />
+            ) : (
+              num2
+            )}
+            {' = '}
+            {num3 === 'blank' ? (
+              <TextUnderBar
+                width="5rem"
+                value={input1 ? input1 : ''}
+                onChange={e => {
+                  setInput1(e.target.value);
+                }}
+              />
+            ) : Array.isArray(num3) ? (
+              <VisualFraction momNum={num3[1]} sonNum={num3[0]} />
+            ) : (
+              num3
+            )}
+            {' : '}
+            {num4 === 'blank' ? (
+              <TextUnderBar
+                width="5rem"
+                value={input1 ? input1 : ''}
+                onChange={e => {
+                  setInput1(e.target.value);
+                }}
+              />
+            ) : Array.isArray(num4) ? (
+              <VisualFraction momNum={num4[1]} sonNum={num4[0]} />
+            ) : (
+              num4
+            )}
           </Typography>
         </Box>
       </Box>
