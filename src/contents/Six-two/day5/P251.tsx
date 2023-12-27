@@ -5,7 +5,7 @@ import ExampleBox from 'src/contents/common/example-box';
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 
-import e221Image from 'src/contents/assets/image/e_221.png';
+import e221Image from 'src/contents/assets/image/P221/e_221.png';
 export default function P251() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(

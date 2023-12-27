@@ -3,8 +3,8 @@ import { Box } from '@mui/material';
 import ExampleBox from 'src/contents/common/example-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 
-import fractionE121 from 'src/contents/assets/image/fraction-e121.png';
-import textE121 from 'src/contents/assets/image/text-e121.png';
+import fractionE121 from 'src/contents/assets/image/P121/fraction-e121.png';
+import textE121 from 'src/contents/assets/image/P121/text-e121.png';
 
 export default function E121() {
   return (

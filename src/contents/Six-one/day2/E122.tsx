@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import ExampleBox from 'src/contents/common/example-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 
-import fractionE122 from 'src/contents/assets/image/fraction-e122.png';
+import fractionE122 from 'src/contents/assets/image/P122/fraction-e122.png';
 
 export default function E122() {
   return (

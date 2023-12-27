@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
 
+import ExampleBox from 'src/contents/common/example-box';
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C122 from './C122';
 import E122 from './E122';
+
+import e131Image from 'src/contents/assets/image/P131/e_1-3-1.png';
 export default function P122() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
@@ -31,6 +34,9 @@ export default function P122() {
       day="day2"
     >
       <E122 />
+      <ExampleBox>
+        <img width="100%" src={e131Image} alt="fractionE122" />
+      </ExampleBox>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Box
           sx={{

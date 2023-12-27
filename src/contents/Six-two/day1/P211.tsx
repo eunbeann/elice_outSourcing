@@ -6,8 +6,7 @@ import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C211 from './C211';
 
-import i211_1 from 'src/contents/assets/image/211-1.png';
-import e211Image from 'src/contents/assets/image/e_2-1-1.png';
+import e211Image from 'src/contents/assets/image/P211/e_2-1-1.png';
 
 export default function P211() {
   const [isSolved, setIsSolved] = useState(false);

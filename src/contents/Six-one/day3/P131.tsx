@@ -6,7 +6,7 @@ import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C131 from './C131';
 
-import e131Image from 'src/contents/assets/image/e_1-3-1.png';
+import e131Image from 'src/contents/assets/image/P131/e_1-3-1.png';
 export default function P131() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
