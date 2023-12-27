@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Avatar, Box } from '@mui/material';
 
+import CorrectChecker from 'src/contents/common/correct-checker';
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
 import C451 from './C451';
 
-import ImgExample from '../../assets/image/P451/ImgExample.png';
+import Img from '../../assets/image/P451/img.png';
 
 export default function P451() {
   const [isSolved, setIsSolved] = useState(false);
@@ -25,6 +26,7 @@ export default function P451() {
     //TODO 점수 보내는 api 추가
     setIsSolved(prev => !prev);
   };
+
   return (
     <Layout
       day="day5"
@@ -33,9 +35,14 @@ export default function P451() {
         '★이 나타내는 수가 더 큰 칸에 체크하여 집으로 가는 길을 표시하세요.'
       }
     >
-      <Box width="100%" display="flex" justifyContent="center">
+      <Box
+        width="100%"
+        display="flex"
+        justifyContent="center"
+        position="relative"
+      >
         <Avatar
-          src={ImgExample}
+          src={Img}
           variant="square"
           style={{
             width: '50rem',
@@ -43,31 +50,54 @@ export default function P451() {
             marginBottom: '2rem',
           }}
         />
-      </Box>
-      <Box display="grid" gridTemplateColumns="1fr">
-        {problems.map(problem => (
+        {isSolved && (
           <Box
-            key={problem.qNum}
-            sx={{
-              overflowY: 'auto',
-              display: 'flex',
-              justifyContent: 'center',
-              margin: '0.5rem',
-              paddingTop: '1rem',
-              paddingLeft: '2rem',
-            }}
+            display="flex"
+            alignItems="center"
+            position="absolute"
+            left="35%"
+            top="35%"
           >
-            <C451
-              problem={problem}
-              isSolved={isSolved}
-              handleCorrectChange={(qId, pass) =>
-                handleCorrectChange(qId, pass)
-              }
-            />
+            {passArray.every(value => value === true) ? (
+              <CorrectChecker isCorrect={true} $width={20} />
+            ) : (
+              <CorrectChecker isCorrect={false} $width={20} />
+            )}
           </Box>
-        ))}
-      </Box>
+        )}
 
+        <Box
+          display="grid"
+          gridTemplateColumns="1fr 1fr 1fr 1fr"
+          gap="8.7rem 10rem"
+          mt="7.2rem"
+          position="absolute"
+        >
+          {problems.map(problem => (
+            <Box
+              key={problem.qId}
+              sx={
+                {
+                  // overflowY: 'auto',
+                  // display: 'flex',
+                  // justifyContent: 'center',
+                  // margin: '0.5rem',
+                  // paddingTop: '1rem',
+                  // paddingLeft: '2rem',
+                }
+              }
+            >
+              <C451
+                problem={problem}
+                isSolved={isSolved}
+                handleCorrectChange={(qId, pass) =>
+                  handleCorrectChange(qId, pass)
+                }
+              />
+            </Box>
+          ))}
+        </Box>
+      </Box>
       <SubmitButton
         onClick={checkAnswer}
         $color="#00B76A"
@@ -84,6 +114,11 @@ export interface ProblemProp {
 }
 
 const problems: ProblemProp[] = [
+  {
+    qId: -1,
+    pass: false,
+    answer: false,
+  },
   {
     qId: 0,
     pass: false,
