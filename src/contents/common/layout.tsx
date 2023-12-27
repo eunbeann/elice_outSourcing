@@ -43,7 +43,7 @@ const Flex = styled.div`
 `;
 
 const TitleBox = styled.header<{ mainColor: string }>`
-  width: fit-content;
+  width: 30vw;
   border-radius: 0px 0px 30px 30px;
   background: ${props => props.mainColor};
   display: inline-flex;
@@ -63,7 +63,6 @@ const QuestionBox = styled.div<{
   subColor: string;
   bgColor: string;
 }>`
-  font-family: Elice DX Neolli;
   padding: 1rem 2rem;
   white-space: break-spaces;
   width: 42.5rem;
