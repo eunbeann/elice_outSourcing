@@ -2,14 +2,17 @@ import { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { AnswerInput } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
-import { AnswerInput } from '../day2/C223';
+import VisualFraction from 'src/contents/common/visual-fraction';
 
+import fractionBar from 'src/contents/assets/icon/fraction-bar.png';
 interface C211Props {
   problem: {
     qId: number;
     qNum: string;
-    qI: string;
+    sonNum: number;
+    momNum: number;
     answer: number;
     pass: boolean;
   };
@@ -20,10 +23,8 @@ export default function C211(props: C211Props) {
   //P21도 같은 컴포넌트 사용
   const [isCorrect, setIsCorrect] = useState(false);
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, qNum, qI, answer, pass } = problem;
+  const { qId, qNum, sonNum, momNum, answer, pass } = problem;
   const [enter, setEnter] = useState<number | string>('');
-
-  console.log(qI);
 
   useEffect(() => {
     if (enter === answer) {
@@ -40,13 +41,18 @@ export default function C211(props: C211Props) {
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <CustomTypo> {qNum} </CustomTypo>
       <Box display="flex" alignItems="center">
-        <img src="src/contents/assets/image/e_2-1-1.png" alt="questionImage" />
+        <CustomTypo mt="1.7rem">{momNum}</CustomTypo>
+        <Box ml="0.2rem" mt="2rem" mr="1rem" position="relative">
+          <img width="60rem" height="30rem" src={fractionBar} alt="icon" />
+          <Box position="absolute" left="0.8rem" top="0rem">
+            <CustomTypo>{sonNum}</CustomTypo>
+          </Box>
+        </Box>
+        <VisualFraction momNum={momNum} sonNum={sonNum} />
         <CustomTypo marginX="0.4rem"> = </CustomTypo>
         <AnswerInput
-          type="number"
           value={enter}
           onChange={e => setEnter(Number(e.target.value))}
-          step="any"
           disabled={isSolved}
         />
       </Box>

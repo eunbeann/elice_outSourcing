@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
+import { AnswerInput } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
 import VisualFraction from 'src/contents/common/visual-fraction';
-import { AnswerInput } from '../day2/C223';
 
 import fractionBar from 'src/contents/assets/icon/fraction-bar.png';
 
@@ -52,10 +52,8 @@ export default function C212(props: C212Props) {
         <VisualFraction momNum={momNum} sonNum={sonNum} />
         <CustomTypo marginX="0.4rem"> = </CustomTypo>
         <AnswerInput
-          type="number"
           value={enter}
           onChange={e => setEnter(Number(e.target.value))}
-          step="any"
           disabled={isSolved}
         />
       </Box>
