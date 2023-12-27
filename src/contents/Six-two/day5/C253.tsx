@@ -43,18 +43,18 @@ export default function C253(props: C253Props) {
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <Box display="flex" gap="1rem">
-        <CustomTypo fontSize="20px"> {qNum}</CustomTypo>
-        <CustomTypo fontSize="19px">{q}</CustomTypo>
+        <CustomTypo fontSize="1.25rem"> {qNum}</CustomTypo>
+        <CustomTypo fontSize="1.25rem">{q}</CustomTypo>
       </Box>
       <Box display="flex" justifyContent="end" width="60vw" gap="0.5rem">
-        <CustomTypo fontSize="20px"> 답 : </CustomTypo>
+        <CustomTypo fontSize="1.25rem"> 답 : </CustomTypo>
         <Input
           value={enter}
           onChange={e => setEnter(e.target.value)}
           style={{ width: '3rem', textAlign: 'center' }}
           disabled={isSolved}
         />
-        <CustomTypo fontSize="20px"> {unit} </CustomTypo>
+        <CustomTypo fontSize="1.25rem"> {unit} </CustomTypo>
       </Box>
     </Box>
   );
