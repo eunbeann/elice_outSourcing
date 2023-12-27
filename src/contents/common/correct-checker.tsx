@@ -11,7 +11,7 @@ export default function CorrectChecker({ isCorrect }: { isCorrect: boolean }) {
         position: 'absolute',
         width: '4.5rem',
         height: '4.5rem',
-        transform: 'translate(-1rem, -0.2rem)',
+        transform: 'translate(-1.2rem, -0.6rem)',
         objectFit: 'contain',
       }}
       src={isCorrect ? correct : inCorrect}
