@@ -38,7 +38,7 @@ export default function C111(props: C111Props) {
   }, [isSolved, qId]);
 
   return (
-    <Box position="relative" minHeight="8rem">
+    <Box position="relative" minHeight="10rem">
       <Box>
         <Box display="flex" margin="1rem 2rem" position="relative">
           {isSolved && <CorrectChecker isCorrect={isCorrect} />}

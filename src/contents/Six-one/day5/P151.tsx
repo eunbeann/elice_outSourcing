@@ -43,8 +43,6 @@ export default function P151() {
             <Box
               key={problem.qNum}
               sx={{
-                maxHeight: '200px',
-                overflowY: 'auto',
                 width: '100%',
                 justifyContent: 'center',
                 display: 'flex',

@@ -48,6 +48,8 @@ export default function C121(props: C121Props) {
       alignItems="center"
       margin="1rem"
       position="relative"
+      minWidth="22rem"
+      overflow="hidden"
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
