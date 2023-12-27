@@ -17,13 +17,17 @@ export default function VisualFraction(props: DivisionTypoProps) {
   const { momNum, sonNum, width, natureNum, fontSize } = props;
   return (
     <Box display="flex" flexDirection="row" alignItems="center">
-      {natureNum && <CustomTypo fontSize="18 px">{natureNum}</CustomTypo>}
+      {natureNum && (
+        <CustomTypo fontSize={fontSize ? fontSize : '1.5rem'}>
+          {natureNum}
+        </CustomTypo>
+      )}
       <FractionContainer>
-        <CustomTypo fontSize={fontSize ? fontSize : '18px'}>
+        <CustomTypo fontSize={fontSize ? fontSize : '1.5rem'}>
           {sonNum}
         </CustomTypo>
         <Divider $width={width} />
-        <CustomTypo fontSize={fontSize ? fontSize : '18px'}>
+        <CustomTypo fontSize={fontSize ? fontSize : '1.5rem'}>
           {momNum}
         </CustomTypo>
       </FractionContainer>
@@ -36,11 +40,11 @@ export function BasicVisualFraction(props: DivisionTypoProps) {
   const { momNum, sonNum, width, natureNum } = props;
   return (
     <Box display="flex" flexDirection="row" alignItems="center">
-      {natureNum && <Typography fontSize="18 px">{natureNum}</Typography>}
+      {natureNum && <Typography fontSize="1.2rem">{natureNum}</Typography>}
       <FractionContainer>
-        <Typography>{sonNum}</Typography>
+        <Typography fontSize="1.25rem">{sonNum}</Typography>
         <BasicDivider $width={width} />
-        <Typography>{momNum}</Typography>
+        <Typography fontSize="1.25rem">{momNum}</Typography>
       </FractionContainer>
     </Box>
   );

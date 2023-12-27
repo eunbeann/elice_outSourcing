@@ -43,7 +43,7 @@ const Flex = styled.div`
 `;
 
 const TitleBox = styled.header<{ mainColor: string }>`
-  width: 30vw;
+  width: 35vw;
   border-radius: 0px 0px 30px 30px;
   background: ${props => props.mainColor};
   display: inline-flex;
