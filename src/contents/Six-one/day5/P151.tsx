@@ -71,18 +71,18 @@ export default function P151() {
 
 function QuestionTab() {
   return (
-    <>
-      <Box fontSize="1.5rem" display="flex" alignItems="center">
+    <Box width="90%">
+      <Box fontSize="1.25rem" display="flex" alignItems="center">
         어떤 분수를 6으로 나누어야 할 것을 잘못하여 곱했더니
         <span style={{ margin: '0ch 0.3ch' }}>
           <VisualFraction natureNum="3" momNum="5" sonNum="1" />
         </span>
         이 되었습니다.
       </Box>
-      <Box fontSize="1.5rem" marginBottom="2rem">
+      <Box fontSize="1.25rem" marginBottom="2rem">
         바르게 계산한 몫을 기약분수로 구하려고 합니다. (①~②)
       </Box>
-    </>
+    </Box>
   );
 }
 
