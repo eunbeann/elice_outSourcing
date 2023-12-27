@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import styled from '@emotion/styled';
+import { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 
 import CorrectChecker from 'src/contents/common/correct-checker';
-import DivisionInput from 'src/contents/common/number-box';
+import DivisionInput, { NumberInput } from 'src/contents/common/number-box';
 import { CustomTypo } from 'src/contents/common/styled-component';
-interface C242Props {
+interface C241Props {
   problem: {
     qId: number;
     qNum: string;
@@ -13,21 +12,27 @@ interface C242Props {
     momNum: number;
     answer: number;
     pass: boolean;
+    nature?: number;
   };
   isSolved: boolean;
   handleCorrectChange: (qId: number, pass: boolean) => void;
 }
-export default function C242(props: C242Props) {
+export default function C241(props: C241Props) {
   const [isCorrect, setIsCorrect] = useState(false);
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, qNum, sonNum, momNum, answer, pass } = problem;
+  const { qId, qNum, sonNum, momNum, answer, pass, nature } = problem;
   const [aMom, setAMom] = useState<number | string>('');
   const [aSon, setASon] = useState<number | string>('');
+  const [aNature, setANature] = useState<number | string>('');
 
   useEffect(() => {
     if (aMom === momNum && aSon === sonNum) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
+      if (aNature === nature) {
+        setIsCorrect(true);
+        handleCorrectChange(qId, true);
+      }
     } else {
       setIsCorrect(false);
       handleCorrectChange(qId, false);
@@ -40,8 +45,18 @@ export default function C242(props: C242Props) {
       <CustomTypo> {qNum} </CustomTypo>
       <Box display="flex" alignItems="center">
         <CustomTypo>{answer}</CustomTypo>
-        <CustomTypo marginRight="1rem"> = </CustomTypo>
+        <CustomTypo marginX="0.3rem"> = </CustomTypo>
+        {nature && (
+          <Box marginRight="0.3rem">
+            <NumberInput
+              value={aNature}
+              onChange={e => setANature(Number(e.target.value))}
+              disabled={isSolved}
+            />
+          </Box>
+        )}
         <DivisionInput
+          width="3rem"
           mother={aMom}
           son={aSon}
           onChangeMother={e => setAMom(Number(e.target.value))}
