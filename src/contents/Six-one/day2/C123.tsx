@@ -12,6 +12,8 @@ interface C123Props {
     qNum: string;
     mom: number;
     son: number;
+    aMom: number;
+    aSon: number;
     nature: number;
     pass: boolean;
   };
@@ -21,7 +23,7 @@ interface C123Props {
 
 export default function C123(props: C123Props) {
   const { problem, isSolved, handleCorrectChange } = props;
-  const { qId, qNum, mom, son, nature, pass } = problem;
+  const { qId, qNum, mom, son, nature, pass, aMom, aSon } = problem;
 
   const [isCorrect, setIsCorrect] = useState(false);
   const [answerMom, setAnswerMom] = useState<string | number>('');
@@ -29,7 +31,7 @@ export default function C123(props: C123Props) {
 
   useEffect(() => {
     // TODO 정답 체크
-    if (true) {
+    if (aMom === answerMom && aSon === answerSon) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
@@ -49,10 +51,10 @@ export default function C123(props: C123Props) {
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
       <VisualFraction momNum={mom} sonNum={son} />
-      <CustomTypo fontSize="20px"> ÷ </CustomTypo>
-      <CustomTypo fontSize="20px"> {nature} = </CustomTypo>
+      <CustomTypo> ÷ </CustomTypo>
+      <CustomTypo> {nature} = </CustomTypo>
       <DivisionInput
-        son={answerMom}
+        son={answerSon}
         mother={answerMom}
         onChangeMother={e => setAnswerMom(Number(e.target.value))}
         onChangeSon={e => setAnswerSon(Number(e.target.value))}

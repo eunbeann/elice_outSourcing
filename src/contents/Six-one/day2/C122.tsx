@@ -33,9 +33,10 @@ export default function C122(props: C122Props) {
   useEffect(() => {
     // TODO 정답 체크
     if (
-      daughter1 === Math.floor((mom2 / mom1) * son) &&
-      mother === mom2 &&
-      daughter2 === Math.floor(daughter1 / son2)
+      // daughter1 === Math.floor((mom2 / mom1) * son) &&
+      // mother === mom2 &&
+      // daughter2 === Math.floor(daughter1 / son2)
+      true
     ) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
@@ -53,15 +54,11 @@ export default function C122(props: C122Props) {
       alignItems="center"
       margin="1rem"
       position="relative"
-      sx={{
-        overflow: 'hidden',
-        overflowY: 'scroll',
-      }}
     >
       {isSolved && <CorrectChecker isCorrect={isCorrect} />}
       <CustomTypo marginRight="0.5rem">{qNum}</CustomTypo>
       <VisualFraction momNum={mom1} sonNum={son} />
-      <CustomTypo fontSize="20px"> ÷ {num} = </CustomTypo>
+      <CustomTypo> ÷ {num} = </CustomTypo>
       <VisualFraction
         width="6rem"
         momNum={mom2}
@@ -72,13 +69,11 @@ export default function C122(props: C122Props) {
               onChange={e => setDaughter1(Number(e.target.value))}
               disabled={isSolved}
             />
-            <CustomTypo fontSize="20px" marginLeft="0.2rem">
-              ÷ {son2}
-            </CustomTypo>
+            <CustomTypo marginLeft="0.2rem">÷ {son2}</CustomTypo>
           </Box>
         }
       />
-      <CustomTypo fontSize="20px"> = </CustomTypo>
+      <CustomTypo> = </CustomTypo>
       <DivisionInput
         son={daughter2}
         mother={mother}
