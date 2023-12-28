@@ -52,11 +52,7 @@ export default function C341(props: C341Props) {
               alignItems="center"
             >
               {isFraction ? (
-                <VisualFraction
-                  momNum={leftItem[1]}
-                  sonNum={leftItem[0]}
-                  fontSize="20rem"
-                />
+                <VisualFraction momNum={leftItem[1]} sonNum={leftItem[0]} />
               ) : (
                 leftItem
               )}

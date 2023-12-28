@@ -3,11 +3,11 @@ import { Avatar, Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C422 from './C422';
+import C441 from './C441';
 
-import ImgExample from '../../assets/image/P422/ImgExample.png';
+import ImgExample from '../../assets/image/P441/ImgExample.png';
 
-export default function P422() {
+export default function P441() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     problems.map(problem => problem.pass)
@@ -27,11 +27,9 @@ export default function P422() {
   };
   return (
     <Layout
-      day="day2"
-      title="간단한 자연수의 비로 나타내기"
-      question={
-        '자연수의 비로 나타내는 과정입니다. 빈 곳에 알맞은 수를 써넣으세요.'
-      }
+      day="day4"
+      title="□ 구하기"
+      question={'□에 알맞은 수를 써넣으세요.'}
     >
       <Box width="100%" display="flex" justifyContent="center">
         <Avatar
@@ -44,7 +42,7 @@ export default function P422() {
           }}
         />
       </Box>
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Box display="grid" gridTemplateColumns="1fr">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -56,7 +54,7 @@ export default function P422() {
               padding: '2rem 2rem',
             }}
           >
-            <C422
+            <C441
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
@@ -69,7 +67,7 @@ export default function P422() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#8F6CFF"
         isSolved={isSolved}
       />
     </Layout>
@@ -82,7 +80,7 @@ export interface ProblemProp {
   pass: boolean;
   numList1: number[];
   numList2: number[];
-  answer: number[];
+  answer: number;
 }
 
 const problems: ProblemProp[] = [
@@ -90,48 +88,48 @@ const problems: ProblemProp[] = [
     qId: 0,
     qNum: '①',
     pass: false,
-    numList1: [8, 6],
-    numList2: [5, 7],
-    answer: [24, 15, 28],
+    numList1: [32, 28],
+    numList2: [8, 4],
+    answer: 7,
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
-    numList1: [4, 5],
-    numList2: [3, 4],
-    answer: [20, 15, 16],
+    numList1: [7, 3, 7, 9],
+    numList2: [21, 9],
+    answer: 7,
   },
   {
     qId: 2,
     qNum: '③',
     pass: false,
-    numList1: [6, 9],
-    numList2: [7, 5],
-    answer: [18, 21, 10],
+    numList1: [16, 24],
+    numList2: [4, 4],
+    answer: 6,
   },
   {
     qId: 3,
     qNum: '④',
     pass: false,
-    numList1: [4, 6],
-    numList2: [3, 5],
-    answer: [12, 9, 10],
+    numList1: [7, 3],
+    numList2: [49, 7],
+    answer: 21,
   },
   {
     qId: 4,
     qNum: '⑤',
     pass: false,
-    numList1: [11, 3],
-    numList2: [2, 2],
-    answer: [33, 6, 22],
+    numList1: [25, 30],
+    numList2: [5, 5],
+    answer: 6,
   },
   {
     qId: 5,
     qNum: '⑥',
     pass: false,
-    numList1: [9, 15],
-    numList2: [5, 2],
-    answer: [45, 25, 6],
+    numList1: [5, 6, 10, 9],
+    numList2: [15, 18],
+    answer: 20,
   },
 ];

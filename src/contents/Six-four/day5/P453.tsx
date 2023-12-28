@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import { Avatar, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 import Layout from 'src/contents/common/layout';
 import SubmitButton from 'src/contents/common/submit-button';
-import C422 from './C422';
+import C453 from './C453';
 
-import ImgExample from '../../assets/image/P422/ImgExample.png';
-
-export default function P422() {
+export default function P453() {
   const [isSolved, setIsSolved] = useState(false);
   const [passArray, setPassArray] = useState(
     problems.map(problem => problem.pass)
@@ -27,24 +25,13 @@ export default function P422() {
   };
   return (
     <Layout
-      day="day2"
-      title="간단한 자연수의 비로 나타내기"
+      day="day5"
+      title="□ 구하기"
       question={
-        '자연수의 비로 나타내는 과정입니다. 빈 곳에 알맞은 수를 써넣으세요.'
+        '3장의 수 카드를 한 번씩만 사용하여 비례식을 완성하세요. 각각 두 가지 방법이 있어요.'
       }
     >
-      <Box width="100%" display="flex" justifyContent="center">
-        <Avatar
-          src={ImgExample}
-          variant="square"
-          style={{
-            width: '50rem',
-            height: 'max-content',
-            marginBottom: '2rem',
-          }}
-        />
-      </Box>
-      <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+      <Box display="grid" gridTemplateColumns="1fr 1fr" gap="5rem">
         {problems.map(problem => (
           <Box
             key={problem.qNum}
@@ -52,11 +39,12 @@ export default function P422() {
               overflowY: 'auto',
               display: 'flex',
               justifyContent: 'center',
-              margin: '0.5rem',
-              padding: '2rem 2rem',
+              paddingLeft: '2rem',
+              height: '15rem',
+              padding: '2rem',
             }}
           >
-            <C422
+            <C453
               problem={problem}
               isSolved={isSolved}
               handleCorrectChange={(qId, pass) =>
@@ -69,7 +57,7 @@ export default function P422() {
 
       <SubmitButton
         onClick={checkAnswer}
-        $color="#6297FF"
+        $color="#00B76A"
         isSolved={isSolved}
       />
     </Layout>
@@ -80,8 +68,9 @@ export interface ProblemProp {
   qId: number;
   qNum: string;
   pass: boolean;
-  numList1: number[];
-  numList2: number[];
+  cardNumList: number[];
+  index: number;
+  num: number;
   answer: number[];
 }
 
@@ -90,48 +79,54 @@ const problems: ProblemProp[] = [
     qId: 0,
     qNum: '①',
     pass: false,
-    numList1: [8, 6],
-    numList2: [5, 7],
-    answer: [24, 15, 28],
+    cardNumList: [5, 9, 15],
+    index: 0,
+    num: 3,
+    answer: [5, 9, 15, 9, 5, 15],
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
-    numList1: [4, 5],
-    numList2: [3, 4],
-    answer: [20, 15, 16],
+    cardNumList: [4, 7, 21],
+    index: 1,
+    num: 12,
+    answer: [4, 7, 21, 21, 7, 4],
   },
   {
     qId: 2,
     qNum: '③',
     pass: false,
-    numList1: [6, 9],
-    numList2: [7, 5],
-    answer: [18, 21, 10],
+    cardNumList: [3, 5, 21],
+    index: 3,
+    num: 35,
+    answer: [3, 21, 5, 3, 5, 21],
   },
   {
     qId: 3,
     qNum: '④',
     pass: false,
-    numList1: [4, 6],
-    numList2: [3, 5],
-    answer: [12, 9, 10],
+    cardNumList: [7, 9, 28],
+    index: 2,
+    num: 36,
+    answer: [9, 7, 28, 28, 7, 9],
   },
   {
     qId: 4,
     qNum: '⑤',
     pass: false,
-    numList1: [11, 3],
-    numList2: [2, 2],
-    answer: [33, 6, 22],
+    cardNumList: [12, 18, 33],
+    index: 0,
+    num: 22,
+    answer: [33, 12, 18, 12, 33, 18],
   },
   {
     qId: 5,
     qNum: '⑥',
     pass: false,
-    numList1: [9, 15],
-    numList2: [5, 2],
-    answer: [45, 25, 6],
+    cardNumList: [8, 16, 34],
+    index: 1,
+    num: 17,
+    answer: [34, 16, 8, 8, 16, 34],
   },
 ];

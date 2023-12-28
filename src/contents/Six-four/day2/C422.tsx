@@ -56,7 +56,7 @@ export default function C422(props: C422Props) {
         </Box>
         <Box display="flex" gap="0.3rem" alignItems="center">
           <Typography variant="h5" fontWeight={600}>
-            {numList1[0]}와 {numList1[1]}의 최대공약수:
+            {numList1[0]}와 {numList1[1]}의 최소공배수:
           </Typography>
           <NumberUnderBar
             value={Number(input1)}

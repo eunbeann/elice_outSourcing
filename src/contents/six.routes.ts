@@ -216,4 +216,44 @@ export default createEliceExtRoutes([
     path: 'quiz4-2-2',
     component: import('./Six-four/day2/P422'),
   },
+  {
+    path: 'quiz4-2-3',
+    component: import('./Six-four/day2/P423'),
+  },
+  {
+    path: 'quiz4-3-1',
+    component: import('./Six-four/day3/P431'),
+  },
+  {
+    path: 'quiz4-3-2',
+    component: import('./Six-four/day3/P432'),
+  },
+  {
+    path: 'quiz4-3-3',
+    component: import('./Six-four/day3/P433'),
+  },
+  {
+    path: 'quiz4-4-1',
+    component: import('./Six-four/day4/P441'),
+  },
+  {
+    path: 'quiz4-4-2',
+    component: import('./Six-four/day4/P442'),
+  },
+  {
+    path: 'quiz4-4-3',
+    component: import('./Six-four/day4/P443'),
+  },
+  {
+    path: 'quiz4-5-1',
+    component: import('./Six-four/day5/P451'),
+  },
+  {
+    path: 'quiz4-5-2',
+    component: import('./Six-four/day5/P452'),
+  },
+  {
+    path: 'quiz4-5-3',
+    component: import('./Six-four/day5/P453'),
+  },
 ]);

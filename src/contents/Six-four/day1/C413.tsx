@@ -82,6 +82,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     {numList[0]}
                   </Typography>
@@ -93,6 +96,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     <NumberInput
                       width="2.5rem"
@@ -114,6 +120,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     {numList[1]}
                   </Typography>
@@ -125,6 +134,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     <NumberInput
                       width="2.5rem"
@@ -145,6 +157,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     {numList[2]}
                   </Typography>
@@ -156,6 +171,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     <NumberInput
                       width="2.5rem"
@@ -177,6 +195,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     {numList[3]}
                   </Typography>
@@ -188,6 +209,9 @@ export default function C413(props: C413Props) {
                     width="3rem"
                     border="0.1rem solid black"
                     textAlign="center"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
                   >
                     <NumberInput
                       width="2.5rem"
