@@ -20,7 +20,7 @@ const UnderBar = styled.input`
   border-bottom: 0.08rem solid gray;
   font-size: 1.6rem;
   width: ${({ width }) => (width ? width : '8rem')};
-  height: 2rem;
+  height: 3rem;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {

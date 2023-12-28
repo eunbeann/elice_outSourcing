@@ -93,8 +93,8 @@ export interface ProblemProp {
 }
 
 interface AnswerProp {
-  first: string;
-  second: string;
+  first: string[];
+  second: string[];
 }
 
 const problems: ProblemProp[] = [
@@ -105,8 +105,8 @@ const problems: ProblemProp[] = [
     imgSrc1: Img11,
     imgSrc2: Img12,
     answer: {
-      first: '2:4',
-      second: '4:8',
+      first: ['2', '4'],
+      second: ['4', '8'],
     },
   },
   {
@@ -116,8 +116,8 @@ const problems: ProblemProp[] = [
     imgSrc1: Img21,
     imgSrc2: Img22,
     answer: {
-      first: '2:6',
-      second: '8:24',
+      first: ['2', '6'],
+      second: ['8', '24'],
     },
   },
   {
@@ -127,8 +127,8 @@ const problems: ProblemProp[] = [
     imgSrc1: Img31,
     imgSrc2: Img32,
     answer: {
-      first: '5:6',
-      second: '10:12',
+      first: ['5', '6'],
+      second: ['10', '12'],
     },
   },
   {
@@ -138,8 +138,8 @@ const problems: ProblemProp[] = [
     imgSrc1: Img41,
     imgSrc2: Img42,
     answer: {
-      first: '3:4',
-      second: '9:12',
+      first: ['3', '4'],
+      second: ['9', '12'],
     },
   },
   {
@@ -149,8 +149,8 @@ const problems: ProblemProp[] = [
     imgSrc1: Img51,
     imgSrc2: Img52,
     answer: {
-      first: '5:12',
-      second: '20:48',
+      first: ['5', '12'],
+      second: ['20', '48'],
     },
   },
 ];

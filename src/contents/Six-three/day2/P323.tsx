@@ -50,7 +50,7 @@ export default function P323() {
           src={ImgExample}
           variant="square"
           style={{
-            width: '20rem',
+            width: '25rem',
             height: 'max-content',
             marginBottom: '1rem',
           }}
@@ -63,7 +63,9 @@ export default function P323() {
               display: 'flex',
               justifyContent: 'center',
               margin: '0.5rem',
-              padding: '2rem 2rem',
+              padding: '3rem 2rem',
+              width: '33rem',
+              WebkitJustifyContent: 'left',
             }}
           >
             <C323
@@ -91,7 +93,7 @@ export interface ProblemProp {
   qNum: string;
   pass: boolean;
   imgSrc: string;
-  answer: string;
+  answer: string[];
 }
 
 const problems: ProblemProp[] = [
@@ -100,97 +102,97 @@ const problems: ProblemProp[] = [
     qNum: '①',
     pass: false,
     imgSrc: Img1,
-    answer: '3:5',
+    answer: ['3', '5'],
   },
   {
     qId: 1,
     qNum: '②',
     pass: false,
     imgSrc: Img2,
-    answer: '2:4',
+    answer: ['2', '4'],
   },
   {
     qId: 2,
     qNum: '③',
     pass: false,
     imgSrc: Img3,
-    answer: '5:9',
+    answer: ['5', '9'],
   },
   {
     qId: 3,
     qNum: '④',
     pass: false,
     imgSrc: Img4,
-    answer: '2:5',
+    answer: ['2', '5'],
   },
   {
     qId: 4,
     qNum: '⑤',
     pass: false,
     imgSrc: Img5,
-    answer: '4:6',
+    answer: ['4', '6'],
   },
   {
     qId: 5,
     qNum: '⑥',
     pass: false,
     imgSrc: Img6,
-    answer: '2:6',
+    answer: ['2', '6'],
   },
   {
     qId: 6,
     qNum: '⑦',
     pass: false,
     imgSrc: Img7,
-    answer: '4:10',
+    answer: ['4', '10'],
   },
   {
     qId: 7,
     qNum: '⑧',
     pass: false,
     imgSrc: Img8,
-    answer: '5:8',
+    answer: ['5', '8'],
   },
   {
     qId: 8,
     qNum: '⑨',
     pass: false,
     imgSrc: Img9,
-    answer: '5:6',
+    answer: ['5', '6'],
   },
   {
     qId: 9,
     qNum: '⑩',
     pass: false,
     imgSrc: Img10,
-    answer: '1:5',
+    answer: ['1', '5'],
   },
   {
     qId: 10,
     qNum: '⑪',
     pass: false,
     imgSrc: Img11,
-    answer: '7:8',
+    answer: ['7', '8'],
   },
   {
     qId: 11,
     qNum: '⑫',
     pass: false,
     imgSrc: Img12,
-    answer: '1:6',
+    answer: ['1', '6'],
   },
   {
     qId: 12,
     qNum: '⑬',
     pass: false,
     imgSrc: Img13,
-    answer: '2:10',
+    answer: ['2', '10'],
   },
   {
     qId: 13,
     qNum: '⑭',
     pass: false,
     imgSrc: Img14,
-    answer: '3:4',
+    answer: ['3', '4'],
   },
 ];

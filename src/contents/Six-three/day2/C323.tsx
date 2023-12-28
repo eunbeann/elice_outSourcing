@@ -18,10 +18,11 @@ export default function C323(props: C323Props) {
 
   const [isCorrect, setIsCorrect] = useState(false);
 
-  const [input, setInput] = useState('');
+  const [input1, setInput1] = useState('');
+  const [input2, setInput2] = useState('');
 
   useEffect(() => {
-    if (answer === input) {
+    if (answer[0] === input1 && answer[1] === input2) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
@@ -39,18 +40,28 @@ export default function C323(props: C323Props) {
             {qNum}
           </Typography>
         </Box>
-        <Box display="flex" gap="2rem" alignItems="end">
+        <Box display="flex" gap="1rem" alignItems="end">
           <Avatar
             src={imgSrc}
             variant="square"
             style={{
-              width: 'max-content',
+              width: '13rem',
               height: 'max-content',
             }}
           />
           <TextUnderBar
-            value={input}
-            onChange={e => setInput(e.target.value)}
+            width="4rem"
+            value={input1}
+            onChange={e => setInput1(e.target.value)}
+          />
+          <Typography variant="h5" fontWeight={400}>
+            {':'}
+          </Typography>
+
+          <TextUnderBar
+            width="4rem"
+            value={input2}
+            onChange={e => setInput2(e.target.value)}
           />
         </Box>
       </Box>

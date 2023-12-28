@@ -20,9 +20,16 @@ export default function C352(props: C352Props) {
 
   const [input1, setInput1] = useState('');
   const [input2, setInput2] = useState('');
+  const [input3, setInput3] = useState('');
+  const [input4, setInput4] = useState('');
 
   useEffect(() => {
-    if (answer.first === input1 && answer.second === input2) {
+    if (
+      answer.first[0] === input1 &&
+      answer.first[1] === input2 &&
+      answer.second[0] === input3 &&
+      answer.second[1] === input4
+    ) {
       setIsCorrect(true);
       handleCorrectChange(qId, true);
     } else {
@@ -56,12 +63,25 @@ export default function C352(props: C352Props) {
                   height: 'max-content',
                 }}
               />
-              <TextUnderBar
-                value={input1}
-                onChange={e => {
-                  setInput1(e.target.value);
-                }}
-              />
+              <Box display="flex" alignItems="center" gap="0.5rem">
+                <TextUnderBar
+                  width="4rem"
+                  value={input1}
+                  onChange={e => {
+                    setInput1(e.target.value);
+                  }}
+                />
+                <Typography variant="h5" fontWeight={600}>
+                  :
+                </Typography>
+                <TextUnderBar
+                  width="4rem"
+                  value={input2}
+                  onChange={e => {
+                    setInput2(e.target.value);
+                  }}
+                />
+              </Box>
             </Box>
             <Box
               display="flex"
@@ -77,12 +97,25 @@ export default function C352(props: C352Props) {
                   height: 'max-content',
                 }}
               />
-              <TextUnderBar
-                value={input2}
-                onChange={e => {
-                  setInput2(e.target.value);
-                }}
-              />
+              <Box display="flex" alignItems="center" gap="0.5rem">
+                <TextUnderBar
+                  width="4rem"
+                  value={input3}
+                  onChange={e => {
+                    setInput3(e.target.value);
+                  }}
+                />
+                <Typography variant="h5" fontWeight={600}>
+                  :
+                </Typography>
+                <TextUnderBar
+                  width="4rem"
+                  value={input4}
+                  onChange={e => {
+                    setInput4(e.target.value);
+                  }}
+                />
+              </Box>
             </Box>
           </Box>
         </Box>
